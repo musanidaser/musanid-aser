@@ -1,0 +1,47 @@
+<section class="cinematic-hero-fullwidth">
+
+  <!-- Full-Width Background Image & Overlay -->
+  <div class="hero-bg-layer" style="background-image: url('/hero.png');"></div>
+  <div class="hero-overlay-gradient"></div>
+
+  <!-- Content Container -->
+  <div class="editorial-container hero-fullwidth-content">
+
+    <!-- Top Metadata -->
+    <div class="hero-top-eyebrow">
+      <span class="eyebrow-line-gold"></span>
+      <span class="eyebrow-text">
+        {{ langService.t.hero.eyebrow }}
+      </span>
+      <span class="eyebrow-line-gold"></span>
+    </div>
+
+    <!-- Monumental Headline -->
+    <h1 class="hero-cinematic-title">
+      {{ langService.t.hero.titleLine1 }}<br />
+      <span class="gold-gradient-text">{{ langService.t.hero.titleLine2 }}</span>
+    </h1>
+
+    <!-- Subtitle Manifesto -->
+    <p class="hero-cinematic-lead">
+      {{ langService.t.hero.description }}
+    </p>
+
+    <!-- Two Hero Action Buttons (Side by Side on Desktop) -->
+    <div class="hero-actions-row">
+      <a routerLink="/request-quote" class="hero-btn-primary">
+        <span>{{ langService.t.hero.ctaQuote }}</span>
+        <i class="fa-solid btn-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'"
+          [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+      </a>
+
+      <a routerLink="/services" class="hero-btn-secondary">
+        <span>{{ langService.t.hero.ctaServices }}</span>
+        <i class="fa-solid btn-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'"
+          [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+      </a>
+    </div>
+
+  </div>
+
+</section>

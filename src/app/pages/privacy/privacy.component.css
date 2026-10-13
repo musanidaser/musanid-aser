@@ -1,0 +1,669 @@
+/* ========================================================
+   PRIVACY POLICY PAGE STYLES — MUSANID ASER
+   Architectural, Editorial Corporate, Luxury Aesthetics
+   ======================================================== */
+
+.privacy-page-wrapper {
+  background-color: var(--beige-light);
+  color: var(--charcoal-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   2. STATEMENT & LEAD SECTION
+   ======================================================== */
+.privacy-statement-section {
+  padding: 70px 0 35px;
+  position: relative;
+}
+
+.statement-ambient-light {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 250px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.statement-hero-card {
+  position: relative;
+  background: var(--color-white);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(11, 77, 77, 0.04);
+  padding: 48px 56px;
+  border-radius: 4px;
+}
+
+.statement-gold-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary), var(--gold-light), var(--gold-primary));
+}
+
+.statement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(11, 77, 77, 0.06);
+  border: 1px solid rgba(11, 77, 77, 0.14);
+  border-radius: 3px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--teal-primary);
+  margin-bottom: 22px;
+}
+
+.badge-ico {
+  color: var(--gold-primary);
+  font-size: 0.92rem;
+}
+
+.statement-headline {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--teal-deep);
+  line-height: 1.4;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.statement-copy {
+  font-size: 1.12rem;
+  line-height: 1.95;
+  color: #2D3748;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.statement-sub-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(212, 175, 55, 0.3);
+}
+
+.indicator-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 4px;
+  background: #F4EFE6;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+}
+
+.indicator-pill i {
+  color: var(--gold-primary);
+}
+
+/* ========================================================
+   4. CLAUSES GRID
+   ======================================================== */
+.privacy-clauses-section {
+  padding: 35px 0 80px;
+}
+
+.clauses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.clause-card {
+  background: var(--color-white);
+  border: 1px solid rgba(11, 77, 77, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  padding: 36px 36px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  position: relative;
+}
+
+.clause-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(11, 77, 77, 0.06);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.clause-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.clause-num-badge {
+  font-family: 'Montserrat', var(--font-ar);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.clause-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clause-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gold-dark);
+}
+
+.clause-title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--teal-deep);
+  line-height: 1.4;
+}
+
+.clause-text {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #374151;
+  font-weight: 450;
+  margin-bottom: 24px;
+}
+
+.clause-text.leading-emphasis {
+  font-size: 1.06rem;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+/* Fields Tags in Clause 01 */
+.clause-fields-box {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.fields-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--teal-primary);
+  margin-bottom: 14px;
+}
+
+.fields-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.field-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+  background: #FAF7F2;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  padding: 5px 12px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.field-tag i {
+  font-size: 0.65rem;
+  color: var(--gold-primary);
+}
+
+.field-tag:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-primary);
+}
+
+/* Purpose Bullet Points in Clause 02 */
+.purpose-bullets-wrap {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.purpose-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.purpose-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #2D3748;
+}
+
+.bullet-icon {
+  color: var(--gold-primary);
+  font-size: 0.95rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Clause Highlight (Clause 03) */
+.clause-card.clause-highlight {
+  border-color: rgba(212, 175, 55, 0.45);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F4 100%);
+  position: relative;
+}
+
+.strict-badge-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 3px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--teal-deep);
+  margin-bottom: 18px;
+  width: fit-content;
+}
+
+.strict-badge-notice i {
+  color: var(--gold-primary);
+}
+
+/* Security Pillars (Clause 04) */
+.security-pillars-row {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sec-pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 12px 8px;
+  background: #FAF7F2;
+  border: 1px solid rgba(11, 77, 77, 0.08);
+  border-radius: 4px;
+}
+
+.sec-ico {
+  font-size: 1.1rem;
+  color: var(--teal-primary);
+}
+
+.sec-pillar span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--charcoal-muted);
+  line-height: 1.3;
+}
+
+/* External Links Chips (Clause 05) */
+.external-links-chips {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ext-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: #F4EFE6;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+}
+
+.ext-ico-wa {
+  color: #25D366;
+  font-size: 1rem;
+}
+
+.ext-ico-mail {
+  color: var(--gold-primary);
+  font-size: 0.95rem;
+}
+
+/* Consent Stamp (Clause 06) */
+.consent-stamp {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(11, 77, 77, 0.05);
+  border-inline-start: 3px solid var(--teal-primary);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+  line-height: 1.5;
+}
+
+[dir="ltr"] .consent-stamp {
+  border-radius: 4px 0 0 4px;
+}
+
+.stamp-ico {
+  color: var(--teal-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ========================================================
+   4. DEDICATED HIGH-IMPACT CONTACT CTA SECTION
+   With Premium Executive Background Image & Scrim
+   ======================================================== */
+.privacy-contact-cta-section {
+  position: relative;
+  background-color: #000000;
+  color: var(--color-white);
+  padding: 100px 0;
+  overflow: hidden;
+  border-top: 2px solid var(--gold-primary);
+}
+
+/* Background Image Layer */
+.cta-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('/privacy-cta-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.88;
+  z-index: 0;
+}
+
+/* Balanced Black Luxury Scrim Overlay */
+.cta-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.42) 0%,
+    rgba(0, 0, 0, 0.52) 50%,
+    rgba(0, 0, 0, 0.68) 100%
+  );
+  z-index: 1;
+}
+
+/* Fine Gold Hairlines Top & Bottom */
+.cta-hairlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cta-line-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.6) 50%, transparent 100%);
+}
+
+.cta-line-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+}
+
+.cta-container-relative {
+  position: relative;
+  z-index: 3;
+}
+
+.cta-central-frame {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-gold-accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--gold-primary);
+  margin-bottom: 24px;
+}
+
+.cta-eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--gold-light);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta-main-heading {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--color-white);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.cta-subheading-copy {
+  font-size: 1.12rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 740px;
+  margin-bottom: 36px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+}
+
+/* CTA Actions */
+.cta-actions-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.cta-prime-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  background: var(--gold-primary);
+  color: var(--charcoal-dark);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 1px solid var(--gold-light);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.cta-prime-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+
+.cta-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cta-wa-btn i {
+  color: #25D366;
+  font-size: 1.2rem;
+}
+
+.cta-wa-btn:hover {
+  background: rgba(37, 211, 102, 0.25);
+  border-color: #25D366;
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN
+   ======================================================== */
+@media (max-width: 992px) {
+  .clauses-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .statement-hero-card {
+    padding: 36px 32px;
+  }
+
+  .statement-headline {
+    font-size: 1.55rem;
+  }
+
+  .statement-copy {
+    font-size: 1.05rem;
+  }
+
+  .cta-main-heading {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .statement-hero-card {
+    padding: 28px 20px;
+  }
+
+  .statement-headline {
+    font-size: 1.35rem;
+  }
+
+  .statement-copy {
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .clause-card {
+    padding: 24px 20px;
+  }
+
+  .clause-card-header {
+    gap: 14px;
+  }
+
+  .clause-num-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+  }
+
+  .clause-title {
+    font-size: 1.12rem;
+  }
+
+  .clause-text {
+    font-size: 0.94rem;
+    line-height: 1.8;
+  }
+
+  .security-pillars-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .privacy-contact-cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-main-heading {
+    font-size: 1.45rem;
+  }
+
+  .cta-subheading-copy {
+    font-size: 0.95rem;
+  }
+
+  .cta-actions-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-prime-btn,
+  .cta-wa-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

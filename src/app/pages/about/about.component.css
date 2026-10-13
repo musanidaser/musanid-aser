@@ -1,0 +1,1606 @@
+/* ========================================================
+   MUSANID ASER — ABOUT US PAGE ARCHITECTURAL SYSTEM
+   Saudi Corporate Luxury × Editorial Architecture
+   Palette:
+     Deep Teal: #0B4D4D | Dark Teal: #063A3A
+     Gold: #D4AF37 | Warm Ivory: #F7F3EA (#FAF7F2)
+     Charcoal: #1F1F1F | White: #FFFFFF
+   Standard CSS Only (Zero SCSS / Zero SASS)
+   ======================================================== */
+
+.about-page-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #FAF7F2;
+  color: #1F1F1F;
+  position: relative;
+}
+
+/* ========================================================
+   SHARED EDITORIAL REUSABLE TOKENS
+   ======================================================== */
+
+.section-label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.gold-lead-line {
+  display: inline-block;
+  width: 38px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+.section-label-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #B38E22;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+[dir="rtl"] .section-label-text,
+[dir="rtl"] .hero-eyebrow-text,
+[dir="rtl"] .vision-meta-tag,
+[dir="rtl"] .purpose-label-tag,
+[dir="rtl"] .philosophy-label,
+[dir="rtl"] .cta-tag-text {
+  font-family: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 0.92rem;
+}
+
+.statement-accent-bar {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  inset-inline-start: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #D4AF37 0%, rgba(212, 175, 55, 0.25) 100%);
+}
+
+/* ========================================================
+   1. INTERNAL HERO (Editorial Brand Book Opening, 380–450px)
+   Warm Ivory #F7F3EA, Asymmetric Architectural AM Linework
+   ======================================================== */
+.about-hero-section {
+  position: relative;
+  min-height: 410px;
+  background-color: #F7F3EA;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  display: flex;
+  align-items: center;
+  padding: 75px 0 65px 0;
+  overflow: hidden;
+}
+
+.hero-subtle-hairlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-hairline-h {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.15) 30%, rgba(212, 175, 55, 0.08) 100%);
+}
+
+.hero-hairline-v {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 48%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(11, 77, 77, 0.07), transparent);
+}
+
+.hero-master-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-architectural-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero-copy-column {
+  max-width: 680px;
+}
+
+.hero-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-gold-dash {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background-color: #D4AF37;
+}
+
+.hero-eyebrow-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #B38E22;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-display-heading {
+  font-size: clamp(2.8rem, 5.2vw, 4.2rem);
+  font-weight: 800;
+  color: #063A3A;
+  line-height: 1.18;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.025em;
+}
+
+.hero-statement-lead {
+  font-size: clamp(1.08rem, 1.7vw, 1.22rem);
+  line-height: 1.85;
+  color: #4A5258;
+  margin: 0 0 24px 0;
+  max-width: 600px;
+}
+
+/* Subtle Horizontal Gold Rule & Metadata Line */
+.hero-meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-gold-rule {
+  width: 64px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+.hero-meta-line {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0B4D4D;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* Architectural Corporate Photo Column */
+.hero-visual-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-executive-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 20px 48px rgba(11, 77, 77, 0.12);
+  border-radius: 4px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.hero-executive-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px rgba(11, 77, 77, 0.16);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.hero-image-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.hero-architectural-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: contrast(1.02) saturate(1.05);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-executive-frame:hover .hero-architectural-img {
+  transform: scale(1.04);
+}
+
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 77, 77, 0.05) 0%, rgba(6, 58, 58, 0.25) 100%);
+  pointer-events: none;
+}
+
+.hero-floating-seal {
+  position: absolute;
+  bottom: -16px;
+  inset-inline-start: 24px;
+  background-color: #063A3A;
+  color: #FFFFFF;
+  border: 1px solid #D4AF37;
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.hero-floating-seal i {
+  color: #D4AF37;
+  font-size: 0.88rem;
+}
+
+/* ========================================================
+   2. FOUNDATION (Preserved Section + Headquarters Photography)
+   ======================================================== */
+.foundation-signature-section {
+  position: relative;
+  padding: 130px 0;
+  background-color: #FAF7F2;
+  border-bottom: 1px solid rgba(11, 77, 77, 0.08);
+  overflow: hidden;
+}
+
+.foundation-ambient-glow {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(11, 77, 77, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.foundation-layout-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 68px;
+  align-items: center;
+}
+
+.foundation-text-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.foundation-statement-box {
+  position: relative;
+  padding-inline-start: 26px;
+  margin-bottom: 32px;
+}
+
+.foundation-signature-statement {
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #0B4D4D;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.foundation-narrative-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-inline-start: 26px;
+  margin-bottom: 36px;
+}
+
+.narrative-lead-paragraph {
+  font-size: clamp(1.12rem, 1.7vw, 1.25rem);
+  font-weight: 600;
+  color: #1F1F1F;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.narrative-hairline-sep {
+  width: 54px;
+  height: 1px;
+  background-color: rgba(212, 175, 55, 0.45);
+}
+
+.narrative-body-paragraph {
+  font-size: 1.04rem;
+  line-height: 1.9;
+  color: #4A5055;
+  margin: 0;
+}
+
+.foundation-trust-seal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 16px 22px;
+  border-radius: 4px;
+  margin-inline-start: 26px;
+}
+
+.trust-seal-icon {
+  font-size: 1.4rem;
+  color: #D4AF37;
+  flex-shrink: 0;
+}
+
+.trust-seal-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0B4D4D;
+  line-height: 1.6;
+}
+
+.executive-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  background: #FFFFFF;
+  padding: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 24px 50px rgba(11, 77, 77, 0.08);
+}
+
+.card-corner-tick {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #D4AF37;
+  z-index: 3;
+}
+
+.tick-top-left { top: -2px; left: -2px; border-bottom: none; border-right: none; }
+.tick-top-right { top: -2px; right: -2px; border-bottom: none; border-left: none; }
+.tick-bottom-left { bottom: -2px; left: -2px; border-top: none; border-right: none; }
+.tick-bottom-right { bottom: -2px; right: -2px; border-top: none; border-left: none; }
+
+.image-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 16 / 10;
+}
+
+.executive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.executive-image-card:hover .executive-image {
+  transform: scale(1.03);
+}
+
+.image-gradient-veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(6, 58, 58, 0.6) 100%);
+  pointer-events: none;
+}
+
+.floating-executive-badge {
+  position: absolute;
+  bottom: -22px;
+  inset-inline-start: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #063A3A;
+  color: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  padding: 12px 20px;
+  border-radius: 2px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+  z-index: 4;
+}
+
+.badge-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37;
+  font-size: 1rem;
+}
+
+.badge-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.badge-subtitle {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ========================================================
+   3. VISION (Brand Manifesto — Upgraded Architectural Background)
+   Deep Teal #063A3A, Subtle Linework & Tonal Shapes (No Glow)
+   ======================================================== */
+.vision-manifesto-section {
+  position: relative;
+  background-color: #063A3A;
+  color: #FFFFFF;
+  padding: 160px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.vision-architectural-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.vision-tonal-block-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  background-color: rgba(3, 34, 34, 0.25);
+}
+
+.vision-tonal-block-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  background-color: rgba(11, 77, 77, 0.12);
+}
+
+.vision-linework-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 600px;
+}
+
+.vision-horizontal-datum {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.12) 50%, transparent 100%);
+}
+
+.vision-inner-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.vision-meta-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.vision-leadline {
+  display: inline-block;
+  width: 44px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+.vision-pill-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: #D4AF37;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.vision-section-subhead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.12em;
+  margin-bottom: 28px;
+}
+
+.vision-monumental-quote {
+  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.44;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin: 0 0 38px 0;
+  padding: 0 16px;
+}
+
+.vision-center-hairline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hairline-segment {
+  width: 45px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+.hairline-diamond {
+  width: 6px;
+  height: 6px;
+  background-color: #D4AF37;
+  transform: rotate(45deg);
+}
+
+.vision-grounding-subtext {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ========================================================
+   4. MISSION (Preserved Section — Narrative + Boardroom Visual)
+   ======================================================== */
+.mission-editorial-section {
+  position: relative;
+  background-color: #F7F3EA;
+  padding: 130px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.mission-ambient-glow {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.mission-dominant-headline {
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: #063A3A;
+  line-height: 1.34;
+  letter-spacing: -0.02em;
+  margin: 0 0 54px 0;
+  max-width: 1040px;
+}
+
+.mission-layout-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 68px;
+  align-items: center;
+}
+
+.mission-narrative-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-statement-card {
+  position: relative;
+  padding-inline-start: 24px;
+  margin-bottom: 36px;
+}
+
+.mission-detailed-text {
+  font-size: 1.14rem;
+  line-height: 1.95;
+  color: #4A5055;
+  margin: 0;
+}
+
+.mission-indicators-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mission-indicator-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(11, 77, 77, 0.1);
+  padding: 16px 20px;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mission-indicator-item:hover {
+  background: #FFFFFF;
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateX(-4px);
+  box-shadow: 0 8px 24px rgba(11, 77, 77, 0.06);
+}
+
+[dir="ltr"] .mission-indicator-item:hover {
+  transform: translateX(4px);
+}
+
+.indicator-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: #0B4D4D;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.indicator-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.indicator-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #063A3A;
+  margin: 0 0 4px 0;
+}
+
+.indicator-desc {
+  font-size: 0.92rem;
+  color: #555D62;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================================
+   5. PURPOSE (Monumental Executive Purpose Plaque)
+   ======================================================== */
+.purpose-monumental-section {
+  position: relative;
+  background-color: #FAF7F2;
+  border-bottom: 1px solid rgba(11, 77, 77, 0.08);
+  padding: 60px 0 35px 0;
+  overflow: hidden;
+}
+
+.purpose-executive-card {
+  position: relative;
+  background: linear-gradient(135deg, #063A3A 0%, #032525 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 6px;
+  padding: 64px 56px;
+  box-shadow: 0 24px 60px rgba(6, 58, 58, 0.18), 0 2px 6px rgba(212, 175, 55, 0.15);
+  overflow: visible;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.purpose-executive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 70px rgba(6, 58, 58, 0.24);
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+.purpose-inner-frame {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.purpose-executive-card .card-corner-tick {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #D4AF37;
+  z-index: 3;
+}
+
+.purpose-executive-card .tick-top-left { top: -2px; left: -2px; border-bottom: none; border-right: none; }
+.purpose-executive-card .tick-top-right { top: -2px; right: -2px; border-bottom: none; border-left: none; }
+.purpose-executive-card .tick-bottom-left { bottom: -2px; left: -2px; border-top: none; border-right: none; }
+.purpose-executive-card .tick-bottom-right { bottom: -2px; right: -2px; border-top: none; border-left: none; }
+
+.purpose-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.purpose-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.purpose-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 8px 20px;
+  border-radius: 999px;
+}
+
+.purpose-gold-icon {
+  font-size: 1rem;
+  color: #D4AF37;
+}
+
+.purpose-label-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #D4AF37;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+[dir="rtl"] .purpose-label-tag {
+  font-family: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 0.95rem;
+}
+
+.purpose-num-watermark {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(212, 175, 55, 0.45);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.purpose-gold-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.2) 50%, transparent 100%);
+  margin-bottom: 32px;
+}
+
+[dir="ltr"] .purpose-gold-divider {
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 50%, #D4AF37 100%);
+}
+
+.purpose-monumental-statement {
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 980px;
+}
+
+/* ========================================================
+   6. OUR PRINCIPLES (Four Tall Editorial Cards in ONE ROW)
+   Warm White, Subtle Border, Distinct Micro-Accents, Hover
+   ======================================================== */
+.principles-editorial-section {
+  position: relative;
+  background-color: #F7F3EA;
+  padding: 45px 0 100px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.principles-header-block {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.principles-master-title {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: #063A3A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Four Cards in ONE Row on Desktop */
+.principles-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.principle-card {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  padding: 34px 26px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(11, 77, 77, 0.04), 0 1px 3px rgba(212, 175, 55, 0.08);
+  overflow: visible;
+}
+
+.principle-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 20px 42px rgba(11, 77, 77, 0.1), 0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+/* Subtle Architectural Inner Frame (برواز داخلي فاخر) */
+.card-inner-frame {
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 2px;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.principle-card:hover .card-inner-frame {
+  border-color: rgba(212, 175, 55, 0.55);
+  inset: 6px;
+}
+
+/* Subtle Top Accent Gold Line */
+.card-top-accent-line {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37 50%, transparent);
+  opacity: 0.8;
+  z-index: 2;
+  transition: opacity 0.35s ease;
+}
+
+.principle-card:hover .card-top-accent-line {
+  opacity: 1;
+}
+
+/* Delicate Golden Corner Ticks on the Card */
+.principle-card .card-corner-tick {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid rgba(212, 175, 55, 0.55);
+  z-index: 3;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-card .tick-top-left { top: -2px; left: -2px; border-bottom: none; border-right: none; }
+.principle-card .tick-top-right { top: -2px; right: -2px; border-bottom: none; border-left: none; }
+.principle-card .tick-bottom-left { bottom: -2px; left: -2px; border-top: none; border-right: none; }
+.principle-card .tick-bottom-right { bottom: -2px; right: -2px; border-top: none; border-left: none; }
+
+.principle-card:hover .card-corner-tick {
+  border-color: #D4AF37;
+  width: 14px;
+  height: 14px;
+}
+
+.card-header-bar,
+.card-body-content,
+.card-bottom-anchor-bar {
+  position: relative;
+  z-index: 2;
+}
+
+.card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.card-icon-emblem {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: rgba(11, 77, 77, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: #0B4D4D;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-card:hover .card-icon-emblem {
+  background-color: #063A3A;
+  color: #D4AF37;
+  border-color: #D4AF37;
+  transform: scale(1.08) rotate(4deg);
+}
+
+.card-num-pill {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #B38E22;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1em;
+  background-color: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.card-body-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-arabic-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #063A3A;
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+}
+
+.card-hairline-accent {
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37 0%, rgba(212, 175, 55, 0.3) 100%);
+  margin-bottom: 14px;
+  border-radius: 1px;
+  transition: width 0.35s ease, background 0.35s ease;
+}
+
+.principle-card:hover .card-hairline-accent {
+  width: 50px;
+  background: #D4AF37;
+}
+
+.card-description {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #555D62;
+  margin: 0;
+}
+
+.card-bottom-anchor-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background 0.35s ease;
+}
+
+.principle-card:hover .card-bottom-anchor-bar {
+  background: linear-gradient(90deg, #D4AF37, #0B4D4D);
+}
+
+/* ========================================================
+   4. WHAT WE BELIEVE (Dark Charcoal #1F1F1F Luxury Manifesto)
+   Clean, prestigious typography on deep charcoal background
+   ======================================================== */
+.philosophy-manifesto-sanctuary {
+  position: relative;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  padding: 140px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Thin Gold Architectural Transverse Lines */
+.philosophy-transverse-line-top {
+  position: absolute;
+  top: 50px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.22), transparent);
+}
+
+.philosophy-transverse-line-bottom {
+  position: absolute;
+  bottom: 50px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.22), transparent);
+}
+
+.philosophy-inner-container {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.philosophy-meta-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.philosophy-gold-pin {
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+.philosophy-label {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: #D4AF37;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.philosophy-master-quote {
+  font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.45;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin: 0 auto 30px auto;
+  max-width: 920px;
+  padding: 0 16px;
+}
+
+.philosophy-gold-axis-guide {
+  width: 64px;
+  height: 2px;
+  background: #D4AF37;
+  margin: 0 auto 28px auto;
+  border-radius: 1px;
+}
+
+.philosophy-grounding-para {
+  font-size: clamp(1.08rem, 1.7vw, 1.22rem);
+  line-height: 1.88;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========================================================
+   5. FINAL CTA (Harmonious Executive Grand Finale)
+   Background /cta.png with Black/Near-Black Overlay rgba(0,0,0,0.76)
+   ======================================================== */
+.cta-grand-finale {
+  position: relative;
+  min-height: 440px;
+  color: #FFFFFF;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-bg-image-layer {
+  position: absolute;
+  inset: 0;
+  background-image: url('/cta.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Dark Near-Black Overlay */
+.cta-black-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(6, 20, 20, 0.76);
+  z-index: 1;
+}
+
+.cta-top-gold-rule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+  z-index: 2;
+}
+
+.cta-bottom-gold-rule {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+  z-index: 2;
+}
+
+.cta-centered-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.cta-harmonious-content {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.cta-tag-gold-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+.cta-tag-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #D4AF37;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta-display-heading {
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.28;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+}
+
+.cta-supporting-text {
+  font-size: clamp(1.08rem, 1.7vw, 1.22rem);
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 36px 0;
+  max-width: 620px;
+}
+
+.cta-button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.cta-action-btn {
+  padding: 18px 46px;
+  font-size: 1.05rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+.cta-icon-arrow {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.editorial-btn-gold:hover .cta-icon-arrow {
+  transform: translateX(-5px);
+}
+
+[dir="ltr"] .editorial-btn-gold:hover .cta-icon-arrow {
+  transform: translateX(5px);
+}
+
+/* Micro Trust Signals Underneath Button */
+.cta-trust-pills-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.cta-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.cta-trust-pill i {
+  color: #D4AF37;
+  font-size: 0.75rem;
+}
+
+.cta-trust-divider {
+  color: rgba(212, 175, 55, 0.4);
+  font-size: 0.8rem;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (Desktop, Tablet, Mobile)
+   ======================================================== */
+
+/* Large Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-architectural-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-visual-column {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-executive-frame {
+    max-width: 520px;
+  }
+
+  .foundation-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .foundation-visual-column {
+    order: -1;
+  }
+
+  .executive-image-card {
+    max-width: 100%;
+  }
+
+  .mission-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .mission-visual-column {
+    order: -1;
+  }
+
+  /* Purpose Section on Tablet */
+  .purpose-monumental-section {
+    padding: 45px 0 25px 0;
+  }
+
+  .principles-editorial-section {
+    padding: 35px 0 75px 0;
+  }
+
+  .purpose-executive-card {
+    padding: 48px 36px;
+  }
+
+  .purpose-num-watermark {
+    font-size: 2.6rem;
+  }
+
+  /* Principles 2x2 on Tablet */
+  .principles-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-hero-section {
+    min-height: auto;
+    padding: 55px 0 45px 0;
+  }
+
+  .foundation-signature-section,
+  .vision-manifesto-section,
+  .mission-editorial-section,
+  .philosophy-manifesto-sanctuary,
+  .cta-grand-finale {
+    padding: 70px 0;
+  }
+
+  /* Purpose & Principles on Mobile (Calibrated vertical rhythm) */
+  .purpose-monumental-section {
+    padding: 40px 0 20px 0;
+  }
+
+  .principles-editorial-section {
+    padding: 25px 0 60px 0;
+  }
+
+  .hero-statement-lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .foundation-statement-box,
+  .foundation-narrative-flow,
+  .foundation-trust-seal {
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+  }
+
+  .statement-accent-bar {
+    display: none;
+  }
+
+  .mission-dominant-headline {
+    margin-bottom: 32px;
+  }
+
+  .mission-statement-card {
+    padding-inline-start: 0;
+    margin-bottom: 24px;
+  }
+
+  .mission-detailed-text {
+    font-size: 1.05rem;
+    line-height: 1.82;
+  }
+
+  /* Purpose Card on Mobile */
+
+  .purpose-executive-card {
+    padding: 38px 24px;
+    border-radius: 4px;
+  }
+
+  .purpose-inner-frame {
+    inset: 6px;
+  }
+
+  .purpose-gold-divider {
+    margin-bottom: 22px;
+  }
+
+  .purpose-monumental-statement {
+    font-size: clamp(1.4rem, 4.8vw, 1.85rem);
+    line-height: 1.55;
+  }
+
+  .purpose-num-watermark {
+    font-size: 2.2rem;
+  }
+
+  .purpose-badge-pill {
+    padding: 6px 14px;
+    gap: 8px;
+  }
+
+  /* Principles 1 Column on Mobile */
+  .principles-header-block {
+    margin-bottom: 36px;
+  }
+
+  .principles-cards-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .principle-card {
+    min-height: auto;
+    padding: 26px 20px;
+  }
+
+  .card-arabic-title {
+    font-size: 1.25rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .cta-harmonious-content {
+    max-width: 100%;
+  }
+
+  .cta-trust-pills-row {
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 14px;
+    padding: 14px 18px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .cta-trust-divider {
+    display: none;
+  }
+
+  .floating-executive-badge {
+    bottom: -14px;
+    inset-inline-start: 12px;
+    padding: 8px 14px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-display-heading {
+    font-size: 2.2rem;
+    line-height: 1.22;
+  }
+
+  .hero-floating-seal {
+    bottom: -12px;
+    inset-inline-start: 12px;
+    padding: 6px 12px;
+    font-size: 0.74rem;
+    gap: 6px;
+  }
+
+  .foundation-signature-statement {
+    font-size: 1.8rem;
+    line-height: 1.35;
+  }
+
+  .narrative-lead-paragraph {
+    font-size: 1.05rem;
+  }
+
+  .narrative-body-paragraph {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .foundation-trust-seal {
+    padding: 12px 14px;
+    font-size: 0.86rem;
+    gap: 10px;
+  }
+
+  .vision-monumental-quote {
+    font-size: 1.75rem;
+    line-height: 1.45;
+  }
+
+  .vision-grounding-subtext {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .mission-dominant-headline {
+    font-size: 1.75rem;
+    line-height: 1.35;
+  }
+
+  .mission-indicator-item {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .indicator-title {
+    font-size: 0.98rem;
+  }
+
+  .indicator-desc {
+    font-size: 0.86rem;
+  }
+
+  .purpose-monumental-section {
+    padding: 30px 0 15px 0;
+  }
+
+  .principles-editorial-section {
+    padding: 20px 0 50px 0;
+  }
+
+  .purpose-executive-card {
+    padding: 30px 18px;
+  }
+
+  .purpose-monumental-statement {
+    font-size: 1.35rem;
+    line-height: 1.6;
+  }
+
+  .principles-master-title {
+    font-size: 1.95rem;
+  }
+
+  .philosophy-master-quote {
+    font-size: 1.75rem;
+    line-height: 1.45;
+  }
+
+  .philosophy-grounding-para {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .cta-display-heading {
+    font-size: 1.85rem;
+    line-height: 1.3;
+  }
+
+  .cta-supporting-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .cta-action-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+}

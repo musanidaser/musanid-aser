@@ -1,0 +1,249 @@
+<main class="sectors-page-wrapper">
+
+  <!-- ========================================================
+       1. UNIFIED INTERNAL HERO — CINEMATIC FULL-WIDTH HERO
+       ======================================================== -->
+  <app-internal-hero
+    bgImage="/sectors-hero.jpg"
+    [eyebrow]="langService.t.sectorsPage.hero.eyebrow"
+    [title]="langService.t.sectorsPage.hero.title"
+    [description]="langService.t.sectorsPage.hero.description"
+    [ctaText]="langService.t.sectorsPage.hero.ctaExplore"
+    ctaLink="#sectors-showcase"
+    [imageAlt]="langService.t.sectorsPage.hero.title">
+  </app-internal-hero>
+
+  <!-- ========================================================
+       2. SECTORS INTRODUCTION — ASYMMETRIC EDITORIAL STATEMENT
+       "احتياجات مختلفة، وفهم يبدأ من طبيعة النشاط."
+       ======================================================== -->
+  <section class="sectors-intro-section" aria-labelledby="sectors-intro-headline">
+    <div class="editorial-container">
+      <div class="intro-asymmetric-layout">
+        
+        <!-- Primary Statement Column -->
+        <div class="intro-statement-column">
+          <div class="section-label-row">
+            <span class="gold-lead-line" aria-hidden="true"></span>
+            <span class="section-label-text">{{ langService.t.sectorsPage.intro.eyebrow }}</span>
+            <span class="gold-lead-line" aria-hidden="true"></span>
+          </div>
+
+          <div class="statement-accent-box">
+            <div class="statement-accent-bar" aria-hidden="true"></div>
+            <h2 id="sectors-intro-headline" class="intro-dominant-headline">
+              {{ langService.t.sectorsPage.intro.headline }}
+            </h2>
+          </div>
+        </div>
+
+        <!-- Narrative & Architectural Seal Column -->
+        <div class="intro-narrative-column">
+          <p class="intro-narrative-text">
+            {{ langService.t.sectorsPage.intro.description }}
+          </p>
+
+          <div class="intro-architectural-seal" aria-hidden="true">
+            <span class="seal-diamond-pip"></span>
+            <span class="seal-caption-text">{{ langService.t.sectorsPage.intro.tagline }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. MAIN SECTORS SHOWCASE — 3-CARDS SWIPER SLIDER
+       #sectors-showcase anchor
+       Header with Title + Navigation Arrow Controls
+       Swiper Slider with custom sector cards
+       Pagination Bullets
+       ======================================================== -->
+  <section id="sectors-showcase" class="sectors-showcase-section" aria-labelledby="showcase-dominant-title">
+    <div class="editorial-container">
+      
+      <!-- Showcase Slider Header -->
+      <div class="sectors-slider-header">
+        <div class="header-title-block">
+          <div class="section-label-row">
+            <span class="gold-lead-line" aria-hidden="true"></span>
+            <span class="section-label-text">{{ langService.t.sectorsPage.showcase.eyebrow }}</span>
+            <span class="gold-lead-line" aria-hidden="true"></span>
+          </div>
+          <h2 id="showcase-dominant-title" class="showcase-monumental-title">
+            {{ langService.t.sectorsPage.showcase.title }}
+          </h2>
+          <p class="showcase-lead-description">
+            {{ langService.t.sectorsPage.showcase.description }}
+          </p>
+        </div>
+
+        <!-- Slider Arrow Navigation Controls -->
+        <div class="sectors-slider-controls">
+          <button type="button"
+                  class="slider-nav-btn sectors-slider-nav-prev"
+                  [attr.aria-label]="langService.currentLang === 'ar' ? 'السابق' : 'Previous'">
+            <i class="fa-solid"
+               [class.fa-arrow-right]="langService.currentLang === 'ar'"
+               [class.fa-arrow-left]="langService.currentLang !== 'ar'"></i>
+          </button>
+          <button type="button"
+                  class="slider-nav-btn sectors-slider-nav-next"
+                  [attr.aria-label]="langService.currentLang === 'ar' ? 'التالي' : 'Next'">
+            <i class="fa-solid"
+               [class.fa-arrow-left]="langService.currentLang === 'ar'"
+               [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Swiper Slider Container -->
+      <div class="sectors-swiper-wrapper">
+        <div class="swiper" #sectorsSwiper>
+          <div class="swiper-wrapper">
+            @for (sector of langService.t.sectorsPage.showcase.sectors; track sector.num; let i = $index) {
+              <div class="swiper-slide">
+                <article class="sector-chic-card">
+                  
+                  <!-- Top Gold Accent Line on Hover -->
+                  <div class="card-accent-line" aria-hidden="true"></div>
+
+                  <!-- Architectural Corner Ticks -->
+                  <div class="card-tick tick-tl" aria-hidden="true"></div>
+                  <div class="card-tick tick-tr" aria-hidden="true"></div>
+
+                  <!-- Image Window with Sector Number Watermark & Category Tag -->
+                  <div class="card-image-window">
+                    <img [src]="sector.image"
+                         [alt]="sector.title"
+                         class="card-preview-photo"
+                         loading="lazy" />
+                    <div class="card-image-gradient" aria-hidden="true"></div>
+                    
+                    <!-- Watermark Numeral -->
+                    <span class="card-watermark-num" aria-hidden="true">{{ sector.num }}</span>
+
+                    <!-- Category Tag Over Image -->
+                    <div class="card-image-tag">
+                      <span class="tag-gold-pip" aria-hidden="true"></span>
+                      <span class="tag-text">{{ sector.tag }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Card Body -->
+                  <div class="card-content-body">
+                    
+                    <div class="card-header-row">
+                      <span class="card-num-indicator">{{ sector.num }}</span>
+                      <h3 class="card-sector-title">{{ sector.title }}</h3>
+                    </div>
+
+                    <div class="card-gold-rule" aria-hidden="true"></div>
+
+                    <p class="card-sector-description">
+                      {{ sector.desc }}
+                    </p>
+
+                    <!-- Scope Deliverables Box -->
+                    <div class="card-scope-box">
+                      <span class="scope-box-label">{{ sector.scopeLabel }}</span>
+                      <ul class="scope-box-list">
+                        @for (item of sector.scope; track item) {
+                          <li class="scope-box-item">
+                            <i class="fa-solid fa-check scope-check-icon" aria-hidden="true"></i>
+                            <span>{{ item }}</span>
+                          </li>
+                        }
+                      </ul>
+                    </div>
+
+                    <!-- Footer Action Button -->
+                    <div class="card-footer-action">
+                      <a routerLink="/request-quote" class="card-quote-action-btn">
+                        <span>{{ langService.currentLang === 'ar' ? 'طلب تسعيرة لهذا القطاع' : 'Request Sector Quotation' }}</span>
+                        <span class="action-btn-circle" aria-hidden="true">
+                          <i class="fa-solid"
+                             [class.fa-arrow-left]="langService.currentLang === 'ar'"
+                             [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+                        </span>
+                      </a>
+                    </div>
+
+                  </div>
+
+                </article>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Slider Pagination Bullets -->
+        <div class="slider-pagination-wrap">
+          <div class="sectors-swiper-pagination"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. FLEXIBLE SUPPLY REQUIREMENTS — RESTRAINED EDITORIAL SEQUENCE
+       "لكل نشاط متطلباته الخاصة."
+       ======================================================== -->
+  <section class="sectors-requirements-section" aria-labelledby="requirements-dominant-title">
+    <div class="editorial-container">
+      
+      <!-- Section Header -->
+      <div class="requirements-header-block">
+        <div class="section-label-row">
+          <span class="gold-lead-line" aria-hidden="true"></span>
+          <span class="section-label-text">{{ langService.t.sectorsPage.requirements.eyebrow }}</span>
+          <span class="gold-lead-line" aria-hidden="true"></span>
+        </div>
+
+        <h2 id="requirements-dominant-title" class="requirements-dominant-title">
+          {{ langService.t.sectorsPage.requirements.headline }}
+        </h2>
+
+        <p class="requirements-lead-description">
+          {{ langService.t.sectorsPage.requirements.description }}
+        </p>
+      </div>
+
+      <!-- 3 Refined Typographic Pillars Sequence -->
+      <div class="requirements-triptych-track" role="list">
+        @for (item of langService.t.sectorsPage.requirements.items; track item.code; let i = $index) {
+          <article class="requirement-pillar" role="listitem">
+            
+            <div class="pillar-code-row">
+              <span class="pillar-code-num">{{ item.code }}</span>
+              <span class="pillar-gold-dash" aria-hidden="true"></span>
+            </div>
+
+            <h3 class="pillar-title">{{ item.title }}</h3>
+            <div class="pillar-gold-hairline" aria-hidden="true"></div>
+            <p class="pillar-desc">{{ item.desc }}</p>
+
+            <div class="pillar-corner-tick tick-tl" aria-hidden="true"></div>
+          </article>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. FINAL CTA — UNIFIED EXECUTIVE GRAND FINALE
+       Matches About Us, Services & all internal pages
+       ======================================================== -->
+  <app-internal-cta
+    bgImage="/sectors-cta.jpg"
+    [label]="langService.t.sectorsPage.cta.eyebrow"
+    [title]="langService.t.sectorsPage.cta.headline"
+    [description]="langService.t.sectorsPage.cta.description"
+    [buttonText]="langService.t.sectorsPage.cta.buttonText"
+    buttonLink="/request-quote">
+  </app-internal-cta>
+
+</main>

@@ -1,0 +1,563 @@
+<main class="quote-page-wrapper">
+
+  <!-- ========================================================
+       1. UNIFIED INTERNAL HERO — CONTACT & QUOTE REQUEST
+       ======================================================== -->
+  <app-internal-hero
+    bgImage="/quote-hero.jpg"
+    [eyebrow]="langService.t.quotePage.hero.eyebrow"
+    [title]="langService.t.quotePage.hero.title"
+    [description]="langService.t.quotePage.hero.description"
+    [ctaText]="langService.t.quotePage.hero.ctaText"
+    ctaLink="#quote-content"
+    [imageAlt]="langService.t.quotePage.hero.title">
+  </app-internal-hero>
+
+  <!-- ========================================================
+       2. MAIN SECTION — BALANCED TWO-COLUMN EDITORIAL COMPOSITION
+       Form (Dominant Element) + Supporting Contact Information
+       ======================================================== -->
+  <section id="quote-content" class="contact-quote-section" aria-labelledby="form-heading-title">
+    <div class="editorial-container">
+
+      <!-- Mobile Quick Contact Strip (Visible on mobile for instant 1-tap direct action) -->
+      <div class="mobile-quick-channels-bar" aria-label="Quick Contact Actions">
+        <a href="tel:0533796523" class="quick-pill-btn">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'اتصال مباشر' : 'Direct Call' }}</span>
+        </a>
+        <a href="https://wa.me/966533796523" target="_blank" rel="noopener noreferrer" class="quick-pill-btn quick-pill-whatsapp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'واتساب فوري' : 'WhatsApp' }}</span>
+        </a>
+        <a href="mailto:info@musanidaser.com" class="quick-pill-btn">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'البريد الرسمي' : 'Email' }}</span>
+        </a>
+      </div>
+      
+      <div class="contact-quote-layout">
+        
+        <!-- ====================================================
+             COLUMN 1: THE QUOTE REQUEST FORM (DOMINANT ELEMENT)
+             ==================================================== -->
+        <div class="form-dominant-column">
+          <div class="quote-form-card">
+            
+            <!-- Luxury Gold & Teal Top Accent Bar -->
+            <div class="form-top-accent-bar" aria-hidden="true"></div>
+
+            <!-- Form Header Block -->
+            <div class="form-header-block">
+              <div class="section-label-row">
+                <span class="gold-lead-line" aria-hidden="true"></span>
+                <span class="section-label-text">{{ langService.t.quotePage.hero.eyebrow }}</span>
+                <span class="gold-lead-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 id="form-heading-title" class="form-display-heading">
+                {{ langService.t.quotePage.form.heading }}
+              </h2>
+
+              <p class="form-supporting-paragraph">
+                {{ langService.t.quotePage.form.subheading }}
+              </p>
+
+              <div class="form-divider-gold" aria-hidden="true"></div>
+            </div>
+
+            <!-- SUCCESS STATE BANNER (SHOWN ONLY UPON CONFIRMED SUCCESS) -->
+            @if (submitStatus === 'success') {
+              <div class="feedback-banner state-success" role="alert">
+                <div class="feedback-icon-box">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="feedback-body">
+                  <h3 class="feedback-title">{{ langService.t.quotePage.form.feedback.successTitle }}</h3>
+                  <p class="feedback-text">{{ langService.t.quotePage.form.feedback.successMessage }}</p>
+                  <button type="button" (click)="resetForm()" class="editorial-btn-gold feedback-reset-btn">
+                    <span>{{ langService.t.quotePage.form.feedback.resetButton }}</span>
+                    <i class="fa-solid fa-rotate-left"></i>
+                  </button>
+                </div>
+              </div>
+            }
+
+            <!-- ERROR STATE BANNER (FORM DATA PRESERVED) -->
+            @if (submitStatus === 'error') {
+              <div class="feedback-banner state-error" role="alert">
+                <div class="feedback-icon-box">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="feedback-body">
+                  <h3 class="feedback-title">{{ langService.t.quotePage.form.feedback.errorTitle }}</h3>
+                  <p class="feedback-text">{{ langService.t.quotePage.form.feedback.errorMessage }}</p>
+                  @if (errorMessage) {
+                    <p class="feedback-detail-code">{{ errorMessage }}</p>
+                  }
+                  <div class="feedback-actions-row">
+                    <button type="button" (click)="onSubmit()" class="editorial-btn-gold feedback-retry-btn">
+                      <span>{{ langService.currentLang === 'ar' ? 'إعادة المحاولة' : 'Try Again' }}</span>
+                      <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                    <a [href]="getWhatsAppPrefilledUrl()" target="_blank" rel="noopener noreferrer" class="whatsapp-fallback-btn">
+                      <i class="fa-brands fa-whatsapp"></i>
+                      <span>{{ langService.t.quotePage.form.feedback.whatsappAlternative }}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            }
+
+            <!-- SETUP CONFIGURATION NOTICE (WHEN LIVE KEY PENDING) -->
+            @if (submitStatus === 'unconfigured') {
+              <div class="feedback-banner state-notice" role="alert">
+                <div class="feedback-icon-box">
+                  <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="feedback-body">
+                  <h3 class="feedback-title">{{ langService.currentLang === 'ar' ? 'تم تجهيز بيانات طلبكم' : 'Your Request Data Is Ready' }}</h3>
+                  <p class="feedback-text">{{ langService.t.quotePage.form.feedback.configNotice }}</p>
+                  <div class="feedback-actions-row">
+                    <a [href]="getWhatsAppPrefilledUrl()" target="_blank" rel="noopener noreferrer" class="whatsapp-fallback-btn active-whatsapp-direct">
+                      <i class="fa-brands fa-whatsapp"></i>
+                      <span>{{ langService.t.quotePage.form.feedback.whatsappAlternative }}</span>
+                    </a>
+                    <button type="button" (click)="resetForm()" class="feedback-text-link">
+                      {{ langService.t.quotePage.form.feedback.resetButton }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            }
+
+            <!-- REACTIVE QUOTE REQUEST FORM -->
+            @if (submitStatus !== 'success') {
+              <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()" class="quote-form-body" novalidate>
+                
+                <!-- ====================================================
+                     GROUP 1: بيانات المنشأة والتواصل
+                     ==================================================== -->
+                <div class="form-logical-group">
+                  <div class="group-header-row">
+                    <span class="group-badge-number">01</span>
+                    <h3 class="group-title-text">{{ langService.t.quotePage.form.groups.entity }}</h3>
+                    <span class="group-header-line" aria-hidden="true"></span>
+                  </div>
+
+                  <div class="form-fields-grid">
+                    
+                    <!-- 1. اسم المنشأة — حقل نصي، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('organizationName')">
+                      <label for="field-organizationName" class="field-label">
+                        <span>{{ langService.t.quotePage.form.organizationName }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-organizationName"
+                        type="text"
+                        formControlName="organizationName"
+                        class="field-input-control"
+                        [placeholder]="langService.t.quotePage.form.organizationNamePlaceholder"
+                        autocomplete="organization" />
+                      @if (isFieldInvalid('organizationName')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.organizationNameRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 2. اسم المسؤول — حقل نصي، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('contactPerson')">
+                      <label for="field-contactPerson" class="field-label">
+                        <span>{{ langService.t.quotePage.form.contactPerson }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-contactPerson"
+                        type="text"
+                        formControlName="contactPerson"
+                        class="field-input-control"
+                        [placeholder]="langService.t.quotePage.form.contactPersonPlaceholder"
+                        autocomplete="name" />
+                      @if (isFieldInvalid('contactPerson')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.contactPersonRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 3. رقم الجوال — حقل هاتف، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('mobileNumber')">
+                      <label for="field-mobileNumber" class="field-label">
+                        <span>{{ langService.t.quotePage.form.mobileNumber }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-mobileNumber"
+                        type="tel"
+                        formControlName="mobileNumber"
+                        class="field-input-control"
+                        dir="ltr"
+                        [placeholder]="langService.t.quotePage.form.mobileNumberPlaceholder"
+                        autocomplete="tel" />
+                      @if (isFieldInvalid('mobileNumber')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.mobileRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 4. البريد الإلكتروني — حقل بريد إلكتروني، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('email')">
+                      <label for="field-email" class="field-label">
+                        <span>{{ langService.t.quotePage.form.email }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-email"
+                        type="email"
+                        formControlName="email"
+                        class="field-input-control"
+                        dir="ltr"
+                        [placeholder]="langService.t.quotePage.form.emailPlaceholder"
+                        autocomplete="email" />
+                      @if (isFieldInvalid('email')) {
+                        <span class="field-error-message">
+                          @if (f['email'].errors?.['required']) {
+                            {{ langService.t.quotePage.form.validation.emailRequired }}
+                          } @else {
+                            {{ langService.t.quotePage.form.validation.emailInvalid }}
+                          }
+                        </span>
+                      }
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ====================================================
+                     GROUP 2: تفاصيل الطلب والمواصفات
+                     ==================================================== -->
+                <div class="form-logical-group">
+                  <div class="group-header-row">
+                    <span class="group-badge-number">02</span>
+                    <h3 class="group-title-text">{{ langService.t.quotePage.form.groups.request }}</h3>
+                    <span class="group-header-line" aria-hidden="true"></span>
+                  </div>
+
+                  <div class="form-fields-grid">
+                    
+                    <!-- 5. نوع الطلب — قائمة اختيار، مطلوبة -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('requestType')">
+                      <label for="field-requestType" class="field-label">
+                        <span>{{ langService.t.quotePage.form.requestType }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <div class="select-field-wrapper">
+                        <select id="field-requestType" formControlName="requestType" class="field-select-control">
+                          <option value="" disabled selected>{{ langService.t.quotePage.form.requestTypePlaceholder }}</option>
+                          @for (opt of langService.t.quotePage.form.requestTypeOptions; track opt) {
+                            <option [value]="opt">{{ opt }}</option>
+                          }
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-chevron-icon" aria-hidden="true"></i>
+                      </div>
+                      @if (isFieldInvalid('requestType')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.requestTypeRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 6. المنتج أو الخدمة المطلوبة — حقل نصي، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('requestedItem')">
+                      <label for="field-requestedItem" class="field-label">
+                        <span>{{ langService.t.quotePage.form.requestedItem }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-requestedItem"
+                        type="text"
+                        formControlName="requestedItem"
+                        class="field-input-control"
+                        [placeholder]="langService.t.quotePage.form.requestedItemPlaceholder" />
+                      @if (isFieldInvalid('requestedItem')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.requestedItemRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 7. الكمية — حقل رقمي، مطلوب (قيمة موجبة) -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('quantity')">
+                      <label for="field-quantity" class="field-label">
+                        <span>{{ langService.t.quotePage.form.quantity }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-quantity"
+                        type="number"
+                        min="1"
+                        formControlName="quantity"
+                        class="field-input-control"
+                        [placeholder]="langService.t.quotePage.form.quantityPlaceholder" />
+                      @if (isFieldInvalid('quantity')) {
+                        <span class="field-error-message">
+                          @if (f['quantity'].errors?.['required']) {
+                            {{ langService.t.quotePage.form.validation.quantityRequired }}
+                          } @else {
+                            {{ langService.t.quotePage.form.validation.quantityPositive }}
+                          }
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 9. الميزانية التقريبية — حقل اختياري -->
+                    <div class="form-group-field">
+                      <label for="field-approximateBudget" class="field-label">
+                        <span>{{ langService.t.quotePage.form.approximateBudget }}</span>
+                        <span class="optional-badge">{{ langService.t.quotePage.form.optionalBadge }}</span>
+                      </label>
+                      <input
+                        id="field-approximateBudget"
+                        type="text"
+                        formControlName="approximateBudget"
+                        class="field-input-control"
+                        [placeholder]="langService.t.quotePage.form.approximateBudgetPlaceholder" />
+                      <span class="field-helper-notice">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <span>{{ langService.t.quotePage.form.budgetNotice }}</span>
+                      </span>
+                    </div>
+
+                    <!-- 8. المواصفات — حقل نصي متعدد الأسطر، مطلوب (عرض كامل) -->
+                    <div class="form-group-field field-span-full" [class.has-field-error]="isFieldInvalid('specifications')">
+                      <label for="field-specifications" class="field-label">
+                        <span>{{ langService.t.quotePage.form.specifications }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <textarea
+                        id="field-specifications"
+                        formControlName="specifications"
+                        class="field-textarea-control"
+                        rows="4"
+                        [placeholder]="langService.t.quotePage.form.specificationsPlaceholder"></textarea>
+                      @if (isFieldInvalid('specifications')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.specificationsRequired }}
+                        </span>
+                      }
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- ====================================================
+                     GROUP 3: موعد الاحتياج والتسليم والتفاصيل الإضافية
+                     ==================================================== -->
+                <div class="form-logical-group">
+                  <div class="group-header-row">
+                    <span class="group-badge-number">03</span>
+                    <h3 class="group-title-text">{{ langService.t.quotePage.form.groups.delivery }}</h3>
+                    <span class="group-header-line" aria-hidden="true"></span>
+                  </div>
+
+                  <div class="form-fields-grid">
+
+                    <!-- 10. موعد الاحتياج — حقل لاختيار التاريخ المطلوب، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('requiredDate')">
+                      <label for="field-requiredDate" class="field-label">
+                        <span>{{ langService.t.quotePage.form.requiredDate }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-requiredDate"
+                        type="date"
+                        formControlName="requiredDate"
+                        class="field-input-control field-date-control"
+                        [placeholder]="langService.t.quotePage.form.requiredDatePlaceholder" />
+                      @if (isFieldInvalid('requiredDate')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.requiredDateRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 11. مدينة التسليم — حقل نصي، مطلوب -->
+                    <div class="form-group-field" [class.has-field-error]="isFieldInvalid('deliveryCity')">
+                      <label for="field-deliveryCity" class="field-label">
+                        <span>{{ langService.t.quotePage.form.deliveryCity }}</span>
+                        <span class="required-indicator" [title]="langService.t.quotePage.form.requiredBadge">*</span>
+                      </label>
+                      <input
+                        id="field-deliveryCity"
+                        type="text"
+                        formControlName="deliveryCity"
+                        class="field-input-control"
+                        [placeholder]="langService.t.quotePage.form.deliveryCityPlaceholder" />
+                      @if (isFieldInvalid('deliveryCity')) {
+                        <span class="field-error-message">
+                          {{ langService.t.quotePage.form.validation.deliveryCityRequired }}
+                        </span>
+                      }
+                    </div>
+
+                    <!-- 12. تفاصيل إضافية — حقل نصي متعدد الأسطر، اختياري (عرض كامل) -->
+                    <div class="form-group-field field-span-full">
+                      <label for="field-additionalDetails" class="field-label">
+                        <span>{{ langService.t.quotePage.form.additionalDetails }}</span>
+                        <span class="optional-badge">{{ langService.t.quotePage.form.optionalBadge }}</span>
+                      </label>
+                      <textarea
+                        id="field-additionalDetails"
+                        formControlName="additionalDetails"
+                        class="field-textarea-control"
+                        rows="3"
+                        [placeholder]="langService.t.quotePage.form.additionalDetailsPlaceholder"></textarea>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Form Action Submit Row -->
+                <div class="form-action-row">
+                  <button
+                    type="submit"
+                    class="editorial-btn-gold quote-submit-button"
+                    [disabled]="isSubmitting">
+                    @if (isSubmitting) {
+                      <i class="fa-solid fa-circle-notch fa-spin"></i>
+                      <span>{{ langService.t.quotePage.form.submittingButton }}</span>
+                    } @else {
+                      <span>{{ langService.t.quotePage.form.submitButton }}</span>
+                      <i class="fa-solid arrow-dynamic"
+                         [class.fa-arrow-left]="langService.currentLang === 'ar'"
+                         [class.fa-arrow-right]="langService.currentLang !== 'ar'"
+                         aria-hidden="true"></i>
+                    }
+                  </button>
+
+                  <span class="form-security-note">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    <span>{{ langService.currentLang === 'ar' ? 'تعامل طلباتكم بسرية مهنية ومواصفات دقيقة' : 'Your requests are handled with strict commercial confidentiality' }}</span>
+                  </span>
+                </div>
+
+              </form>
+            }
+
+          </div>
+        </div>
+
+        <!-- ====================================================
+             COLUMN 2: EXECUTIVE SUPPORTING CONTACT DECK (STICKY)
+             ==================================================== -->
+        <aside class="contact-sidebar-column" aria-labelledby="sidebar-contact-heading">
+          <div class="contact-sidebar-card">
+            
+            <div class="sidebar-header-box">
+              <div class="sidebar-badge-row">
+                <span class="sidebar-gold-emblem">
+                  <i class="fa-solid fa-building-shield"></i>
+                </span>
+                <span class="sidebar-tag-eyebrow">{{ langService.t.quotePage.contactInfo.eyebrow }}</span>
+              </div>
+              <h3 id="sidebar-contact-heading" class="sidebar-title">
+                {{ langService.t.quotePage.contactInfo.title }}
+              </h3>
+              <div class="sidebar-gold-line" aria-hidden="true"></div>
+              <p class="sidebar-summary">
+                {{ langService.t.quotePage.contactInfo.description }}
+              </p>
+            </div>
+
+            <!-- Contact Channels List -->
+            <div class="contact-channels-list">
+              
+              <!-- Primary Phone -->
+              <a href="tel:0533796523" class="contact-channel-item">
+                <div class="channel-icon-pill">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="channel-meta-box">
+                  <span class="channel-label">{{ langService.t.quotePage.contactInfo.labels.phonePrimary }}</span>
+                  <span class="channel-value" dir="ltr">{{ langService.t.quotePage.contactInfo.phonePrimary }}</span>
+                </div>
+                <span class="channel-action-hint">
+                  <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+                </span>
+              </a>
+
+              <!-- Secondary Phone -->
+              <a href="tel:0531660854" class="contact-channel-item">
+                <div class="channel-icon-pill">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="channel-meta-box">
+                  <span class="channel-label">{{ langService.t.quotePage.contactInfo.labels.phoneSecondary }}</span>
+                  <span class="channel-value" dir="ltr">{{ langService.t.quotePage.contactInfo.phoneSecondary }}</span>
+                </div>
+                <span class="channel-action-hint">
+                  <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+                </span>
+              </a>
+
+              <!-- Direct WhatsApp (Highlighted Tile) -->
+              <a href="https://wa.me/966533796523" target="_blank" rel="noopener noreferrer" class="contact-channel-item item-whatsapp">
+                <div class="channel-icon-pill icon-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="channel-meta-box">
+                  <span class="channel-label">{{ langService.t.quotePage.contactInfo.labels.whatsapp }}</span>
+                  <span class="channel-value" dir="ltr">053 379 6523</span>
+                </div>
+                <span class="channel-action-hint whatsapp-hint">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+              </a>
+
+              <!-- Email Address -->
+              <a href="mailto:info@musanidaser.com" class="contact-channel-item">
+                <div class="channel-icon-pill">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="channel-meta-box">
+                  <span class="channel-label">{{ langService.t.quotePage.contactInfo.labels.email }}</span>
+                  <span class="channel-value" dir="ltr">{{ langService.t.quotePage.contactInfo.email }}</span>
+                </div>
+                <span class="channel-action-hint">
+                  <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+                </span>
+              </a>
+
+              <!-- Location / Headquarters -->
+              <div class="contact-channel-item item-static">
+                <div class="channel-icon-pill">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="channel-meta-box">
+                  <span class="channel-label">{{ langService.t.quotePage.contactInfo.labels.location }}</span>
+                  <span class="channel-value">{{ langService.t.quotePage.contactInfo.location }}</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Commercial Registry Institutional Seal -->
+            <div class="sidebar-institutional-seal">
+              <span class="seal-gold-pip" aria-hidden="true"></span>
+              <span class="seal-text-content">
+                {{ langService.currentLang === 'ar' ? 'سجل تجاري سعودي · الرياض' : 'Saudi Commercial Registration – Riyadh' }}
+              </span>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>

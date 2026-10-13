@@ -1,0 +1,45 @@
+<section class="editorial-cinematic-cta">
+  
+  <!-- Directional Cinematic Overlay: Rich Teal on Text Side, Luminous Sunlight on Photography Side -->
+  <div class="cta-cinematic-overlay" aria-hidden="true"></div>
+
+  <div class="editorial-container cta-master-container">
+    <div class="cta-editorial-layout">
+      
+      <!-- Asymmetric Right-Aligned Content Column (Controlled Max-Width) -->
+      <div class="cta-content-column">
+        
+        <!-- Centered Editorial Brand Label with Flanking Gold Lines -->
+        <div class="cta-editorial-label">
+          <span class="cta-gold-line" aria-hidden="true"></span>
+          <span class="cta-label-text">
+            {{ langService.t.cta.label }}
+          </span>
+          <span class="cta-gold-line" aria-hidden="true"></span>
+        </div>
+
+        <!-- Main Heading (White + Gold Hierarchy) -->
+        <h2 class="cta-cinematic-heading">
+          <span class="heading-white-line">{{ langService.t.cta.titleLine1 }}</span>
+          <span class="heading-gold-line">{{ langService.t.cta.titleLine2 }}</span>
+        </h2>
+
+        <!-- Supporting Paragraph (Subtle & Restrained) -->
+        <p class="cta-cinematic-lead">
+          {{ langService.t.cta.description }}
+        </p>
+
+        <!-- Single Refined Action Button -->
+        <div class="cta-action-wrap">
+          <a routerLink="/request-quote" class="cta-btn-gold">
+            <span>{{ langService.t.cta.buttonText }}</span>
+            <i class="fa-solid cta-btn-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>

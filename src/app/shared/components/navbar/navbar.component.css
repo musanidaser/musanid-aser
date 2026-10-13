@@ -1,0 +1,385 @@
+/* ========================================================
+   MUSANED ASER — LIGHT EDITORIAL NAVBAR
+   Brand Identity: Warm Ivory (#F4EFE6) + Deep Teal (#0B4D4D) + Gold (#D4AF37)
+   Standard CSS Only (Zero SCSS)
+   ======================================================== */
+
+:host {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.editorial-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(244, 239, 230, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 4px 20px rgba(31, 31, 31, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* --------------------------------------------------------
+   1. NAVBAR WRAPPER & HEIGHT (76px – 84px)
+   -------------------------------------------------------- */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 32px;
+}
+
+/* --------------------------------------------------------
+   2. BRAND LOGO (Natural on light background, generous breathing room)
+   -------------------------------------------------------- */
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.brand-link:hover .brand-logo-img {
+  transform: scale(1.03);
+}
+
+.brand-name {
+  font-size: 1.38rem;
+  font-weight: 800;
+  color: var(--teal-primary);
+  /* #0B4D4D */
+  letter-spacing: 0.01em;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.brand-link:hover .brand-name {
+  color: var(--charcoal-primary);
+}
+
+/* --------------------------------------------------------
+   3. DESKTOP NAVIGATION HIERARCHY
+   -------------------------------------------------------- */
+.desktop-navigation {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-anchor {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--charcoal-primary);
+  /* #1F1F1F */
+  text-decoration: none;
+  padding: 8px 0;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+/* Subtle, Editorial Gold Active/Hover Underline Indicator */
+.nav-anchor::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 16px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+  /* #D4AF37 */
+  border-radius: 1px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-anchor:hover {
+  color: var(--teal-primary);
+}
+
+.nav-anchor:hover::after,
+.nav-anchor.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-anchor.active {
+  color: var(--teal-primary);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------
+   4. UTILITIES (MINIMALIST AR/EN SWITCHER + ONE SINGLE CTA)
+   -------------------------------------------------------- */
+.nav-utilities {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Minimalist Editorial Language Switcher (Text Control, NOT a CTA) */
+.lang-text-toggle {
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  font-size: 0.84rem;
+  font-family: var(--font-en);
+  font-weight: 600;
+  color: rgba(31, 31, 31, 0.45);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.lang-opt {
+  transition: color 0.2s ease;
+}
+
+.lang-opt.lang-current {
+  color: var(--teal-primary);
+  font-weight: 700;
+}
+
+.lang-divider {
+  color: rgba(31, 31, 31, 0.25);
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0 1px;
+}
+
+.lang-text-toggle:hover .lang-opt:not(.lang-current) {
+  color: var(--gold-primary);
+}
+
+/* The Single Primary CTA: Request a Quote (Refined, Compact, Gold #D4AF37) */
+.editorial-quote-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background-color: var(--gold-primary);
+  /* #D4AF37 */
+  color: #1F1F1F;
+  border: 1px solid #C49F27;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s var(--ease-editorial);
+  white-space: nowrap;
+}
+
+.editorial-quote-cta:hover {
+  background-color: #C59E24;
+  color: #121212;
+  border-color: #B38E1F;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.cta-arrow {
+  font-size: 0.78rem;
+  transition: transform 0.25s ease;
+}
+
+.editorial-quote-cta:hover .cta-arrow {
+  transform: translateX(-3px);
+}
+
+[dir="ltr"] .editorial-quote-cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------
+   5. MOBILE MENU TRIGGER
+   -------------------------------------------------------- */
+.mobile-menu-trigger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid rgba(11, 77, 77, 0.15);
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trigger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--teal-primary);
+  transition: all 0.25s ease;
+}
+
+.mobile-menu-trigger.is-open .trigger-bar:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.mobile-menu-trigger.is-open .trigger-bar:nth-child(2) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------
+   6. MOBILE LIGHT EDITORIAL DRAWER PANEL
+   -------------------------------------------------------- */
+.mobile-light-drawer {
+  background-color: var(--beige-primary);
+  border-top: 1px solid rgba(11, 77, 77, 0.08);
+  box-shadow: 0 16px 28px rgba(31, 31, 31, 0.06);
+  padding: 20px 20px 28px;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.mobile-nav-list a {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+  text-decoration: none;
+  padding: 12px 4px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(11, 77, 77, 0.06);
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-list a.mobile-active {
+  color: var(--teal-primary);
+  border-bottom-color: var(--gold-primary);
+  font-weight: 700;
+}
+
+.mobile-drawer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+.mobile-lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(11, 77, 77, 0.15);
+  border-radius: 4px;
+  padding: 11px 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--charcoal-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+}
+
+.mobile-lang-toggle .active-code {
+  color: var(--teal-primary);
+  font-weight: 700;
+}
+
+.mobile-quote-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  background-color: var(--gold-primary);
+  color: #1F1F1F;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-height: 48px;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+}
+
+/* --------------------------------------------------------
+   7. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .desktop-navigation {
+    display: none;
+  }
+
+  .mobile-menu-trigger {
+    display: flex;
+  }
+
+  .nav-wrapper {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper {
+    height: 70px;
+    gap: 10px;
+  }
+
+  .brand-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+    white-space: nowrap;
+  }
+
+  .editorial-quote-cta {
+    display: none;
+  }
+
+  .lang-text-toggle {
+    font-size: 0.8rem;
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .nav-utilities {
+    gap: 8px;
+  }
+}

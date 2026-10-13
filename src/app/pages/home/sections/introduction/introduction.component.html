@@ -1,0 +1,98 @@
+<section class="editorial-manifesto-section">
+  <!-- Subtle Brand Motif (Faint vector watermark inspired by the logo emblem) -->
+  <div class="manifesto-watermark-motif" aria-hidden="true">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="90" cy="90" r="82" stroke="rgba(212, 175, 55, 0.05)" stroke-width="1.5" />
+      <path d="M46 130C58 72 122 72 134 130" stroke="rgba(11, 77, 77, 0.04)" stroke-width="2" />
+      <path d="M90 36V144" stroke="rgba(212, 175, 55, 0.05)" stroke-width="1" stroke-dasharray="3 3" />
+    </svg>
+  </div>
+
+  <div class="editorial-container manifesto-inner-container">
+
+    <!-- Header Block: Section Label + Editorial Headline -->
+    <header class="manifesto-header">
+
+      <!-- Refined Editorial Label (UI Font + Gold Line) -->
+      <div class="manifesto-label-row">
+        <span class="manifesto-gold-marker"></span>
+        <span class="manifesto-label-text">
+          {{ langService.t.introduction.label }}
+        </span>
+        <span class="manifesto-gold-marker"></span>
+      </div>
+
+      <!-- Statement in Site Font (Almarai) -->
+      <div class="manifesto-statement-wrapper">
+        <h2 class="manifesto-statement-text">
+          {{ langService.t.introduction.statement }}
+        </h2>
+      </div>
+
+    </header>
+
+    <!-- Subtle Editorial Separator (Single delicate hairline) -->
+    <div class="manifesto-separator-line" aria-hidden="true"></div>
+
+    <!-- Three Supporting Principles (Refined Grid with Icons - No Numbers, No Cards) -->
+    <div class="manifesto-principles-grid">
+
+      <!-- Principle 01 -->
+      <article class="principle-item principle-item-first">
+        <div class="principle-icon-anchor">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <h3 class="principle-heading">
+          {{ langService.t.introduction.principles[0].title }}
+        </h3>
+        <p class="principle-desc">
+          {{ langService.t.introduction.principles[0].desc }}
+        </p>
+      </article>
+
+      <!-- Principle 02 -->
+      <article class="principle-item principle-item-second">
+        <div class="principle-icon-anchor">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3 class="principle-heading">
+          {{ langService.t.introduction.principles[1].title }}
+        </h3>
+        <p class="principle-desc">
+          {{ langService.t.introduction.principles[1].desc }}
+        </p>
+      </article>
+
+      <!-- Principle 03 -->
+      <article class="principle-item principle-item-third">
+        <div class="principle-icon-anchor">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="principle-heading">
+          {{ langService.t.introduction.principles[2].title }}
+        </h3>
+        <p class="principle-desc">
+          {{ langService.t.introduction.principles[2].desc }}
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Editorial Footer Link (Positioned on the Opposite Side) -->
+    <div class="manifesto-footer-link-wrap">
+      <a routerLink="/about" class="manifesto-editorial-link">
+        <div class="link-content-row">
+          <span class="link-label">
+            {{ langService.t.introduction.linkText }}
+          </span>
+          <span class="link-arrow-box" aria-hidden="true">
+            <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'"
+              [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+          </span>
+        </div>
+        <div class="link-gold-rule" aria-hidden="true"></div>
+      </a>
+    </div>
+
+  </div>
+</section>

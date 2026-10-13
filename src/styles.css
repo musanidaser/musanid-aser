@@ -1,0 +1,278 @@
+/* ========================================================
+   MUSANED ASER — EDITORIAL BRAND DESIGN SYSTEM
+   Standard CSS Only (Zero SCSS / Zero SASS)
+   Brand Reference: Deep Teal (#0B4D4D), Gold (#D4AF37), Beige (#F4EFE6), Charcoal (#1F1F1F)
+   Style: Art-directed, Architectural, Editorial Corporate
+   ======================================================== */
+
+:root {
+  /* Primary Brand Palette */
+  --teal-primary: #0B4D4D;
+  --teal-deep: #062828;
+  --teal-dark: #083838;
+  --teal-medium: #0E5E5E;
+  --teal-light: #167474;
+  --teal-subtle: rgba(11, 77, 77, 0.05);
+
+  --gold-primary: #D4AF37;
+  --gold-light: #E8C86A;
+  --gold-dark: #B38E22;
+  --gold-hairline: rgba(212, 175, 55, 0.35);
+  --gold-subtle: rgba(212, 175, 55, 0.08);
+
+  --beige-primary: #F4EFE6;
+  --beige-light: #FAF7F2;
+  --beige-surface: #F5EFE6;
+  --beige-line: rgba(212, 175, 55, 0.2);
+
+  --charcoal-primary: #1F1F1F;
+  --charcoal-dark: #121212;
+  --charcoal-muted: #374151;
+  --charcoal-light: #4B5563;
+
+  --color-white: #FFFFFF;
+
+  /* Typography (Unified Single Font: IBM Plex Sans Arabic) */
+  --font-ar: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-en: 'IBM Plex Sans Arabic', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Editorial Layout Grid */
+  --site-max-width: 1360px;
+  --section-pad-y: 130px;
+  --section-pad-y-sm: 80px;
+
+  /* Editorial Lines (Replacing Cards & Box Shadows) */
+  --hairline-dark: 1px solid rgba(31, 31, 31, 0.1);
+  --hairline-gold: 1px solid rgba(212, 175, 55, 0.35);
+  --hairline-teal: 1px solid rgba(11, 77, 77, 0.14);
+  --hairline-light: 1px solid rgba(255, 255, 255, 0.15);
+
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--beige-light);
+  color: var(--charcoal-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  overflow-x: clip;
+  font-family: var(--font-ar);
+  background-color: var(--beige-light);
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-ar);
+}
+
+[dir="ltr"] body {
+  font-family: var(--font-en);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-editorial);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.3s var(--ease-editorial);
+}
+
+/* Master Editorial Container */
+.editorial-container {
+  width: 100%;
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+@media (max-width: 768px) {
+  .editorial-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Editorial Monogram / Category Header */
+.editorial-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 24px;
+}
+
+.editorial-meta-line {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--gold-primary);
+}
+
+/* Primary Architectural Action Button */
+.editorial-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background-color: var(--teal-primary);
+  color: #FFFFFF;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  border: 1px solid var(--teal-primary);
+  transition: all 0.35s var(--ease-editorial);
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-btn-primary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gold-primary);
+}
+
+.editorial-btn-primary:hover {
+  background-color: var(--teal-deep);
+  border-color: var(--teal-deep);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* Gold Button on Dark Teal Surfaces */
+.editorial-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background-color: var(--gold-primary);
+  color: #FFFFFF;
+  padding: 18px 42px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+  border: 1px solid var(--gold-primary);
+  transition: all 0.35s var(--ease-editorial);
+}
+
+.editorial-btn-gold:hover {
+  background-color: var(--gold-dark);
+  border-color: var(--gold-dark);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+/* Understated Link Button */
+.editorial-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--charcoal-primary);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gold-primary);
+  transition: all 0.3s ease;
+}
+
+.editorial-btn-ghost:hover {
+  color: var(--teal-primary);
+  border-bottom-color: var(--teal-primary);
+}
+
+/* Delicate Gold Hairline Dividers */
+.hairline-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+  margin: 0;
+}
+
+.main-content {
+  min-height: calc(100vh - 280px);
+}
+
+/* Mobile Viewport Safety & Scroll Margins - Preserves sticky navbar */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+app-root {
+  display: block;
+}
+
+app-navbar {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+app-hero,
+app-introduction,
+app-services-preview,
+app-sectors-preview,
+app-why-us,
+app-process,
+app-quote-cta,
+.site-footer {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 640px) {
+  app-hero,
+  app-introduction,
+  app-services-preview,
+  app-sectors-preview,
+  app-why-us,
+  app-process,
+  app-quote-cta,
+  .site-footer {
+    scroll-margin-top: 72px;
+  }
+}

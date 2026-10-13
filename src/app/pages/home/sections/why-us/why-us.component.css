@@ -1,0 +1,333 @@
+/* ========================================================
+   MUSANED ASER — EDITORIAL STANDARDS / QUALITY COMPONENT
+   Standard CSS Only (Zero SCSS)
+   Refined Warm Ivory Ground (#F7F3EA) + 4-Column Architectural Grid
+   Unified Typography: IBM Plex Sans Arabic
+   ======================================================== */
+
+.editorial-standards-section {
+  background-color: #F7F3EA; /* Refined Warm Ivory Neutral */
+  color: var(--charcoal-primary);
+  padding: 110px 0 100px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(11, 77, 77, 0.08);
+}
+
+/* Master Contained Width — inherits .editorial-container */
+.standards-inner-container {
+  position: relative;
+}
+
+/* --------------------------------------------------------
+   1. SECTION HEADER (MEASURED & RESTRAINED)
+   -------------------------------------------------------- */
+.standards-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.standards-label-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.standards-gold-marker {
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+  display: inline-block;
+}
+
+.standards-label-text {
+  font-family: var(--font-ar);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+
+[dir="ltr"] .standards-label-text {
+  letter-spacing: 0.16em;
+}
+
+/* Monumental Headline in IBM Plex Sans Arabic (Weight: 700) */
+.standards-heading {
+  font-family: var(--font-ar);
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--teal-primary);
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+}
+
+[dir="ltr"] .standards-heading {
+  font-size: 2.1rem;
+  line-height: 1.35;
+}
+
+.gold-accent-text {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+/* Supporting Paragraph (Weight: 400) */
+.standards-lead-text {
+  font-family: var(--font-ar);
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #4A5558;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+[dir="ltr"] .standards-lead-text {
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* Refined Trust Statement Signature */
+.standards-trust-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 22px;
+  margin-top: 26px;
+  background-color: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 3px;
+}
+
+.trust-seal-icon {
+  color: var(--gold-dark);
+  font-size: 1.05rem;
+}
+
+.trust-seal-text {
+  font-family: var(--font-ar);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--teal-primary);
+  letter-spacing: 0.02em;
+}
+
+[dir="ltr"] .trust-seal-text {
+  font-size: 0.84rem;
+}
+
+/* --------------------------------------------------------
+   2. ARCHITECTURAL CONNECTOR LINE
+   -------------------------------------------------------- */
+.standards-divider-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 77, 77, 0.04) 0%,
+    rgba(212, 175, 55, 0.4) 30%,
+    rgba(212, 175, 55, 0.4) 70%,
+    rgba(11, 77, 77, 0.04) 100%
+  );
+  margin: 48px 0 52px;
+}
+
+/* --------------------------------------------------------
+   3. FOUR DISTINCT EDITORIAL STANDARDS CARDS
+   Framed Executive Panels (Unique from Process Journey)
+   -------------------------------------------------------- */
+.standards-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Framed Executive Card */
+.standard-editorial-card {
+  background-color: #FFFDF8; /* Refined off-white ground */
+  border: 1px solid rgba(11, 77, 77, 0.12);
+  border-top: 3px solid var(--teal-primary); /* Executive top accent bar */
+  border-radius: 4px;
+  padding: 34px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(11, 77, 77, 0.03);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.standard-editorial-card:hover {
+  transform: translateY(-4px);
+  border-top-color: #D4AF37;
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 14px 34px rgba(11, 77, 77, 0.08);
+}
+
+/* Card Header: Badge & Icon */
+.standard-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.standard-card-num {
+  font-family: var(--font-en);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #D4AF37; /* Editorial Gold */
+  line-height: 1;
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease;
+}
+
+.standard-editorial-card:hover .standard-card-num {
+  color: #B89325;
+}
+
+.standard-card-icon {
+  font-size: 1.75rem;
+  color: var(--teal-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.standard-editorial-card:hover .standard-card-icon {
+  color: #D4AF37;
+  transform: scale(1.08);
+}
+
+/* Crisp Internal Hairline */
+.standard-card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(11, 77, 77, 0.08);
+  margin: 18px 0 20px;
+}
+
+/* Card Title */
+.standard-card-title {
+  font-family: var(--font-ar);
+  font-size: 1.14rem;
+  font-weight: 600;
+  color: var(--teal-primary);
+  line-height: 1.5;
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+  text-align: right;
+  min-height: 3.35em; /* Architectural rhythm */
+  transition: color 0.3s ease;
+}
+
+[dir="ltr"] .standard-card-title {
+  text-align: left;
+  font-size: 1.06rem;
+  line-height: 1.42;
+}
+
+.standard-editorial-card:hover .standard-card-title {
+  color: var(--teal-deep);
+}
+
+/* Card Description */
+.standard-card-desc {
+  font-family: var(--font-ar);
+  font-size: 0.90rem;
+  font-weight: 400;
+  line-height: 1.82;
+  color: #4F595E;
+  margin: 0;
+  text-align: right;
+  flex-grow: 1;
+}
+
+[dir="ltr"] .standard-card-desc {
+  text-align: left;
+  font-size: 0.86rem;
+  line-height: 1.72;
+}
+
+/* --------------------------------------------------------
+   4. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .standards-editorial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .standard-card-title {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .editorial-standards-section {
+    padding: 60px 0 52px;
+  }
+
+  .standards-heading {
+    font-size: clamp(1.48rem, 5vw, 1.75rem);
+    line-height: 1.38;
+  }
+
+  [dir="ltr"] .standards-heading {
+    font-size: clamp(1.35rem, 4.5vw, 1.55rem);
+  }
+
+  .standards-lead-text {
+    font-size: 0.90rem;
+    line-height: 1.72;
+  }
+
+  .standards-trust-seal {
+    padding: 8px 14px;
+    margin-top: 18px;
+    font-size: 0.82rem;
+  }
+
+  .standards-divider-line {
+    margin: 30px 0;
+  }
+
+  .standards-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .standard-editorial-card {
+    padding: 24px 18px 20px;
+  }
+
+  .standard-card-title {
+    font-size: 1.05rem;
+    min-height: auto;
+    margin-bottom: 10px;
+  }
+
+  .standard-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 380px) {
+  .standard-editorial-card {
+    padding: 20px 15px 18px;
+  }
+
+  .standard-card-title {
+    font-size: 0.98rem;
+  }
+}

@@ -1,0 +1,59 @@
+/* ========================================================
+   WHATSAPP FLOATING BUTTON STYLES
+   Standard CSS Only (Zero SCSS)
+   ======================================================== */
+
+.whatsapp-floating-action {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+  border: 2px solid #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+[dir="rtl"] .whatsapp-floating-action {
+  right: auto;
+  left: 26px;
+}
+
+.whatsapp-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.whatsapp-floating-action:hover {
+  background-color: #20BA5A;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.55);
+  color: #FFFFFF;
+}
+
+@media (max-width: 640px) {
+  .whatsapp-floating-action {
+    bottom: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+  }
+
+  [dir="rtl"] .whatsapp-floating-action {
+    left: 18px;
+    right: auto;
+  }
+
+  .whatsapp-icon {
+    font-size: 23px;
+  }
+}
+

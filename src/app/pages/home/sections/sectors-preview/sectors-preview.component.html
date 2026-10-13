@@ -1,0 +1,112 @@
+<section class="editorial-sectors-section">
+  <div class="editorial-container sectors-inner-container">
+
+    <!-- Section Header (Balanced Editorial Header) -->
+    <header class="sectors-header">
+      
+      <div class="sectors-header-content">
+        <!-- Small Section Label -->
+        <div class="sectors-label-row">
+          <span class="sectors-gold-marker"></span>
+          <span class="sectors-label-text">
+            {{ langService.t.sectors.label }}
+          </span>
+          <span class="sectors-gold-marker"></span>
+        </div>
+
+        <!-- Main Heading in Unified IBM Plex Sans Arabic -->
+        <h2 class="sectors-heading">
+          {{ langService.t.sectors.title }}
+        </h2>
+      </div>
+
+      <!-- Supporting Paragraph -->
+      <div class="sectors-header-desc">
+        <p class="sectors-lead-text">
+          {{ langService.t.sectors.description }}
+        </p>
+      </div>
+
+    </header>
+
+    <!-- Asymmetrical Editorial Composition (Distinct from Services) -->
+    <div class="sectors-asymmetric-layout">
+
+      <!-- Dominant Large Visual Block (01 — الشركات والمؤسسات) -->
+      @let primary = langService.t.sectors.items[primarySectorMeta.index];
+      <article class="sector-block-dominant">
+        <a routerLink="/sectors" class="sector-block-link" [attr.aria-label]="primary.title">
+          
+          <div class="sector-media-frame">
+            <img [src]="primarySectorMeta.image" [alt]="primary.title" class="sector-block-img" loading="lazy" />
+            <div class="sector-scrim-overlay" aria-hidden="true"></div>
+          </div>
+
+          <div class="sector-block-content dominant-content">
+            
+            <div class="sector-num-row">
+              <span class="sector-num-tag">{{ primary.num }}</span>
+              <span class="sector-num-gold-rule"></span>
+            </div>
+
+            <h3 class="sector-block-title dominant-title">
+              {{ primary.title }}
+            </h3>
+
+            <p class="sector-block-desc dominant-desc">
+              {{ primary.desc }}
+            </p>
+          </div>
+
+        </a>
+      </article>
+
+      <!-- Two Stacked Secondary Visual Blocks (02 & 03) -->
+      <div class="sectors-stacked-column">
+        @for (meta of secondarySectorsMeta; track meta.index) {
+          @let item = langService.t.sectors.items[meta.index];
+          <article class="sector-block-secondary">
+            <a routerLink="/sectors" class="sector-block-link" [attr.aria-label]="item.title">
+
+              <div class="sector-media-frame">
+                <img [src]="meta.image" [alt]="item.title" class="sector-block-img" loading="lazy" />
+                <div class="sector-scrim-overlay" aria-hidden="true"></div>
+              </div>
+
+              <div class="sector-block-content secondary-content">
+                
+                <div class="sector-num-row">
+                  <span class="sector-num-tag">{{ item.num }}</span>
+                  <span class="sector-num-gold-rule"></span>
+                </div>
+
+                <h3 class="sector-block-title secondary-title">
+                  {{ item.title }}
+                </h3>
+
+                <p class="sector-block-desc secondary-desc">
+                  {{ item.desc }}
+                </p>
+              </div>
+
+            </a>
+          </article>
+        }
+      </div>
+
+    </div>
+
+    <!-- Final Section Editorial CTA -->
+    <div class="sectors-bottom-cta-wrap">
+      <a routerLink="/sectors" class="sectors-master-cta">
+        <span class="cta-label">
+          {{ langService.t.sectors.viewAll }}
+        </span>
+        <span class="cta-arrow" aria-hidden="true">
+          <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+        </span>
+      </a>
+    </div>
+
+  </div>
+</section>

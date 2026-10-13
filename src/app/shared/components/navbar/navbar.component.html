@@ -1,0 +1,97 @@
+<header class="editorial-header">
+  <div class="editorial-container nav-wrapper">
+
+    <!-- Brand Logo -->
+    <a routerLink="/" class="brand-link" (click)="closeMenu()">
+      <img src="/logo.png" alt="مؤسسة مساند آسر للإمداد والوساطة التجارية | Musanid Aser" class="brand-logo-img" />
+      <span class="brand-name">
+        {{ langService.t.meta.companyName }}
+      </span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-navigation" aria-label="Main Navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-anchor">
+        {{ langService.t.nav.home }}
+      </a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-anchor">
+        {{ langService.t.nav.about }}
+      </a>
+      <a routerLink="/services" routerLinkActive="active" class="nav-anchor">
+        {{ langService.t.nav.services }}
+      </a>
+      <a routerLink="/sectors" routerLinkActive="active" class="nav-anchor">
+        {{ langService.t.nav.sectors }}
+      </a>
+      <a routerLink="/request-quote" routerLinkActive="active" class="nav-anchor">
+        {{ langService.t.nav.quote }}
+      </a>
+    </nav>
+
+    <!-- Utilities: Minimalist Language Switcher + The Single Primary CTA -->
+    <div class="nav-utilities">
+
+      <!-- Editorial Minimalist Language Switcher (Text Control, NOT a CTA) -->
+      <button type="button" (click)="langService.toggleLanguage()" class="lang-text-toggle"
+        [attr.aria-label]="langService.t.nav.switchLang">
+        <span class="lang-opt" [class.lang-current]="langService.currentLang === 'ar'">AR</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-opt" [class.lang-current]="langService.currentLang === 'en'">EN</span>
+      </button>
+
+      <!-- The Single CTA: Request a Quote (Gold #D4AF37 on #1F1F1F) -->
+      <a routerLink="/request-quote" class="editorial-quote-cta">
+        <span>{{ langService.t.nav.quote }}</span>
+        <i class="fa-solid cta-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'"
+          [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+      </a>
+
+      <!-- Minimalist Mobile Menu Trigger -->
+      <button type="button" class="mobile-menu-trigger" (click)="toggleMenu()" [class.is-open]="isMenuOpen"
+        [attr.aria-label]="isMenuOpen ? 'Close navigation' : 'Open navigation'">
+        <span class="trigger-bar"></span>
+        <span class="trigger-bar"></span>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Light Editorial Drawer Panel -->
+  @if (isMenuOpen) {
+  <div class="mobile-light-drawer">
+    <nav class="mobile-nav-list">
+      <a routerLink="/" (click)="closeMenu()" routerLinkActive="mobile-active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        {{ langService.t.nav.home }}
+      </a>
+      <a routerLink="/about" (click)="closeMenu()" routerLinkActive="mobile-active">
+        {{ langService.t.nav.about }}
+      </a>
+      <a routerLink="/services" (click)="closeMenu()" routerLinkActive="mobile-active">
+        {{ langService.t.nav.services }}
+      </a>
+      <a routerLink="/sectors" (click)="closeMenu()" routerLinkActive="mobile-active">
+        {{ langService.t.nav.sectors }}
+      </a>
+      <a routerLink="/request-quote" (click)="closeMenu()" routerLinkActive="mobile-active">
+        {{ langService.t.nav.quote }}
+      </a>
+    </nav>
+
+    <div class="mobile-drawer-bottom">
+      <button type="button" (click)="langService.toggleLanguage(); closeMenu()" class="mobile-lang-toggle">
+        <span [class.active-code]="langService.currentLang === 'ar'">العربية</span>
+        <span class="lang-slash">/</span>
+        <span [class.active-code]="langService.currentLang === 'en'">English</span>
+      </button>
+
+      <a routerLink="/request-quote" (click)="closeMenu()" class="mobile-quote-cta">
+        <span>{{ langService.t.nav.quote }}</span>
+        <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'"
+          [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+      </a>
+    </div>
+  </div>
+  }
+</header>

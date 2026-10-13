@@ -1,0 +1,159 @@
+<footer class="site-footer">
+  <div class="editorial-container footer-container">
+
+    <div class="footer-grid">
+
+      <!-- Brand & Summary Col -->
+      <div class="footer-col footer-brand-col">
+        <a routerLink="/" class="footer-brand-link">
+          <img src="/logo.png" alt="مؤسسة مساند آسر للإمداد والوساطة التجارية | Musanid Aser" class="footer-logo-img" />
+          <div class="footer-brand-title">
+            <span class="brand-ar">{{ langService.t.meta.companyName }}</span>
+            <span class="brand-desc">{{ langService.t.footer.brandDesc }}</span>
+          </div>
+        </a>
+
+        <p class="footer-mission">
+          {{ langService.t.footer.mission }}
+        </p>
+      </div>
+
+      <!-- Quick Navigation Col -->
+      <div class="footer-col">
+        <h4 class="footer-heading">
+          {{ langService.t.footer.navHeading }}
+        </h4>
+        <div class="footer-gold-bar"></div>
+        <ul class="footer-nav-list">
+          <li>
+            <a routerLink="/">
+              <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
+              <span>{{ langService.t.nav.home }}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/about">
+              <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
+              <span>{{ langService.t.nav.about }}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/services">
+              <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
+              <span>{{ langService.t.nav.services }}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/sectors">
+              <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
+              <span>{{ langService.t.nav.sectors }}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/request-quote" class="quote-nav-link">
+              <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
+              <span>{{ langService.t.nav.quote }}</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/privacy">
+              <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
+              <span>{{ langService.t.footer.privacyPolicy }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services List Col -->
+      <div class="footer-col">
+        <h4 class="footer-heading">
+          {{ langService.t.footer.servicesHeading }}
+        </h4>
+        <div class="footer-gold-bar"></div>
+        <ul class="footer-services-list">
+          @for (service of langService.t.services.items; track service.id) {
+          <li>
+            <a routerLink="/services">
+              <i class="fa-solid fa-angle-left footer-service-bullet"></i>
+              <span>{{ service.title }}</span>
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Direct Contact Channels Col -->
+      <div class="footer-col">
+        <h4 class="footer-heading">
+          {{ langService.t.footer.contactHeading }}
+        </h4>
+        <div class="footer-gold-bar"></div>
+
+        <div class="footer-contact-items">
+          <!-- Primary Number: Call + WhatsApp -->
+          <div class="contact-item">
+            <span class="c-label">{{ langService.t.footer.primaryPhoneLabel }}</span>
+            <div class="c-dual-actions">
+              <a href="tel:+966533796523" class="c-val" [title]="langService.currentLang === 'ar' ? 'اتصال هاتفي' : 'Phone Call'">
+                <i class="fa-solid fa-phone c-icon"></i>
+                <span class="c-val-content" dir="ltr">053 379 6523</span>
+              </a>
+              <a href="https://wa.me/966533796523" target="_blank" rel="noopener noreferrer" class="c-val wa-link c-wa-badge" [title]="langService.currentLang === 'ar' ? 'مراسلة واتساب' : 'WhatsApp Chat'">
+                <i class="fa-brands fa-whatsapp c-icon"></i>
+                <span class="wa-badge-text">{{ langService.currentLang === 'ar' ? 'واتساب' : 'WhatsApp' }}</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Secondary Number: Call + WhatsApp -->
+          <div class="contact-item">
+            <span class="c-label">{{ langService.t.footer.secondaryPhoneLabel }}</span>
+            <div class="c-dual-actions">
+              <a href="tel:+966531660854" class="c-val" [title]="langService.currentLang === 'ar' ? 'اتصال هاتفي' : 'Phone Call'">
+                <i class="fa-solid fa-phone c-icon"></i>
+                <span class="c-val-content" dir="ltr">053 166 0854</span>
+              </a>
+              <a href="https://wa.me/966531660854" target="_blank" rel="noopener noreferrer" class="c-val wa-link c-wa-badge" [title]="langService.currentLang === 'ar' ? 'مراسلة واتساب' : 'WhatsApp Chat'">
+                <i class="fa-brands fa-whatsapp c-icon"></i>
+                <span class="wa-badge-text">{{ langService.currentLang === 'ar' ? 'واتساب' : 'WhatsApp' }}</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Official Email -->
+          <div class="contact-item">
+            <span class="c-label">{{ langService.t.footer.emailLabel }}</span>
+            <a href="mailto:info@musanidaser.com" class="c-val">
+              <i class="fa-solid fa-envelope c-icon"></i>
+              <span class="c-val-content" dir="ltr">{{ langService.t.meta.email }}</span>
+            </a>
+          </div>
+
+          <!-- Location -->
+          <div class="contact-item">
+            <span class="c-label">{{ langService.t.footer.locationLabel }}</span>
+            <span class="c-val-text">
+              <i class="fa-solid fa-location-dot c-icon"></i>
+              <span class="c-val-content">{{ langService.t.meta.location }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <p class="copyright-text">
+        &copy; {{ currentYear }} {{ langService.t.meta.companyFullName }}. {{ langService.t.footer.rights }}
+      </p>
+      <div class="footer-legal-links">
+        <a routerLink="/privacy" class="footer-legal-link">
+          <i class="fa-solid fa-shield-halved footer-legal-icon"></i>
+          <span>{{ langService.t.footer.privacyPolicy }}</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>

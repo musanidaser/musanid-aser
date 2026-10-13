@@ -1,0 +1,479 @@
+<div class="about-page-wrapper">
+
+  <!-- ========================================================
+       1. UNIFIED INTERNAL HERO — ABOUT US
+       Full-Bleed Cinematic Photography + Pure Black Scrim
+       Centered Editorial Axis · No CTA (Clean & Confident)
+       ======================================================== -->
+  <app-internal-hero
+    bgImage="/about-hero.jpg"
+    [eyebrow]="langService.t.about.hero.eyebrow"
+    [title]="langService.t.about.hero.title"
+    [description]="langService.t.about.hero.description"
+    [ctaText]="langService.t.about.hero.ctaVision"
+    ctaLink="#about-vision"
+    [imageAlt]="langService.t.about.hero.title">
+  </app-internal-hero>
+
+  <!-- ========================================================
+       2. FOUNDATION — من نحن (Preserved Successful Section)
+       Statement Anchor + Bespoke Corporate Headquarters Image
+       ======================================================== -->
+  <section class="foundation-signature-section" aria-labelledby="foundation-statement-anchor">
+    
+    <div class="foundation-ambient-glow" aria-hidden="true"></div>
+
+    <div class="editorial-container">
+      
+      <!-- Section Label Row -->
+      <div class="section-label-row">
+        <span class="gold-lead-line" aria-hidden="true"></span>
+        <span class="section-label-text">{{ langService.t.about.foundation.eyebrow }}</span>
+        <span class="gold-lead-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="foundation-layout-grid">
+        
+        <!-- Left/Copy Column: Statement & Institutional Narrative -->
+        <div class="foundation-text-column">
+          
+          <div class="foundation-statement-box">
+            <div class="statement-accent-bar" aria-hidden="true"></div>
+            <h2 id="foundation-statement-anchor" class="foundation-signature-statement">
+              {{ langService.t.about.foundation.statement }}
+            </h2>
+          </div>
+
+          <div class="foundation-narrative-flow">
+            <p class="narrative-lead-paragraph">
+              {{ langService.t.about.foundation.p1 }}
+            </p>
+            <div class="narrative-hairline-sep" aria-hidden="true"></div>
+            <p class="narrative-body-paragraph">
+              {{ langService.t.about.foundation.p2 }}
+            </p>
+            <p class="narrative-body-paragraph">
+              {{ langService.t.about.foundation.p3 }}
+            </p>
+          </div>
+
+          <!-- Trust Seal Bar -->
+          <div class="foundation-trust-seal">
+            <i class="fa-solid fa-shield-halved trust-seal-icon" aria-hidden="true"></i>
+            <span class="trust-seal-text">
+              {{ langService.currentLang === 'ar' ? 'منهجية عمل مهنية ومنظمة ترتكز على الشفافية والدقة في كافة مراحل التوريد والوساطة التجارية' : 'Structured professional methodology built on transparency and precision across all supply and brokerage phases' }}
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right/Image Column: Bespoke Riyadh Headquarters Photography -->
+        <div class="foundation-visual-column">
+          <div class="executive-image-card">
+            
+            <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+            <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+            <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+            <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+
+            <div class="image-viewport">
+              <img src="/about-foundation.jpg"
+                   [alt]="langService.t.meta.companyFullName"
+                   class="executive-image" />
+              <div class="image-gradient-veil" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating Executive Stamp Badge -->
+            <div class="floating-executive-badge">
+              <div class="badge-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-landmark"></i>
+              </div>
+              <div class="badge-text-wrap">
+                <span class="badge-title">{{ langService.t.meta.companyName }}</span>
+                <span class="badge-subtitle">{{ langService.currentLang === 'ar' ? 'الرياض · المملكة العربية السعودية' : 'Riyadh · Kingdom of Saudi Arabia' }}</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. VISION (Brand Manifesto — Upgraded Architectural Background)
+       Deep Teal #063A3A base with extremely subtle architectural linework
+       ======================================================== -->
+  <section id="about-vision" class="vision-manifesto-section" aria-labelledby="vision-heading">
+    
+    <!-- Sophisticated Subtle Architectural Linework & Tonal Shapes (No Glow, No Gradients) -->
+    <div class="vision-architectural-backdrop" aria-hidden="true">
+      <div class="vision-tonal-block-left"></div>
+      <div class="vision-tonal-block-right"></div>
+      <svg class="vision-linework-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="600" cy="300" r="420" stroke="#FFFFFF" stroke-width="1" opacity="0.035" />
+        <circle cx="600" cy="300" r="280" stroke="#D4AF37" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.06" />
+        <line x1="600" y1="0" x2="600" y2="600" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="6 12" opacity="0.03" />
+        <line x1="100" y1="300" x2="1100" y2="300" stroke="#D4AF37" stroke-width="0.8" opacity="0.06" />
+        <path d="M380 480 L600 120 L820 480" stroke="#D4AF37" stroke-width="1" opacity="0.05" />
+      </svg>
+      <div class="vision-horizontal-datum"></div>
+    </div>
+
+    <div class="editorial-container vision-inner-container">
+      
+      <!-- Eyebrow with Gold Leadlines -->
+      <div class="vision-meta-header">
+        <span class="vision-leadline" aria-hidden="true"></span>
+        <span class="vision-pill-label">{{ langService.t.about.vision.label }}</span>
+        <span class="vision-leadline" aria-hidden="true"></span>
+      </div>
+
+      <!-- Section Title -->
+      <h2 class="vision-section-subhead">
+        {{ langService.t.about.vision.title }}
+      </h2>
+
+      <!-- Monumental Quote Statement -->
+      <blockquote id="vision-heading" class="vision-monumental-quote">
+        “{{ langService.t.about.vision.statement }}”
+      </blockquote>
+
+      <!-- Minimal Gold Hairline Divider -->
+      <div class="vision-center-hairline" aria-hidden="true">
+        <span class="hairline-segment"></span>
+        <span class="hairline-diamond"></span>
+        <span class="hairline-segment"></span>
+      </div>
+
+      <!-- Supporting Editorial Subtext -->
+      <p class="vision-grounding-subtext">
+        {{ langService.t.about.vision.note }}
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. MISSION (Preserved Successful Section)
+       Narrative + Strategic Boardroom Photography
+       ======================================================== -->
+  <section class="mission-editorial-section" aria-labelledby="mission-heading">
+    
+    <div class="mission-ambient-glow" aria-hidden="true"></div>
+
+    <div class="editorial-container">
+      
+      <!-- Section Label Row -->
+      <div class="section-label-row">
+        <span class="gold-lead-line" aria-hidden="true"></span>
+        <span class="section-label-text">{{ langService.t.about.mission.label }}</span>
+        <span class="gold-lead-line" aria-hidden="true"></span>
+      </div>
+
+      <!-- Dominant Display Headline -->
+      <h2 id="mission-heading" class="mission-dominant-headline">
+        {{ langService.t.about.mission.statement }}
+      </h2>
+
+      <div class="mission-layout-grid">
+        
+        <!-- Left: Supporting Text & Key Value Indicators -->
+        <div class="mission-narrative-column">
+          
+          <div class="mission-statement-card">
+            <div class="statement-accent-bar" aria-hidden="true"></div>
+            <p class="mission-detailed-text">
+              {{ langService.t.about.mission.description }}
+            </p>
+          </div>
+
+          <!-- Value Indicators Row with Font Awesome Icons -->
+          <div class="mission-indicators-list">
+            
+            <div class="mission-indicator-item">
+              <div class="indicator-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <div class="indicator-content">
+                <h3 class="indicator-title">{{ langService.currentLang === 'ar' ? 'استقطاب الموردين المؤهلين' : 'Sourcing Qualified Suppliers' }}</h3>
+                <p class="indicator-desc">{{ langService.currentLang === 'ar' ? 'بحث دقيق ومطابقة للمواصفات الفنية المطلوبة' : 'Meticulous sourcing and verification of technical specifications' }}</p>
+              </div>
+            </div>
+
+            <div class="mission-indicator-item">
+              <div class="indicator-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <div class="indicator-content">
+                <h3 class="indicator-title">{{ langService.currentLang === 'ar' ? 'تحليل ومقارنة عروض الأسعار' : 'Quotation Analysis & Comparison' }}</h3>
+                <p class="indicator-desc">{{ langService.currentLang === 'ar' ? 'مقارنات موضوعية متكاملة تحقق التوازن بين التكلفة والجودة' : 'Objective comparisons balancing cost, timeline, and quality' }}</p>
+              </div>
+            </div>
+
+            <div class="mission-indicator-item">
+              <div class="indicator-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <div class="indicator-content">
+                <h3 class="indicator-title">{{ langService.currentLang === 'ar' ? 'التنسيق والمتابعة المسؤولة' : 'Diligent Coordination & Follow-up' }}</h3>
+                <p class="indicator-desc">{{ langService.currentLang === 'ar' ? 'إشراف وتنسيق مستمر يضمن سلاسة التنفيذ وموثوقية التسليم' : 'Continuous follow-up ensuring seamless execution and delivery' }}</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right: Bespoke Corporate Strategic Boardroom Photography -->
+        <div class="mission-visual-column">
+          <div class="executive-image-card">
+            
+            <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+            <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+            <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+            <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+
+            <div class="image-viewport">
+              <img src="/about-mission.jpg"
+                   [alt]="langService.currentLang === 'ar' ? 'جلسات التخطيط الاستراتيجي للإمداد والوساطة التجارية' : 'Strategic Supply Planning Sessions'"
+                   class="executive-image" />
+              <div class="image-gradient-veil" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating Strategic Badge -->
+            <div class="floating-executive-badge">
+              <div class="badge-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <div class="badge-text-wrap">
+                <span class="badge-title">{{ langService.currentLang === 'ar' ? 'مساندة الأعمال والمشروعات' : 'Supporting Enterprises & Projects' }}</span>
+                <span class="badge-subtitle">{{ langService.currentLang === 'ar' ? 'حلول توريد منظمة ومرنة' : 'Structured & Agile Procurement Solutions' }}</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. PURPOSE (Preserved Successful Section)
+       Architectural Deep Teal Vertical Strip + Monumental Statement
+       ======================================================== -->
+  <!-- ========================================================
+       5. PURPOSE (Monumental Executive Purpose Sanctuary)
+       Enclosed Deep Teal Architectural Plaque with Gold Accents
+       ======================================================== -->
+  <section class="purpose-monumental-section" aria-labelledby="purpose-heading">
+    <div class="editorial-container">
+      
+      <div class="purpose-executive-card">
+        <!-- Corner Gold Ticks -->
+        <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+        <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+        <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+        <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+
+        <!-- Subtle Inner Frame Hairline -->
+        <div class="purpose-inner-frame" aria-hidden="true"></div>
+
+        <div class="purpose-card-content">
+          
+          <!-- Top Row: Label Pill + Numeral Indicator -->
+          <div class="purpose-header-row">
+            <div class="purpose-badge-pill">
+              <i class="fa-solid fa-bullseye purpose-gold-icon" aria-hidden="true"></i>
+              <span class="purpose-label-tag">{{ langService.t.about.purpose.label }}</span>
+            </div>
+            
+            <div class="purpose-num-watermark" aria-hidden="true">
+              {{ langService.t.about.purpose.numeral }}
+            </div>
+          </div>
+
+          <!-- Connecting Gold Hairline -->
+          <div class="purpose-gold-divider" aria-hidden="true"></div>
+
+          <!-- Monumental Statement -->
+          <h2 id="purpose-heading" class="purpose-monumental-statement">
+            {{ langService.t.about.purpose.statement }}
+          </h2>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. OUR PRINCIPLES (Four Tall Editorial Cards in ONE ROW on Desktop)
+       Distinct Micro-Compositions, Subtle Gold Accents, Elegant Hover
+       ======================================================== -->
+  <section class="principles-editorial-section" aria-labelledby="principles-section-title">
+    <div class="editorial-container">
+      
+      <!-- Section Header -->
+      <header class="principles-header-block">
+        <div class="section-label-row">
+          <span class="gold-lead-line" aria-hidden="true"></span>
+          <span class="section-label-text">{{ langService.t.about.principles.label }}</span>
+          <span class="gold-lead-line" aria-hidden="true"></span>
+        </div>
+        <h2 id="principles-section-title" class="principles-master-title">
+          {{ langService.t.about.principles.title }}
+        </h2>
+      </header>
+
+      <!-- Four Tall Editorial Cards in ONE Row on Desktop -->
+      <div class="principles-cards-row">
+        
+        <!-- Card 01: الوضوح -->
+        <article class="principle-card">
+          <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+          <div class="card-inner-frame" aria-hidden="true"></div>
+          <div class="card-top-accent-line" aria-hidden="true"></div>
+
+          <div class="card-header-bar">
+            <div class="card-icon-emblem" aria-hidden="true">
+              <i class="fa-regular fa-eye"></i>
+            </div>
+            <span class="card-num-pill">{{ langService.t.about.principles.items[0].number }}</span>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-arabic-title">{{ langService.t.about.principles.items[0].title }}</h3>
+            <div class="card-hairline-accent" aria-hidden="true"></div>
+            <p class="card-description">{{ langService.t.about.principles.items[0].desc }}</p>
+          </div>
+          <div class="card-bottom-anchor-bar" aria-hidden="true"></div>
+        </article>
+
+        <!-- Card 02: التنظيم -->
+        <article class="principle-card">
+          <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+          <div class="card-inner-frame" aria-hidden="true"></div>
+          <div class="card-top-accent-line" aria-hidden="true"></div>
+
+          <div class="card-header-bar">
+            <div class="card-icon-emblem" aria-hidden="true">
+              <i class="fa-solid fa-sitemap"></i>
+            </div>
+            <span class="card-num-pill">{{ langService.t.about.principles.items[1].number }}</span>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-arabic-title">{{ langService.t.about.principles.items[1].title }}</h3>
+            <div class="card-hairline-accent" aria-hidden="true"></div>
+            <p class="card-description">{{ langService.t.about.principles.items[1].desc }}</p>
+          </div>
+          <div class="card-bottom-anchor-bar" aria-hidden="true"></div>
+        </article>
+
+        <!-- Card 03: المرونة -->
+        <article class="principle-card">
+          <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+          <div class="card-inner-frame" aria-hidden="true"></div>
+          <div class="card-top-accent-line" aria-hidden="true"></div>
+
+          <div class="card-header-bar">
+            <div class="card-icon-emblem" aria-hidden="true">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <span class="card-num-pill">{{ langService.t.about.principles.items[2].number }}</span>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-arabic-title">{{ langService.t.about.principles.items[2].title }}</h3>
+            <div class="card-hairline-accent" aria-hidden="true"></div>
+            <p class="card-description">{{ langService.t.about.principles.items[2].desc }}</p>
+          </div>
+          <div class="card-bottom-anchor-bar" aria-hidden="true"></div>
+        </article>
+
+        <!-- Card 04: الاهتمام بالتفاصيل -->
+        <article class="principle-card">
+          <div class="card-corner-tick tick-top-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-top-right" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-left" aria-hidden="true"></div>
+          <div class="card-corner-tick tick-bottom-right" aria-hidden="true"></div>
+          <div class="card-inner-frame" aria-hidden="true"></div>
+          <div class="card-top-accent-line" aria-hidden="true"></div>
+
+          <div class="card-header-bar">
+            <div class="card-icon-emblem" aria-hidden="true">
+              <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <span class="card-num-pill">{{ langService.t.about.principles.items[3].number }}</span>
+          </div>
+          <div class="card-body-content">
+            <h3 class="card-arabic-title">{{ langService.t.about.principles.items[3].title }}</h3>
+            <div class="card-hairline-accent" aria-hidden="true"></div>
+            <p class="card-description">{{ langService.t.about.principles.items[3].desc }}</p>
+          </div>
+          <div class="card-bottom-anchor-bar" aria-hidden="true"></div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. WHAT WE BELIEVE (Luxury Brand Manifesto — Dark Charcoal #1F1F1F)
+       Clean, prestigious typography on deep charcoal background
+       ======================================================== -->
+  <section class="philosophy-manifesto-sanctuary" aria-labelledby="philosophy-statement">
+    
+    <!-- Thin Gold Architectural Lines Crossing the Composition -->
+    <div class="philosophy-transverse-line-top" aria-hidden="true"></div>
+    <div class="philosophy-transverse-line-bottom" aria-hidden="true"></div>
+
+    <div class="editorial-container philosophy-inner-container">
+      
+      <!-- Small Gold Eyebrow -->
+      <div class="philosophy-meta-row">
+        <span class="philosophy-gold-pin" aria-hidden="true"></span>
+        <span class="philosophy-label">{{ langService.t.about.belief.label }}</span>
+        <span class="philosophy-gold-pin" aria-hidden="true"></span>
+      </div>
+
+      <!-- Monumental Dominant Statement -->
+      <blockquote id="philosophy-statement" class="philosophy-master-quote">
+        “{{ langService.t.about.belief.statement }}”
+      </blockquote>
+
+      <!-- Thin Gold Axis Guide -->
+      <div class="philosophy-gold-axis-guide" aria-hidden="true"></div>
+
+      <!-- Subtle Supporting Sentence Underneath -->
+      <p class="philosophy-grounding-para">
+        {{ langService.t.about.belief.description }}
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       8. FINAL CTA (Unified Internal CTA System)
+       ======================================================== -->
+  <app-internal-cta
+    [label]="langService.t.about.cta.label"
+    [title]="langService.t.about.cta.title"
+    [description]="langService.t.about.cta.description"
+    [buttonText]="langService.t.about.cta.buttonText"
+    buttonLink="/request-quote">
+  </app-internal-cta>
+
+</div>

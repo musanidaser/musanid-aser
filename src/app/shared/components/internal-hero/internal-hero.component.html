@@ -1,0 +1,52 @@
+<header class="unified-internal-hero" aria-labelledby="internal-hero-title">
+  
+  <!-- Full-Width Cinematic Background Image Layer -->
+  <div class="hero-image-viewport" aria-hidden="true">
+    <img [src]="bgImage"
+         [alt]="imageAlt || title"
+         class="hero-cinematic-photo"
+         loading="eager" />
+    
+    <!-- STRICTLY BLACK / NEAR-BLACK OVERLAY (rgba(0, 0, 0, 0.58)) -->
+    <div class="hero-black-scrim"></div>
+  </div>
+
+  <div class="editorial-container hero-unified-container">
+    <div class="hero-central-axis-content">
+      
+      <!-- Eyebrow: Gold, Centered, Flanked by Delicate Gold Hairlines -->
+      <div class="hero-eyebrow-block">
+        <span class="eyebrow-hairline-side" aria-hidden="true"></span>
+        <span class="eyebrow-label-text">{{ eyebrow }}</span>
+        <span class="eyebrow-hairline-side" aria-hidden="true"></span>
+      </div>
+
+      <!-- Main Heading: Large White Arabic Heading (64–82px Desktop) -->
+      <h1 id="internal-hero-title" class="hero-monumental-heading">
+        {{ title }}
+      </h1>
+
+      <!-- Supporting Description: Max-width 700–750px, Center-aligned -->
+      <p class="hero-supporting-summary">
+        {{ description }}
+      </p>
+
+      <!-- Optional Single Gold CTA: Centered on Same Central Axis -->
+      @if (ctaText && ctaLink) {
+        <div class="hero-action-anchor">
+          <a [routerLink]="ctaLink.startsWith('#') ? null : ctaLink"
+             (click)="onCtaClick($event)"
+             class="editorial-btn-gold hero-gold-button">
+            <span>{{ ctaText }}</span>
+            <i class="fa-solid arrow-dynamic"
+               [class.fa-arrow-down]="ctaLink.startsWith('#')"
+               [class.fa-arrow-left]="!ctaLink.startsWith('#') && langService.currentLang === 'ar'"
+               [class.fa-arrow-right]="!ctaLink.startsWith('#') && langService.currentLang !== 'ar'"
+               aria-hidden="true"></i>
+          </a>
+        </div>
+      }
+
+    </div>
+  </div>
+</header>

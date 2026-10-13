@@ -1,0 +1,271 @@
+/* ========================================================
+   CINEMATIC FULL-WIDTH HERO STYLES (REFINED & EDITORIAL)
+   Authentic Arabic Editorial Character (Amiri + Brand Gold)
+   Standard CSS Only (Zero SCSS)
+   ======================================================== */
+
+.cinematic-hero-fullwidth {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #0B0E11;
+  color: #FFFFFF;
+  padding: 55px 0 45px;
+}
+
+/* Background Photo Layer (Cropped bottom water via position anchor) */
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Subtle, Light Dark Overlay (Preserves Natural Photo Colors & Contrast) */
+.hero-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.38) 0%,
+    rgba(0, 0, 0, 0.44) 50%,
+    rgba(0, 0, 0, 0.58) 100%
+  );
+  z-index: 2;
+}
+
+/* Centered Content Container (Controlled Width & Elevated Position) */
+.hero-fullwidth-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  transform: translateY(-16px);
+}
+
+/* Top Centered Eyebrow (Editorial Metadata) */
+.hero-top-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.eyebrow-line-gold {
+  width: 28px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+}
+
+.eyebrow-text {
+  color: var(--gold-light);
+  font-family: var(--font-ar);
+}
+
+/* Monumental Centered Headline (Unified IBM Plex Sans Arabic) */
+.hero-cinematic-title {
+  font-family: var(--font-ar);
+  font-size: 2.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  max-width: 860px;
+  margin: 0 auto 18px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+.gold-gradient-text {
+  color: #FFF3C4;
+  font-weight: 700;
+  display: inline-block;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+/* Refined Compact Subtitle (Supporting Brand Typography) */
+.hero-cinematic-lead {
+  font-family: var(--font-ar);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 640px;
+  margin: 0 auto 26px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Two Hero Action Buttons (Side by Side on Desktop) */
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Primary CTA: طلب تسعيرة توريد (Dominant Gold #D4AF37) */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--gold-primary); /* #D4AF37 */
+  color: #1F1F1F;
+  padding: 13px 30px;
+  font-family: var(--font-ar);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  border: 1px solid #C49F27;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+  transition: all 0.25s var(--ease-editorial);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-btn-primary:hover {
+  background-color: #C59E24;
+  color: #121212;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
+}
+
+/* Secondary CTA: استكشف خدماتنا (Understated Light Glass) */
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  padding: 13px 28px;
+  font-family: var(--font-ar);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s var(--ease-editorial);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.25s ease;
+}
+
+.hero-btn-primary:hover .btn-arrow,
+.hero-btn-secondary:hover .btn-arrow {
+  transform: translateX(-3px);
+}
+
+[dir="ltr"] .hero-btn-primary:hover .btn-arrow,
+[dir="ltr"] .hero-btn-secondary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .cinematic-hero-fullwidth {
+    min-height: 580px;
+  }
+
+  .hero-cinematic-title {
+    font-size: 2.45rem;
+    line-height: 1.42;
+  }
+
+  .hero-fullwidth-content {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cinematic-hero-fullwidth {
+    min-height: auto;
+    padding: 60px 0 52px;
+  }
+
+  .hero-fullwidth-content {
+    transform: none;
+    max-width: 100%;
+  }
+
+  .hero-top-eyebrow {
+    font-size: 0.74rem;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+
+  .eyebrow-line-gold {
+    width: 20px;
+  }
+
+  .hero-cinematic-title {
+    font-size: clamp(1.62rem, 5.8vw, 1.95rem);
+    line-height: 1.38;
+    margin-bottom: 14px;
+    letter-spacing: normal;
+  }
+
+  .hero-cinematic-lead {
+    font-size: clamp(0.90rem, 2.8vw, 0.98rem);
+    line-height: 1.72;
+    margin-bottom: 24px;
+    padding: 0 4px;
+  }
+
+  .hero-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    max-width: 340px;
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-cinematic-title {
+    font-size: 1.52rem;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    padding: 11px 18px;
+    font-size: 0.90rem;
+  }
+}

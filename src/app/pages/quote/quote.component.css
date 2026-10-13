@@ -1,0 +1,945 @@
+/* ========================================================
+   MUSANED ASER — CONTACT US & REQUEST A QUOTE STYLES
+   Executive Editorial Architecture (Pure Standard CSS Only)
+   Palette: Deep Teal (#0B4D4D), Dark Teal (#062828),
+   Gold (#D4AF37), Warm Ivory (#FAF7F2), Charcoal (#1F1F1F)
+   ======================================================== */
+
+.quote-page-wrapper {
+  display: block;
+  width: 100%;
+  background-color: var(--beige-light, #FAF7F2);
+  color: var(--charcoal-primary, #1F1F1F);
+}
+
+/* ========================================================
+   MAIN SECTION & TWO-COLUMN BALANCED COMPOSITION
+   ======================================================== */
+.contact-quote-section {
+  position: relative;
+  padding: 70px 0 110px;
+  background-color: var(--beige-light, #FAF7F2);
+}
+
+/* --------------------------------------------------------
+   MOBILE QUICK CHANNELS BAR (1-Tap Direct Action on Mobile)
+   -------------------------------------------------------- */
+.mobile-quick-channels-bar {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .mobile-quick-channels-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .quick-pill-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 8px;
+    color: #1F2937;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+
+  .quick-pill-btn i {
+    font-size: 1rem;
+    color: var(--gold-dark, #B38E22);
+  }
+
+  .quick-pill-btn.quick-pill-whatsapp {
+    background: #F0FDF4;
+    border-color: rgba(37, 211, 102, 0.35);
+    color: #15803D;
+  }
+
+  .quick-pill-btn.quick-pill-whatsapp i {
+    color: #25D366;
+  }
+
+  .quick-pill-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* --------------------------------------------------------
+   TWO-COLUMN MASTER GRID
+   -------------------------------------------------------- */
+.contact-quote-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) 370px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ========================================================
+   COLUMN 1: THE QUOTE REQUEST FORM CARD
+   ======================================================== */
+.form-dominant-column {
+  width: 100%;
+}
+
+.quote-form-card {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(11, 77, 77, 0.09);
+  border-radius: 12px;
+  padding: 44px 40px;
+  box-shadow: 0 16px 44px -12px rgba(11, 77, 77, 0.07), 0 2px 6px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+/* Architectural Top Accent Bar */
+.form-top-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #D4AF37 0%, #E8C86A 100%);
+}
+
+/* Form Header Block */
+.form-header-block {
+  margin-bottom: 34px;
+}
+
+.section-label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.gold-lead-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--gold-primary, #D4AF37);
+}
+
+.section-label-text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark, #B38E22);
+}
+
+.form-display-heading {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--teal-primary, #0B4D4D);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.form-supporting-paragraph {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--charcoal-muted, #5A6065);
+  max-width: 680px;
+}
+
+.form-divider-gold {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(212, 175, 55, 0.4) 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%
+  );
+  margin-top: 22px;
+}
+
+[dir="rtl"] .form-divider-gold {
+  background: linear-gradient(
+    to left,
+    rgba(212, 175, 55, 0.4) 0%,
+    rgba(212, 175, 55, 0.1) 50%,
+    transparent 100%
+  );
+}
+
+/* ========================================================
+   LOGICAL FIELD GROUPINGS
+   ======================================================== */
+.form-logical-group {
+  margin-bottom: 32px;
+  padding-bottom: 26px;
+  border-bottom: 1px dashed rgba(11, 77, 77, 0.12);
+}
+
+.form-logical-group:last-of-type {
+  border-bottom: none;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+}
+
+.group-header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.group-badge-number {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #9A7B1C;
+  background: #FFF9E6;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 4px;
+  padding: 3px 8px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.group-title-text {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--teal-primary, #0B4D4D);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.group-header-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(11, 77, 77, 0.14) 0%, transparent 100%);
+}
+
+[dir="rtl"] .group-header-line {
+  background: linear-gradient(to left, rgba(11, 77, 77, 0.14) 0%, transparent 100%);
+}
+
+/* ========================================================
+   SIMPLE, CHIC FORM INPUTS & CONTROLS
+   ======================================================== */
+.quote-form-body {
+  display: block;
+}
+
+.form-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.field-span-full {
+  grid-column: 1 / -1;
+}
+
+.form-group-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--teal-deep, #062828);
+}
+
+.required-indicator {
+  color: #C0392B;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.optional-badge {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #374151;
+  background: rgba(11, 77, 77, 0.08);
+  padding: 1px 7px;
+  border-radius: 4px;
+  margin-inline-start: 4px;
+}
+
+.field-helper-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #4B5563;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.field-helper-notice i {
+  color: var(--gold-dark, #B38E22);
+  font-size: 0.82rem;
+}
+
+/* Modern, Chic Input Styling */
+.field-input-control,
+.field-select-control,
+.field-textarea-control {
+  width: 100%;
+  border: 1.5px solid #E6E0D6;
+  border-radius: 8px;
+  background-color: #FAF8F5;
+  color: var(--charcoal-primary, #1F1F1F);
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0 16px;
+  transition: all 0.22s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field-input-control:hover,
+.field-select-control:hover,
+.field-textarea-control:hover {
+  border-color: #C8BEAF;
+  background-color: #FCFBF9;
+}
+
+.field-input-control:focus,
+.field-select-control:focus,
+.field-textarea-control:focus {
+  outline: none;
+  border-color: var(--gold-primary, #D4AF37);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3.5px rgba(212, 175, 55, 0.16), 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.field-input-control,
+.field-select-control {
+  height: 48px;
+}
+
+.field-textarea-control {
+  padding: 14px 16px;
+  resize: vertical;
+  min-height: 105px;
+  line-height: 1.6;
+}
+
+.field-input-control::placeholder,
+.field-textarea-control::placeholder {
+  color: #596168;
+  font-size: 0.91rem;
+}
+
+/* Custom Select Dropdown with Clean Aligned Icon */
+.select-field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-field-wrapper .field-select-control {
+  cursor: pointer;
+  padding-inline-end: 42px;
+}
+
+.select-chevron-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: 16px;
+  color: var(--gold-dark, #B38E22);
+  font-size: 0.85rem;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+/* Clean Date Picker Styling */
+.field-date-control {
+  cursor: pointer;
+}
+
+.field-date-control::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.75;
+  filter: invert(24%) sepia(45%) saturate(1450%) hue-rotate(145deg);
+  transition: opacity 0.2s ease;
+}
+
+.field-date-control::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Field Validation Error State */
+.form-group-field.has-field-error .field-input-control,
+.form-group-field.has-field-error .field-select-control,
+.form-group-field.has-field-error .field-textarea-control {
+  border-color: #D9534F !important;
+  background-color: #FFFDFD !important;
+}
+
+.form-group-field.has-field-error .field-input-control:focus,
+.form-group-field.has-field-error .field-select-control:focus,
+.form-group-field.has-field-error .field-textarea-control:focus {
+  border-color: #D9534F !important;
+  box-shadow: 0 0 0 3.5px rgba(217, 83, 79, 0.15) !important;
+}
+
+.field-error-message {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #D9534F;
+  margin-top: 3px;
+  display: block;
+}
+
+/* ========================================================
+   SUBMIT ACTION ROW
+   ======================================================== */
+.form-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(11, 77, 77, 0.08);
+}
+
+.quote-submit-button {
+  min-width: 250px;
+  padding: 16px 38px;
+  font-size: 1.02rem;
+  font-weight: 800;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #D4AF37 0%, #B89326 100%);
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 8px 24px -4px rgba(212, 175, 55, 0.35);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.quote-submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #DFBE4B 0%, #C49F30 100%);
+  box-shadow: 0 12px 28px -4px rgba(212, 175, 55, 0.45);
+  transform: translateY(-2px);
+}
+
+.quote-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.form-security-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-security-note i {
+  color: var(--gold-dark, #B38E22);
+  font-size: 0.95rem;
+}
+
+/* ========================================================
+   COLUMN 2: EXECUTIVE SUPPORTING CONTACT DECK (STICKY)
+   ======================================================== */
+.contact-sidebar-column {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  z-index: 10;
+}
+
+.contact-sidebar-card {
+  position: relative;
+  background: radial-gradient(circle at 85% 12%, rgba(212, 175, 55, 0.06) 0%, transparent 60%), linear-gradient(165deg, #181D24 0%, #101318 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 12px;
+  padding: 36px 26px;
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.contact-sidebar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, #E8C86A, #D4AF37);
+}
+
+/* Sidebar Header */
+.sidebar-header-box {
+  margin-bottom: 26px;
+}
+
+.sidebar-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sidebar-gold-emblem {
+  color: var(--gold-light, #E8C86A);
+  font-size: 0.9rem;
+}
+
+.sidebar-tag-eyebrow {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light, #E8C86A);
+}
+
+.sidebar-title {
+  font-size: 1.48rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.sidebar-gold-line {
+  width: 32px;
+  height: 2px;
+  background-color: var(--gold-primary, #D4AF37);
+  margin-bottom: 12px;
+}
+
+.sidebar-summary {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+/* Contact Channels List */
+.contact-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.contact-channel-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: all 0.22s ease;
+  position: relative;
+}
+
+a.contact-channel-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 175, 55, 0.45);
+  transform: translateY(-2px);
+}
+
+.channel-icon-pill {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light, #E8C86A);
+  font-size: 0.92rem;
+  transition: all 0.22s ease;
+}
+
+a.contact-channel-item:hover .channel-icon-pill {
+  background-color: var(--gold-primary, #D4AF37);
+  color: #101318;
+  border-color: var(--gold-primary, #D4AF37);
+}
+
+/* Direct WhatsApp Highlight */
+.contact-channel-item.item-whatsapp {
+  background-color: rgba(37, 211, 102, 0.08);
+  border-color: rgba(37, 211, 102, 0.3);
+}
+
+.contact-channel-item.item-whatsapp:hover {
+  background-color: rgba(37, 211, 102, 0.15);
+  border-color: #25D366;
+}
+
+.channel-icon-pill.icon-whatsapp {
+  background-color: rgba(37, 211, 102, 0.15);
+  border-color: rgba(37, 211, 102, 0.4);
+  color: #25D366;
+}
+
+a.contact-channel-item.item-whatsapp:hover .channel-icon-pill.icon-whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+/* Channel Meta */
+.channel-meta-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.channel-label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2px;
+}
+
+.channel-value {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  word-break: break-all;
+}
+
+.channel-action-hint {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.8rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+a.contact-channel-item:hover .channel-action-hint {
+  color: var(--gold-light, #E8C86A);
+}
+
+.channel-action-hint.whatsapp-hint {
+  color: rgba(37, 211, 102, 0.7);
+}
+
+/* Static Location Item */
+.contact-channel-item.item-static {
+  cursor: default;
+}
+
+.contact-channel-item.item-static:hover {
+  transform: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+/* Institutional Seal */
+.sidebar-institutional-seal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.seal-gold-pip {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--gold-light, #E8C86A);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+  flex-shrink: 0;
+}
+
+.seal-text-content {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold-light, #E8C86A);
+  line-height: 1.4;
+}
+
+/* ========================================================
+   FEEDBACK BANNERS (SUCCESS / ERROR / UNCONFIGURED NOTICE)
+   ======================================================== */
+.feedback-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 24px;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  animation: fadeInFeedback 0.3s ease-out;
+}
+
+@keyframes fadeInFeedback {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-icon-box {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.feedback-body {
+  flex: 1;
+}
+
+.feedback-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.feedback-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.feedback-detail-code {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.feedback-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.feedback-reset-btn {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.feedback-retry-btn {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.whatsapp-fallback-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.whatsapp-fallback-btn:hover {
+  background-color: #1EBE5D;
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.feedback-text-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--teal-primary, #0B4D4D);
+  text-decoration: underline;
+  padding: 6px 10px;
+}
+
+/* Success State */
+.state-success {
+  background-color: rgba(11, 77, 77, 0.04);
+  border: 1px solid rgba(11, 77, 77, 0.2);
+  border-inline-start: 4px solid var(--teal-primary, #0B4D4D);
+}
+
+.state-success .feedback-icon-box {
+  background-color: rgba(11, 77, 77, 0.12);
+  color: var(--teal-primary, #0B4D4D);
+}
+
+.state-success .feedback-title {
+  color: var(--teal-primary, #0B4D4D);
+}
+
+.state-success .feedback-text {
+  color: var(--charcoal-muted, #5A6065);
+}
+
+/* Error State */
+.state-error {
+  background-color: rgba(217, 83, 79, 0.05);
+  border: 1px solid rgba(217, 83, 79, 0.25);
+  border-inline-start: 4px solid #D9534F;
+}
+
+.state-error .feedback-icon-box {
+  background-color: rgba(217, 83, 79, 0.12);
+  color: #D9534F;
+}
+
+.state-error .feedback-title {
+  color: #B52B27;
+}
+
+.state-error .feedback-text {
+  color: var(--charcoal-muted, #5A6065);
+}
+
+/* Notice State */
+.state-notice {
+  background-color: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-inline-start: 4px solid var(--gold-primary, #D4AF37);
+}
+
+.state-notice .feedback-icon-box {
+  background-color: rgba(212, 175, 55, 0.2);
+  color: var(--gold-dark, #B38E22);
+}
+
+.state-notice .feedback-title {
+  color: var(--teal-primary, #0B4D4D);
+}
+
+.state-notice .feedback-text {
+  color: var(--charcoal-primary, #1F1F1F);
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN & ADAPTATIONS
+   ======================================================== */
+@media (max-width: 1080px) {
+  .contact-quote-layout {
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 30px;
+  }
+
+  .quote-form-card {
+    padding: 38px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-quote-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-sidebar-column {
+    position: static;
+  }
+
+  .quote-form-card {
+    padding: 34px 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-quote-section {
+    padding: 40px 0 70px;
+  }
+
+  .quote-form-card {
+    padding: 24px 18px;
+    border-radius: 10px;
+  }
+
+  .form-display-heading {
+    font-size: 1.65rem;
+  }
+
+  .form-fields-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .quote-submit-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .form-security-note {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-sidebar-card {
+    padding: 24px 18px;
+    border-radius: 10px;
+  }
+
+  .sidebar-title {
+    font-size: 1.3rem;
+  }
+
+  .feedback-banner {
+    flex-direction: column;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .feedback-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .feedback-reset-btn,
+  .feedback-retry-btn,
+  .whatsapp-fallback-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

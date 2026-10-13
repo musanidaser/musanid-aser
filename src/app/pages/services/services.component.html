@@ -1,0 +1,399 @@
+<div class="services-page-wrapper">
+
+  <!-- ========================================================
+       1. UNIFIED INTERNAL HERO — CINEMATIC FULL-WIDTH HERO
+       Full-width authentic Saudi commercial supply facility
+       Pure Black overlay rgba(0, 0, 0, 0.52–0.65), Centered composition
+       ======================================================== -->
+  <app-internal-hero
+    bgImage="/services/services-hero.jpg"
+    [eyebrow]="langService.t.servicesPage.hero.eyebrow"
+    [title]="langService.t.servicesPage.hero.title"
+    [description]="langService.t.servicesPage.hero.description"
+    [ctaText]="langService.t.servicesPage.hero.ctaExplore"
+    ctaLink="#services-showcase"
+    [imageAlt]="langService.t.servicesPage.hero.title">
+  </app-internal-hero>
+
+  <!-- ========================================================
+       2. SERVICES INTRODUCTION — REDESIGNED EDITORIAL PHILOSOPHY
+  <!-- ========================================================
+       2. SERVICES METHODOLOGY — HORIZONTAL CONNECTED FLOW
+       "من الاحتياج إلى الخيار المناسب."
+       Top: Unified Editorial Statement & Narrative
+       Bottom: 4-Step Architectural Connected Sequence (01 → 02 → 03 → 04)
+       ======================================================== -->
+  <section class="services-intro-section" aria-labelledby="intro-anchor-statement">
+    <div class="editorial-container">
+      
+      <!-- Top: Statement & Editorial Narrative -->
+      <div class="methodology-header-block">
+        <div class="section-label-row">
+          <span class="gold-lead-line" aria-hidden="true"></span>
+          <span class="section-label-text">{{ langService.t.servicesPage.intro.eyebrow }}</span>
+          <span class="gold-lead-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="methodology-title-wrap">
+          <div class="statement-accent-bar" aria-hidden="true"></div>
+          <h2 id="intro-anchor-statement" class="methodology-display-statement">
+            {{ langService.t.servicesPage.intro.statement }}
+          </h2>
+        </div>
+
+        <p class="methodology-supporting-narrative">
+          {{ langService.t.servicesPage.intro.description }}
+        </p>
+
+        <div class="methodology-gold-hairline" aria-hidden="true"></div>
+      </div>
+
+      <!-- Bottom: 4-Step Architectural Connected Horizontal Journey Strip -->
+      <div class="methodology-flow-wrapper" aria-label="Supply Methodology Sequence">
+        
+        <!-- Track Header Meta -->
+        <div class="methodology-flow-meta">
+          <span class="flow-meta-pill">
+            <span class="meta-gold-pip" aria-hidden="true"></span>
+            <span class="meta-label-en">{{ langService.t.servicesPage.intro.pathwayTitle }}</span>
+          </span>
+          <span class="flow-meta-code">{{ langService.currentLang === 'ar' ? 'مصفوفة ومسار التنفيذ المتسلسل' : 'SEQUENTIAL EXECUTION MATRIX' }}</span>
+        </div>
+
+        <!-- 4 Connected Step Cards with Continuous Horizontal Datum Line -->
+        <div class="methodology-flow-track" role="list">
+          
+          <!-- Background continuous connector rail -->
+          <div class="flow-connector-rail" aria-hidden="true"></div>
+
+          @for (step of langService.t.servicesPage.intro.journey; track step.step; let last = $last) {
+            <article class="flow-step-card" role="listitem">
+              
+              <!-- Top Gold hairline accent -->
+              <div class="step-card-top-accent" aria-hidden="true"></div>
+              
+              <!-- Architectural corner ticks -->
+              <div class="step-card-tick tick-tl" aria-hidden="true"></div>
+              <div class="step-card-tick tick-tr" aria-hidden="true"></div>
+
+              <!-- Step Header: Number & Connector Node -->
+              <div class="step-header-junction">
+                <span class="step-badge-num">{{ step.step }}</span>
+                <div class="step-node-point" aria-hidden="true">
+                  <span class="node-pulse-ring"></span>
+                </div>
+              </div>
+
+              <!-- Step Body -->
+              <div class="step-card-content">
+                <span class="step-code-en">{{ step.tag }}</span>
+                <h3 class="step-arabic-title">{{ step.name }}</h3>
+                <div class="step-divider-rule" aria-hidden="true"></div>
+                <p class="step-desc-text">{{ step.desc }}</p>
+              </div>
+
+              <!-- Direction Arrow for Non-Last Steps -->
+              @if (!last) {
+                <div class="step-transit-arrow" aria-hidden="true">
+                  <i class="fa-solid"
+                     [class.fa-arrow-left]="langService.currentLang === 'ar'"
+                     [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+                </div>
+              }
+
+            </article>
+          }
+
+        </div>
+
+        <!-- Bottom Brand Footer -->
+        <div class="methodology-flow-footer" aria-hidden="true">
+          <span class="flow-footer-line"></span>
+          <span class="flow-footer-brand">{{ langService.currentLang === 'ar' ? 'مساند آسر · منهجية ومسار التوريد المنظم' : 'MUSANID ASER · STRUCTURED SUPPLY METHODOLOGY' }}</span>
+          <span class="flow-footer-line"></span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. MAIN SERVICES — 3-CARDS SWIPER SLIDER
+       Displays exactly 3 cards side-by-side with elegant spacing
+       Smooth horizontal slide for remaining services
+       ======================================================== -->
+  <section id="services-showcase" class="services-showcase-section" aria-labelledby="services-main-heading">
+    <div class="editorial-container">
+      
+      <!-- Section Header with Title & Arrow Controls -->
+      <div class="services-slider-header">
+        <div class="header-title-block">
+          <div class="section-label-row">
+            <span class="gold-lead-line" aria-hidden="true"></span>
+            <span class="section-label-text">{{ langService.t.servicesPage.showcase.eyebrow }}</span>
+            <span class="gold-lead-line" aria-hidden="true"></span>
+          </div>
+          <h2 id="services-main-heading" class="services-dominant-heading">
+            {{ langService.t.servicesPage.showcase.title }}
+          </h2>
+        </div>
+
+        <!-- Slider Arrow Navigation Controls -->
+        <div class="services-slider-controls">
+          <button type="button"
+                  class="slider-nav-btn slider-nav-prev"
+                  aria-label="Previous">
+            <i class="fa-solid"
+               [class.fa-arrow-right]="langService.currentLang === 'ar'"
+               [class.fa-arrow-left]="langService.currentLang !== 'ar'"></i>
+          </button>
+          <button type="button"
+                  class="slider-nav-btn slider-nav-next"
+                  aria-label="Next">
+            <i class="fa-solid"
+               [class.fa-arrow-left]="langService.currentLang === 'ar'"
+               [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Swiper Slider Container (Shows 3 Cards) -->
+      <div class="services-swiper-wrapper">
+        <div class="swiper" #servicesSwiper>
+          <div class="swiper-wrapper">
+            @for (service of langService.t.servicesPage.showcase.services; track service.num; let i = $index) {
+              <div class="swiper-slide">
+                <article class="service-chic-card">
+                  
+                  <!-- Gold Accent Line at Top -->
+                  <div class="card-accent-line" aria-hidden="true"></div>
+
+                  <!-- Subtle Architectural Corner Accents -->
+                  <div class="card-corner-tick tick-tl" aria-hidden="true"></div>
+                  <div class="card-corner-tick tick-tr" aria-hidden="true"></div>
+
+                  <!-- Balanced, Restrained Image Window -->
+                  <div class="card-image-window">
+                    <img [src]="service.image"
+                         [alt]="service.title"
+                         class="card-preview-photo"
+                         loading="lazy" />
+                    <div class="card-image-gradient" aria-hidden="true"></div>
+                    
+                    <!-- Floating Numeric Badge -->
+                    <div class="card-number-badge" aria-hidden="true">
+                      <span class="badge-num-dash">—</span>
+                      <span class="badge-num-val">{{ service.num }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Card Content Body -->
+                  <div class="card-content-body">
+                    
+                    <div class="card-meta-category">
+                      <span class="category-gold-pip" aria-hidden="true"></span>
+                      <span class="category-text-en">{{ service.subtitle }}</span>
+                    </div>
+
+                    <h3 class="card-service-title">{{ service.title }}</h3>
+
+                    <div class="card-gold-rule" aria-hidden="true"></div>
+
+                    <p class="card-service-description">
+                      {{ service.desc }}
+                    </p>
+
+                    <div class="card-footer-action">
+                      <a routerLink="/request-quote" class="card-quote-action-btn">
+                        <span>{{ langService.t.servicesPage.showcase.actionQuote }}</span>
+                        <span class="action-btn-circle" aria-hidden="true">
+                          <i class="fa-solid"
+                             [class.fa-arrow-left]="langService.currentLang === 'ar'"
+                             [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+                        </span>
+                      </a>
+                    </div>
+
+                  </div>
+
+                </article>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination Indicator Dots -->
+      <div class="slider-pagination-wrap">
+        <div class="services-swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. SERVICE VALUE — LARGE EDITORIAL BLOCKS
+       "ماذا تقدم خدماتنا؟"
+  <!-- ========================================================
+       4. SERVICE VALUE — ARCHITECTURAL VALUE TRIPTYCH
+       "ماذا تقدم خدماتنا؟"
+       3 Luxurious Structured Corporate Cards in a 3-Column Grid
+       ======================================================== -->
+  <section class="services-value-section" aria-labelledby="value-main-heading">
+    <div class="editorial-container">
+      
+      <!-- Section Header Spread -->
+      <div class="value-header-spread">
+        <div class="section-label-row">
+          <span class="gold-lead-line" aria-hidden="true"></span>
+          <span class="section-label-text">{{ langService.t.servicesPage.value.eyebrow }}</span>
+          <span class="gold-lead-line" aria-hidden="true"></span>
+        </div>
+        <h2 id="value-main-heading" class="value-dominant-heading">
+          {{ langService.t.servicesPage.value.title }}
+        </h2>
+        @if (langService.t.servicesPage.value.subtitle) {
+          <p class="value-narrative-sub">{{ langService.t.servicesPage.value.subtitle }}</p>
+        }
+      </div>
+
+      <!-- 3 Luxurious Architectural Value Cards (Triptych) -->
+      <div class="value-cards-grid" role="list">
+        @for (item of langService.t.servicesPage.value.items; track item.num; let i = $index) {
+          <article class="value-card-item" role="listitem">
+            
+            <!-- Top Gold accent hairline -->
+            <div class="value-card-top-accent" aria-hidden="true"></div>
+
+            <!-- Architectural corner ticks -->
+            <div class="value-card-tick tick-tl" aria-hidden="true"></div>
+            <div class="value-card-tick tick-tr" aria-hidden="true"></div>
+
+            <!-- Card Header: Numeral & Emblem / Indicator -->
+            <div class="value-card-header">
+              <span class="value-card-num">{{ item.num }}</span>
+              <div class="value-card-emblem" aria-hidden="true">
+                <span class="emblem-inner-core"></span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="value-card-body">
+              @if (item.tag) {
+                <div class="value-card-tag-row">
+                  <span class="tag-gold-bullet" aria-hidden="true"></span>
+                  <span class="value-card-tag">{{ item.tag }}</span>
+                </div>
+              }
+
+              <h3 class="value-card-title">{{ item.title }}</h3>
+
+              <div class="value-card-divider" aria-hidden="true"></div>
+
+              <p class="value-card-description">{{ item.desc }}</p>
+            </div>
+
+            <!-- Card Footer: Subtle Corporate Marker -->
+            <div class="value-card-footer" aria-hidden="true">
+              <span class="footer-fine-dash"></span>
+              <span class="footer-spec-label">{{ langService.currentLang === 'ar' ? ('الميزة التشغيلية · ' + item.num) : ('CORE ADVANTAGE · ' + item.num) }}</span>
+            </div>
+
+          </article>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. CUSTOM SUPPLY SOLUTIONS — SOPHISTICATED DEEP TEAL
+       Deep Teal #063A3A Base · "احتياجك ليس بالضرورة مثل غيره."
+       Subtle architectural composition · Large cropped typography
+       Thin Gold lines · Structured paths · Small numbers
+       ======================================================== -->
+  <section class="custom-solutions-section" aria-labelledby="custom-solutions-heading">
+    
+    <div class="editorial-container custom-content-wrap">
+      
+      <!-- Brand Statement Block -->
+      <div class="custom-statement-block">
+        
+        <div class="custom-eyebrow-row">
+          <span class="custom-gold-dash" aria-hidden="true"></span>
+          <span class="custom-eyebrow-text">{{ langService.t.servicesPage.customSolutions.eyebrow }}</span>
+          <span class="custom-gold-dash" aria-hidden="true"></span>
+        </div>
+
+        <h2 id="custom-solutions-heading" class="custom-display-title">
+          {{ langService.t.servicesPage.customSolutions.statement }}
+        </h2>
+
+        <p class="custom-supporting-text">
+          {{ langService.t.servicesPage.customSolutions.description }}
+        </p>
+
+      </div>
+
+      <!-- Architectural Three Pillars Row -->
+      <div class="custom-pillars-row">
+        @for (pillar of langService.t.servicesPage.customSolutions.pillars; track pillar.num) {
+          <div class="custom-pillar-column">
+            <div class="pillar-top-datum" aria-hidden="true"></div>
+            <div class="pillar-header-meta">
+              <span class="pillar-num-code">{{ pillar.num }}</span>
+              <span class="pillar-gold-dot"></span>
+            </div>
+            <h3 class="pillar-headline">{{ pillar.title }}</h3>
+            <p class="pillar-paragraph">{{ pillar.desc }}</p>
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. OUR APPROACH — MINIMAL PHILOSOPHY WITH GOLD DATUM
+       Warm Ivory #F7F3EA · One refined horizontal gold rule & subtle geometric diamond
+       "نفهم الاحتياج أولًا، ثم نبحث عن الحل المناسب."
+       ======================================================== -->
+  <section class="services-approach-section" aria-labelledby="approach-quote-heading">
+    <div class="editorial-container approach-inner-container">
+      
+      <div class="section-label-row">
+        <span class="gold-lead-line" aria-hidden="true"></span>
+        <span class="section-label-text">{{ langService.t.servicesPage.philosophy.eyebrow }}</span>
+        <span class="gold-lead-line" aria-hidden="true"></span>
+      </div>
+
+      <blockquote id="approach-quote-heading" class="approach-dominant-quote">
+        “{{ langService.t.servicesPage.philosophy.statement }}”
+      </blockquote>
+
+      <!-- Refined Horizontal Gold Rule with Central Diamond Detail -->
+      <div class="approach-architectural-datum" aria-hidden="true">
+        <span class="datum-left-line"></span>
+        <span class="datum-center-diamond"></span>
+        <span class="datum-right-line"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. FINAL CTA — UNIFIED EXECUTIVE GRAND FINALE
+       Matches About Us & all internal pages
+       ======================================================== -->
+  <app-internal-cta
+    bgImage="/services/services-cta.jpg"
+    [label]="langService.t.servicesPage.cta.eyebrow"
+    [title]="langService.t.servicesPage.cta.title"
+    [description]="langService.t.servicesPage.cta.description"
+    [buttonText]="langService.t.servicesPage.cta.buttonText"
+    buttonLink="/request-quote">
+  </app-internal-cta>
+
+</div>
+

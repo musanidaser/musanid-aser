@@ -1,0 +1,509 @@
+/* ========================================================
+   MUSANED ASER — LUXURY ARCHITECTURAL PROCESS JOURNEY
+   Refined Alabaster Light Ground + Framed Executive Cards
+   Unified Typography: IBM Plex Sans Arabic
+   ======================================================== */
+
+.editorial-process-section {
+  background: radial-gradient(ellipse at 50% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+              linear-gradient(180deg, #FCFAF6 0%, #F5F1E8 100%);
+  color: var(--charcoal-primary);
+  padding: 120px 0 110px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(11, 77, 77, 0.08);
+}
+
+/* Atmospheric Ambient Depth (Light Gold Glow) */
+.process-ambient-glow {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 950px;
+  height: 950px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.07) 0%, rgba(11, 77, 77, 0.03) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Master Contained Width — inherits .editorial-container */
+.process-master-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.process-section-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 80px;
+}
+
+.process-label-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.process-label-text {
+  font-family: var(--font-ar);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+
+.process-gold-leadline {
+  width: 28px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+  display: inline-block;
+}
+
+.process-main-heading {
+  font-family: var(--font-ar);
+  font-size: 2.65rem;
+  font-weight: 800;
+  color: var(--teal-primary);
+  line-height: 1.40;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.process-lead-text {
+  font-family: var(--font-ar);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #4A5558;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Vertical Timeline */
+.process-journey-timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* Golden Continuous Architectural Spine */
+.process-journey-timeline::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(212, 175, 55, 0.35) 0%,
+    #D4AF37 25%,
+    #D4AF37 75%,
+    rgba(212, 175, 55, 0.35) 100%
+  );
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+  z-index: 1;
+}
+
+/* Stage Row: Perfect Vertical Center Alignment between Node and Card */
+.journey-stage-row {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  align-items: center;
+  margin-bottom: 46px;
+  position: relative;
+}
+
+.journey-stage-row:last-of-type {
+  margin-bottom: 24px;
+}
+
+/* Spine Node: Exactly Centered in Column 2 */
+.journey-spine-node {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.journey-node-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.35);
+  transition: all 0.35s ease;
+}
+
+.journey-marker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--teal-primary);
+  transition: transform 0.35s ease, background-color 0.35s ease;
+}
+
+.journey-stage-row:hover .journey-node-marker {
+  background-color: var(--teal-primary);
+  border-color: #D4AF37;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.65);
+  transform: scale(1.18);
+}
+
+.journey-stage-row:hover .journey-marker-dot {
+  background-color: #FFF3C4;
+}
+
+/* Card Column Positioning - Explicitly bind to row 1 */
+.journey-stage-row:not(.stage-even) .journey-stage-card {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.journey-stage-row.stage-even .journey-stage-card {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Framed Executive Stage Card */
+.journey-stage-card {
+  position: relative;
+  background: linear-gradient(145deg, #FFFFFF 0%, #FAF8F4 100%);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 12px;
+  padding: 28px 30px;
+  box-shadow: 0 8px 24px rgba(11, 77, 77, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.journey-stage-row:hover .journey-stage-card {
+  transform: translateY(-4px);
+  border-color: #D4AF37;
+  box-shadow: 0 16px 38px rgba(212, 175, 55, 0.18), 0 6px 16px rgba(11, 77, 77, 0.08);
+}
+
+/* Card Header */
+.stage-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.stage-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-family: var(--font-ar);
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: #8C6D1F;
+  letter-spacing: 0.04em;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold-primary);
+  box-shadow: 0 0 4px var(--gold-primary);
+}
+
+/* Prominent Visible Step Number & Icon Group */
+.stage-header-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stage-prominent-num {
+  font-family: var(--font-en);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #C59E24;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.journey-stage-row:hover .stage-prominent-num {
+  color: var(--teal-primary);
+  transform: scale(1.05);
+}
+
+.stage-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(11, 77, 77, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-primary);
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+}
+
+.journey-stage-row:hover .stage-icon-box {
+  background: var(--teal-primary);
+  border-color: var(--teal-primary);
+  color: #FFF3C4;
+  box-shadow: 0 4px 14px rgba(11, 77, 77, 0.25);
+  transform: scale(1.06);
+}
+
+/* Card Title */
+.stage-card-title {
+  font-family: var(--font-ar);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--teal-primary);
+  line-height: 1.42;
+  margin: 0 0 10px;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.journey-stage-row:hover .stage-card-title {
+  color: var(--teal-deep);
+}
+
+/* Gold Accent Line */
+.stage-card-accent {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(11, 77, 77, 0.08);
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.card-accent-gold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 2px;
+  background-color: #D4AF37;
+  transition: width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[dir="ltr"] .card-accent-gold {
+  right: auto;
+  left: 0;
+}
+
+.journey-stage-row:hover .card-accent-gold {
+  width: 80px;
+}
+
+/* Card Description */
+.stage-card-desc {
+  font-family: var(--font-ar);
+  font-size: 0.96rem;
+  font-weight: 400;
+  line-height: 1.82;
+  color: #4A5558;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Terminal Conclusion */
+.journey-terminal-conclusion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+.terminal-spine-anchor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.terminal-node-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #D4AF37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  margin-bottom: 10px;
+}
+
+.terminal-crossbar {
+  width: 72px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    #D4AF37 50%,
+    rgba(212, 175, 55, 0.1) 100%
+  );
+}
+
+.terminal-statement {
+  font-family: var(--font-ar);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--teal-primary);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .editorial-process-section {
+    padding: 95px 0 85px;
+  }
+
+  .process-main-heading {
+    font-size: 2.25rem;
+  }
+
+  .journey-stage-row {
+    grid-template-columns: 1fr 50px 1fr;
+    margin-bottom: 38px;
+  }
+
+  .journey-stage-card {
+    padding: 24px 26px;
+  }
+
+  .stage-prominent-num {
+    font-size: 1.85rem;
+  }
+
+  .stage-card-title {
+    font-size: 1.30rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .editorial-process-section {
+    padding: 60px 0 52px;
+  }
+
+  .process-ambient-glow {
+    width: 340px;
+    height: 340px;
+    top: 10%;
+  }
+
+  .process-section-header {
+    margin-bottom: 36px;
+  }
+
+  .process-main-heading {
+    font-size: clamp(1.48rem, 5vw, 1.85rem);
+    line-height: 1.36;
+  }
+
+  .process-lead-text {
+    font-size: 0.90rem;
+    line-height: 1.72;
+  }
+
+  /* Single Column Spine */
+  .process-journey-timeline::before {
+    left: auto;
+    right: 11px;
+    transform: none;
+    top: 24px;
+    bottom: 50px;
+  }
+
+  [dir="ltr"] .process-journey-timeline::before {
+    right: auto;
+    left: 11px;
+  }
+
+  .journey-stage-row {
+    grid-template-columns: 24px 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  .journey-spine-node {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    align-self: flex-start;
+    margin-top: 24px;
+  }
+
+  .journey-stage-row .journey-stage-card {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    padding: 20px 16px;
+  }
+
+  .stage-prominent-num {
+    font-size: 1.55rem;
+  }
+
+  .stage-card-title {
+    font-size: 1.15rem;
+  }
+
+  .stage-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .journey-terminal-conclusion {
+    margin-top: 28px;
+    padding: 0 8px;
+  }
+
+  .terminal-statement {
+    font-size: 0.90rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 380px) {
+  .journey-stage-row {
+    gap: 10px;
+  }
+
+  .journey-stage-row .journey-stage-card {
+    padding: 18px 14px;
+  }
+
+  .stage-card-title {
+    font-size: 1.05rem;
+  }
+}

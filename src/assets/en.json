@@ -1,0 +1,757 @@
+{
+  "meta": {
+    "siteTitle": "Musanid Aser | Supply & Commercial Brokerage",
+    "siteDescription": "Musanid Aser Establishment for Business Supply and Commercial Brokerage services in Saudi Arabia. We assist enterprises in meeting procurement demands with clarity and precision.",
+    "companyName": "Musanid Aser",
+    "companyFullName": "Musanid Aser for Supply & Commercial Brokerage",
+    "cr": "Saudi Commercial Registration – Riyadh",
+    "location": "Riyadh — Kingdom of Saudi Arabia",
+    "phone": "0533796523",
+    "phoneSecondary": "0531660854",
+    "phoneDisplay": "+966 53 379 6523",
+    "phoneSecondaryDisplay": "+966 53 166 0854",
+    "whatsapp": "0533796523",
+    "whatsappSecondary": "0531660854",
+    "email": "info@musanidaser.com",
+    "domain": "musanidaser.com"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "sectors": "Sectors",
+    "quote": "Request a Quote",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "whatsapp": "Chat on WhatsApp",
+    "switchLang": "العربية"
+  },
+  "hero": {
+    "eyebrow": "MUSANID ASER · SUPPLY & COMMERCIAL BROKERAGE",
+    "titleLine1": "Business Supply Solutions",
+    "titleLine2": "& Commercial Brokerage",
+    "description": "We assist businesses and projects in fulfilling their procurement needs by sourcing suitable suppliers, collecting and comparing quotations, and coordinating execution with precision and reliability.",
+    "ctaQuote": "Request a Quote",
+    "ctaServices": "Explore Services"
+  },
+  "introduction": {
+    "label": "CORPORATE FOUNDATION & MANIFESTO",
+    "statement": "Delivering structured solutions in business supply & commercial brokerage, helping enterprises fulfill their procurement demands with precision and clarity.",
+    "principles": [
+      {
+        "title": "Institutional Focus",
+        "desc": "Established in Riyadh to provide specialized business supply and commercial brokerage services, assisting organizations in organizing procurement requirements efficiently."
+      },
+      {
+        "title": "Professional Brokerage",
+        "desc": "We identify appropriate suppliers matching each requirement and facilitate commercial engagement to ensure transparent terms and competitive pricing."
+      },
+      {
+        "title": "Pricing Clarity & Follow-up",
+        "desc": "Providing objective quotation comparisons that detail technical and financial specifics, alongside ongoing coordination throughout execution."
+      }
+    ],
+    "linkText": "Explore the complete story and vision of Musanid Aser"
+  },
+  "services": {
+    "label": "COMMERCIAL SUPPLY & BROKERAGE SERVICES",
+    "title": "Enterprise Supply Solutions Engineered for Business Scale",
+    "description": "Providing practical solutions to secure operational requirements, review and compare quotations, and coordinate commercial supply with professionalism and reliability.",
+    "viewAll": "Explore All Services",
+    "items": [
+      {
+        "id": 1,
+        "num": "01",
+        "title": "Business Supply",
+        "desc": "Fulfilling corporate equipment and operational supply requirements according to specified quality requirements and budget."
+      },
+      {
+        "id": 2,
+        "num": "02",
+        "title": "Commercial Brokerage",
+        "desc": "Facilitating commercial coordination between businesses and suitable suppliers to achieve optimal contract terms."
+      },
+      {
+        "id": 3,
+        "num": "03",
+        "title": "Supplier Sourcing",
+        "desc": "Identifying suitable suppliers matching project specifications and verifying readiness and technical compliance."
+      },
+      {
+        "id": 4,
+        "num": "04",
+        "title": "Quotation Collection & Comparison",
+        "desc": "Soliciting, reviewing, and comparing financial and technical quotes to enable informed procurement decisions."
+      },
+      {
+        "id": 5,
+        "num": "05",
+        "title": "Supply Coordination & Follow-up",
+        "desc": "Overseeing execution milestones and delivery schedules to ensure materials are received per agreed standards."
+      },
+      {
+        "id": 6,
+        "num": "06",
+        "title": "Custom Supply Solutions",
+        "desc": "Designing flexible and tailored procurement arrangements engineered around specialized business demands."
+      }
+    ]
+  },
+  "sectors": {
+    "label": "COMMERCIAL SECTORS & SERVED INDUSTRIES",
+    "title": "Procurement Solutions Tailored to Diverse Commercial Verticals",
+    "description": "Delivering supply and brokerage services tailored to meet the unique operational requirements of businesses.",
+    "viewAll": "Explore All Sectors",
+    "items": [
+      {
+        "id": 1,
+        "num": "01",
+        "title": "Companies & Organizations",
+        "desc": "Fulfilling enterprise procurement needs according to specified quality requirements and budget."
+      },
+      {
+        "id": 2,
+        "num": "02",
+        "title": "Restaurants & Cafés",
+        "desc": "Dedicated procurement solutions for hospitality, operational goods, and commercial equipment."
+      },
+      {
+        "id": 3,
+        "num": "03",
+        "title": "Real Estate & Commercial",
+        "desc": "Coordinating real estate and commercial procurement needs with precision and vetted suppliers."
+      },
+      {
+        "id": 4,
+        "num": "04",
+        "title": "Offices & Facilities",
+        "desc": "Comprehensive workplace outfitting, facilities supply, and administrative solutions."
+      },
+      {
+        "id": 5,
+        "num": "05",
+        "title": "Projects & Businesses",
+        "desc": "Managing and coordinating commercial project supplies with timeline precision."
+      }
+    ]
+  },
+  "process": {
+    "label": "STRUCTURED PROCUREMENT METHODOLOGY",
+    "title": "Disciplined Operational Framework through Handover",
+    "description": "Six structured milestones ensuring technical clarity, pricing transparency, and dedicated follow-up through handover.",
+    "terminalConclusion": "From inquiry to delivery with diligent coordination and tracking.",
+    "steps": [
+      {
+        "step": "01",
+        "stage": "Stage 01 · Specification",
+        "title": "Send Your Request & Specs",
+        "desc": "Specify material specs, volume, and required timelines via the quotation form."
+      },
+      {
+        "step": "02",
+        "stage": "Stage 02 · Specification Review",
+        "title": "Reviewing Order & Specifications",
+        "desc": "Reviewing specifications and ensuring alignment with client requirements before supplier solicitation."
+      },
+      {
+        "step": "03",
+        "stage": "Stage 03 · Supplier Sourcing",
+        "title": "Supplier Sourcing",
+        "desc": "Identifying suitable suppliers matching project requirements and soliciting competitive quotes."
+      },
+      {
+        "step": "04",
+        "stage": "Stage 04 · Quotation Matrix",
+        "title": "Structured Quotation Comparison",
+        "desc": "Delivering comparison matrices highlighting technical and commercial value."
+      },
+      {
+        "step": "05",
+        "stage": "Stage 05 · Procurement & Coordination",
+        "title": "Quote Selection & Contractual Coordination",
+        "desc": "Selecting the suitable quote, completing purchasing procedures, and contractual coordination."
+      },
+      {
+        "step": "06",
+        "stage": "Stage 06 · Delivery & Handover",
+        "title": "Execution & Final Delivery",
+        "desc": "Diligent shipment tracking and handover verification through final delivery."
+      }
+    ]
+  },
+  "standards": {
+    "label": "OPERATIONAL STANDARDS & RELIABILITY",
+    "title": "Professional Standards Enhancing Procurement & Governance",
+    "description": "We apply a structured methodology to oversee each stage of the supply process, supporting organizations in securing optimal technical and commercial value.",
+    "trustSeal": "Committed to transparency and clarity in commercial transactions",
+    "items": [
+      {
+        "num": "01",
+        "title": "Vetted Supplier Selection",
+        "desc": "Verifying supplier readiness and capability to meet required technical specifications prior to quotation nomination."
+      },
+      {
+        "num": "02",
+        "title": "Professional Commercial Brokerage",
+        "desc": "Managing commercial communication to protect client interests and establish equitable supply terms."
+      },
+      {
+        "num": "03",
+        "title": "Structured Quotation Comparison",
+        "desc": "Structuring objective comparison sheets that outline cost and technical nuances for informed decisions."
+      },
+      {
+        "num": "04",
+        "title": "Milestone Delivery Tracking",
+        "desc": "Continuous coordination across preparation and dispatch milestones until on-site handover."
+      }
+    ]
+  },
+  "cta": {
+    "label": "PROCUREMENT & COMMERCIAL PARTNERSHIP",
+    "titleLine1": "Ready to Empower Your Enterprise",
+    "titleLine2": "With Supply & Brokerage Solutions",
+    "description": "Submit your procurement specifications to evaluate suitable suppliers, gather competitive quotations, and coordinate fulfillment professionally.",
+    "buttonText": "Submit a Quote Request"
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "ABOUT US",
+      "eyebrowAr": "About Musanid Aser",
+      "title": "About Us",
+      "description": "Discovering Musanid Aser and our strategic vision in delivering business supply and commercial brokerage solutions.",
+      "ctaVision": "Explore Our Vision",
+      "ctaContact": "Contact Musanid Aser",
+      "metaLine": "Supply • Commercial Brokerage • Business Solutions"
+    },
+    "foundation": {
+      "eyebrow": "INSTITUTIONAL FOUNDATION & VISION",
+      "verticalWord": "FOUNDATION",
+      "statement": "Building a clearer way to procure.",
+      "p1": "Musanid Aser for Supply & Commercial Brokerage was founded in Riyadh to deliver a structured, professional model supporting enterprises and projects in fulfilling their commercial supply demands with agility and precision.",
+      "p2": "We serve as a specialized professional nexus covering business supply, commercial brokerage, supplier sourcing, objective quotation collection and analysis, as well as disciplined fulfillment coordination through to delivery.",
+      "p3": "We focus on grasping technical parameters and exact specifications for every client, engineering custom supply solutions that align with business operations while maintaining optimal quality and reliability.",
+      "numeral": "02"
+    },
+    "vision": {
+      "label": "OUR STRATEGIC VISION",
+      "title": "Our Vision",
+      "statement": "To be the benchmark procurement and commercial brokerage partner in Saudi Arabia, founded on transparent governance and reliable execution.",
+      "note": "Establishing Musanid Aser as the premier choice for enterprises demanding purchasing efficiency and commercial transparency across the Saudi market."
+    },
+    "mission": {
+      "label": "OUR MISSION & COMMITMENT",
+      "title": "Our Mission",
+      "statement": "Connecting commercial enterprises with verified suppliers and delivering competitive, specification-compliant quotation portfolios.",
+      "description": "We execute structured procurement workflows starting from precise requirement scoping and objective market comparison through to accountable delivery coordination."
+    },
+    "purpose": {
+      "numeral": "03",
+      "label": "OUR STRATEGIC PURPOSE",
+      "title": "Our Purpose",
+      "statement": "Maximizing operational and financial efficiency for our clients by lowering acquisition costs, saving procurement time, and supporting supply continuity."
+    },
+    "principles": {
+      "label": "OUR GUIDING PRINCIPLES",
+      "title": "Our Principles",
+      "items": [
+        {
+          "number": "01",
+          "title": "Clarity",
+          "desc": "Clear details and straightforward, understandable steps."
+        },
+        {
+          "number": "02",
+          "title": "Organization",
+          "desc": "Structuring the procurement process and disciplined tracking."
+        },
+        {
+          "number": "03",
+          "title": "Agility",
+          "desc": "Adaptive solutions tailored to diverse enterprise requirements."
+        },
+        {
+          "number": "04",
+          "title": "Attention to Detail",
+          "desc": "Sharp focus on specifications, standards, and vetted options."
+        }
+      ]
+    },
+    "belief": {
+      "label": "OUR PROFESSIONAL CREED",
+      "statement": "Sound procurement does not begin with the product; it begins with understanding the need.",
+      "description": "We always start from your exact requirements and specifications to reach the most suitable and dependable supply solutions.",
+      "keywords": [
+        "UNDERSTAND",
+        "SOURCE",
+        "COMPARE",
+        "SUPPLY"
+      ]
+    },
+    "cta": {
+      "label": "COMMERCIAL PROCUREMENT PARTNERSHIP",
+      "title": "Have a Supply Requirement?",
+      "description": "Share your specifications and let us begin from your exact needs.",
+      "buttonText": "Request a Quote"
+    }
+  },
+  "quote": {
+    "pageTitle": "Request a Supply Quotation",
+    "pageSubtitle": "Complete the form with your required specifications and our team will evaluate market offers and collect suitable quotes.",
+    "companyName": "Company / Enterprise Name",
+    "contactPerson": "Contact Person Name",
+    "phone": "Mobile / Phone Number",
+    "email": "Email Address",
+    "sector": "Commercial Sector",
+    "sectorPlaceholder": "Select Sector",
+    "serviceRequired": "Required Service",
+    "servicePlaceholder": "Select Service Type",
+    "itemDetails": "Request Details & Specifications",
+    "itemDetailsPlaceholder": "Specify material types, estimated volumes, and preferred timeline...",
+    "submitButton": "Submit Quotation Request",
+    "successMessage": "Your request has been submitted successfully. We will get in touch shortly to review quotations."
+  },
+  "servicesPage": {
+    "hero": {
+      "eyebrow": "OUR SERVICES",
+      "eyebrowAr": "Services",
+      "title": "Our Services",
+      "description": "Commercial supply and brokerage solutions assisting enterprises and projects in accessing the optimal options for their needs.",
+      "ctaExplore": "Explore Services",
+      "ctaQuote": "Request a Quote",
+      "metaLine": "Business Supply • Commercial Brokerage • Tailored Solutions"
+    },
+    "intro": {
+      "eyebrow": "STRUCTURED SUPPLY METHODOLOGY",
+      "statement": "From Need to the Right Choice.",
+      "description": "We help companies and projects reach suitable supply solutions through an organized operational path that begins with understanding the need and concludes with coordinating the supply process.",
+      "pathwayTitle": "SUPPLY JOURNEY · 01 — 04",
+      "journey": [
+        { "step": "01", "name": "Need", "tag": "Stage 01", "desc": "Defining Specifications" },
+        { "step": "02", "name": "Search", "tag": "Stage 02", "desc": "Supplier Sourcing" },
+        { "step": "03", "name": "Compare", "tag": "Stage 03", "desc": "Quotation Analysis" },
+        { "step": "04", "name": "Supply", "tag": "Stage 04", "desc": "Fulfillment Tracking" }
+      ]
+    },
+    "showcase": {
+      "eyebrow": "SERVICE CAPABILITIES",
+      "title": "Structured Service Index",
+      "actionQuote": "Request Quote for this Service",
+      "services": [
+        {
+          "num": "01",
+          "title": "Business Supply",
+          "subtitle": "Business Supply",
+          "desc": "Fulfilling corporate equipment and operational supply requirements through structured pathways aligned with quality benchmarks and approved budgets.",
+          "image": "/services/business-supply.jpg"
+        },
+        {
+          "num": "02",
+          "title": "Commercial Brokerage",
+          "subtitle": "Commercial Brokerage",
+          "desc": "Connecting enterprises with suitable suppliers while managing commercial negotiations and contractual terms to protect all parties.",
+          "image": "/services/commercial-brokerage.jpg"
+        },
+        {
+          "num": "03",
+          "title": "Supplier Sourcing",
+          "subtitle": "Supplier Sourcing",
+          "desc": "Identifying qualified suppliers and specialized manufacturing facilities aligned with specific technical project requirements.",
+          "image": "/services/supplier-sourcing.jpg"
+        },
+        {
+          "num": "04",
+          "title": "Quotation Collection & Comparison",
+          "subtitle": "Quotation Collection & Comparison",
+          "desc": "Gathering and evaluating commercial quotes objectively with rigorous comparative matrices to support informed purchasing decisions.",
+          "image": "/services/quotation-comparison.jpg"
+        },
+        {
+          "num": "05",
+          "title": "Supply Coordination & Follow-up",
+          "subtitle": "Supply Coordination & Follow-up",
+          "desc": "Overseeing operational progress, verifying timelines, and coordinating fulfillment through to final delivery and specification review.",
+          "image": "/services/supply-coordination.jpg"
+        },
+        {
+          "num": "06",
+          "title": "Custom Supply Solutions",
+          "subtitle": "Custom Supply Solutions",
+          "desc": "Engineering tailored procurement solutions designed specifically for complex requirements or specialized project scales.",
+          "image": "/services/custom-supply-solutions.jpg"
+        }
+      ]
+    },
+    "value": {
+      "eyebrow": "OPERATIONAL VALUE & ADVANTAGE",
+      "title": "What Our Services Deliver",
+      "subtitle": "Structured solutions and clear pathways delivering confidence across every supply phase.",
+      "items": [
+        {
+          "num": "01",
+          "tag": "CLARITY & PRECISION",
+          "title": "Clearer Options",
+          "desc": "We help you reach choices that strictly align with your requirements instead of random searching, verifying specifications and source reliability."
+        },
+        {
+          "num": "02",
+          "tag": "ANALYTICAL RIGOR",
+          "title": "Better Comparison",
+          "desc": "We gather quotations and vital data to facilitate objective technical and financial comparison, supporting confident decision-making."
+        },
+        {
+          "num": "03",
+          "tag": "OPERATIONAL CONTROL",
+          "title": "More Organized Coordination",
+          "desc": "We coordinate and follow up on supply milestones tailored to each request, ensuring compliance with timelines and approved standards."
+        }
+      ]
+    },
+    "customSolutions": {
+      "eyebrow": "BESPOKE SUPPLY SOLUTIONS",
+      "sectionTag": "Custom Supply Solutions",
+      "statement": "Your requirement is not necessarily like others.",
+      "description": "We provide custom supply solutions tailored to the nature of products, specifications, and individual request requirements.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Specification Alignment",
+          "desc": "Detailed technical analysis of specifications and specialized sector requirements without rigid templates."
+        },
+        {
+          "num": "02",
+          "title": "Flexible Sourcing Paths",
+          "desc": "Customized procurement and fulfillment routing adapted to request size, schedule, and location."
+        },
+        {
+          "num": "03",
+          "title": "Dedicated Coordination",
+          "desc": "Handling operational processes and communication aligned with your enterprise's internal protocols."
+        }
+      ]
+    },
+    "philosophy": {
+      "eyebrow": "OUR APPROACH & WORK PHILOSOPHY",
+      "statement": "We understand the need first, then seek the suitable solution.",
+      "description": "Every supply request begins with an accurate understanding of required products, approved technical specifications, and commercial deadlines, establishing a transparent foundation from day one."
+    },
+    "cta": {
+      "eyebrow": "COMMERCIAL PROCUREMENT REQUIREMENTS",
+      "eyebrowAr": "Commercial Requirements",
+      "title": "Have a Supply Requirement?",
+      "description": "Share your specifications and let us begin from your exact needs.",
+      "buttonText": "Request a Quote"
+    }
+  },
+  "sectorsPage": {
+    "hero": {
+      "eyebrow": "OUR SECTORS",
+      "eyebrowAr": "Our Sectors",
+      "title": "Sectors",
+      "description": "Tailored supply options aligned with your business demands and operational requirements.",
+      "ctaExplore": "Explore Sectors"
+    },
+    "intro": {
+      "eyebrow": "NATURE OF ACTIVITY & DEMAND",
+      "headline": "Different needs, and understanding that starts from the nature of the activity.",
+      "description": "Required products and fixtures vary from one activity to another. Therefore, we begin by understanding the exact demand and technical specifications, then source procurement options aligned with each requirement.",
+      "tagline": "Precise alignment with every operational requirement"
+    },
+    "showcase": {
+      "eyebrow": "SERVICED SECTORS",
+      "title": "Comprehensive Coverage for Diverse Commercial Activities",
+      "description": "We focus on understanding the specifics of each sector, providing supply and brokerage pathways tailored to the products and equipment required.",
+      "badge": "Supply & Brokerage Scope",
+      "sectors": [
+        {
+          "num": "01",
+          "tag": "Enterprise & Corporate",
+          "title": "Companies & Organizations",
+          "desc": "Supplying operational needs, equipment, and commercial products in accordance with enterprise requirements and business operations.",
+          "image": "/sectors/companies.jpg",
+          "scopeLabel": "Supply & Support Scope:",
+          "scope": ["Daily operational supplies & facility outfitting", "Competitive quotation coordination", "Supervised fulfillment pathways"]
+        },
+        {
+          "num": "02",
+          "tag": "Hospitality & F&B",
+          "title": "Restaurants & Cafés",
+          "desc": "Assisting in providing equipment, fixtures, and operational supplies tailored to the operational demands of restaurants and cafés.",
+          "image": "/sectors/restaurants.jpg",
+          "scopeLabel": "Supply & Support Scope:",
+          "scope": ["Specialized commercial machinery & gear", "Hospitality & packaging supplies", "Vetted supplier sourcing"]
+        },
+        {
+          "num": "03",
+          "tag": "Property Development & Facilities",
+          "title": "Real Estate & Commercial",
+          "desc": "Supporting commercial facilities, properties, and projects with required supplies and fixtures according to the scope of each demand.",
+          "image": "/sectors/real-estate.jpg",
+          "scopeLabel": "Supply & Support Scope:",
+          "scope": ["Commercial complexes & facilities fixtures", "Finishing materials & outfitting goods", "Quote comparison & supply tracking"]
+        },
+        {
+          "num": "04",
+          "tag": "Workplaces & Corporate HQs",
+          "title": "Offices & Facilities",
+          "desc": "Providing office furniture, workplace equipment, and varied supplies that support meeting workplace outfitting requirements.",
+          "image": "/sectors/offices.jpg",
+          "scopeLabel": "Supply & Support Scope:",
+          "scope": ["Office furniture & workspace solutions", "Workplace operational equipment", "Integrated office environment outfitting"]
+        },
+        {
+          "num": "05",
+          "tag": "Specialized Projects & Ventures",
+          "title": "Projects & Businesses",
+          "desc": "Sourcing vetted suppliers and suitable solutions for project-related requirements, considering specifications, volumes, and custom timelines.",
+          "image": "/sectors/projects.jpg",
+          "scopeLabel": "Supply & Support Scope:",
+          "scope": ["Dedicated project procurement orders", "Timeline & volume alignment", "Compliance verification & delivery follow-up"]
+        }
+      ]
+    },
+    "requirements": {
+      "eyebrow": "FLEXIBLE SUPPLY REQUIREMENTS",
+      "headline": "Every commercial activity has its own distinct requirements.",
+      "description": "Supply needs vary by product category, technical specifications, order quantities, and delivery schedules. Understanding these details facilitates sourcing the most optimal options for each request.",
+      "items": [
+        {
+          "code": "01",
+          "title": "Product Category",
+          "desc": "Defining the precise goods and materials suited to the operational nature of your activity without rigid templates."
+        },
+        {
+          "code": "02",
+          "title": "Specifications & Quantities",
+          "desc": "Calibrating technical criteria and order volumes to secure accurate, compliant, and competitive pricing."
+        },
+        {
+          "code": "03",
+          "title": "Delivery Requirements",
+          "desc": "Aligning delivery milestones and shipment schedules with your operational business timelines."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "YOUR BUSINESS NEEDS",
+      "headline": "Every business has distinct needs, and we begin by understanding yours.",
+      "description": "Share your specific requirements with us, and we will analyze the request and source the most suitable options.",
+      "buttonText": "Request a Quote"
+    }
+  },
+  "quotePage": {
+    "hero": {
+      "eyebrow": "CONTACT US",
+      "eyebrowAr": "Contact Us",
+      "title": "Contact Us",
+      "description": "Tell us about your supply requirements, and we will review your request details.",
+      "ctaText": "Start Quote Request"
+    },
+    "contactInfo": {
+      "eyebrow": "CONTACT DETAILS",
+      "title": "Direct Contact Channels",
+      "description": "We welcome your direct inquiries regarding procurement and commercial brokerage, or you can submit specifications via the quotation form.",
+      "phonePrimary": "053 379 6523",
+      "phoneSecondary": "053 166 0854",
+      "email": "info@musanidaser.com",
+      "location": "Riyadh, Kingdom of Saudi Arabia",
+      "labels": {
+        "phonePrimary": "Primary Phone (Call / WhatsApp)",
+        "phoneSecondary": "Secondary Phone (Call / WhatsApp)",
+        "email": "Official Email Address",
+        "location": "Headquarters",
+        "whatsapp": "Direct WhatsApp"
+      }
+    },
+    "form": {
+      "heading": "Request a Quote",
+      "subheading": "Share your requirements, and we will review your request details to determine the most suitable options and competitive pricing.",
+      "groups": {
+        "entity": "Organization & Contact Details",
+        "request": "Request & Supply Details",
+        "delivery": "Budget, Delivery & Timeline"
+      },
+      "organizationName": "Organization Name",
+      "organizationNamePlaceholder": "Company or entity name...",
+      "contactPerson": "Contact Person",
+      "contactPersonPlaceholder": "Full name of the authorized representative...",
+      "mobileNumber": "Mobile Number",
+      "mobileNumberPlaceholder": "05xxxxxxxx",
+      "email": "Email Address",
+      "emailPlaceholder": "name@company.com",
+      "requestType": "Request Type",
+      "requestTypePlaceholder": "Select request type...",
+      "requestTypeOptions": [
+        "Product Supply",
+        "Commercial Brokerage",
+        "Supplier Sourcing",
+        "Quotation Requests",
+        "Other"
+      ],
+      "requestedItem": "Requested Product or Service",
+      "requestedItemPlaceholder": "Specify the item, material, or commercial service...",
+      "quantity": "Quantity",
+      "quantityPlaceholder": "Enter requested quantity...",
+      "specifications": "Specifications",
+      "specificationsPlaceholder": "Describe technical specifications, dimensions, quality standards, or requirements...",
+      "approximateBudget": "Approximate Budget",
+      "approximateBudgetPlaceholder": "Estimated budget (optional)...",
+      "budgetNotice": "Entering a budget is optional and not mandatory",
+      "requiredDate": "Required Date",
+      "requiredDatePlaceholder": "Select required delivery/need date...",
+      "deliveryCity": "Delivery City",
+      "deliveryCityPlaceholder": "Riyadh, Jeddah, Dammam, or other city...",
+      "additionalDetails": "Additional Details",
+      "additionalDetailsPlaceholder": "Any extra notes, unloading conditions, or special terms (optional)...",
+      "submitButton": "Submit Quote Request",
+      "submittingButton": "Submitting...",
+      "requiredBadge": "Required",
+      "optionalBadge": "Optional",
+      "validation": {
+        "organizationNameRequired": "Please enter the organization name",
+        "contactPersonRequired": "Please enter the contact person's name",
+        "mobileRequired": "Please enter a valid mobile number (e.g. 0533796523)",
+        "emailRequired": "Please enter your email address",
+        "emailInvalid": "Please enter a valid email format",
+        "requestTypeRequired": "Please select a request type",
+        "requestedItemRequired": "Please specify the requested product or service",
+        "quantityRequired": "Please enter the requested quantity",
+        "quantityPositive": "Quantity must be a positive number greater than zero",
+        "specificationsRequired": "Please provide specifications and details",
+        "requiredDateRequired": "Please select the required date",
+        "deliveryCityRequired": "Please enter the delivery city"
+      },
+      "feedback": {
+        "successTitle": "Request Submitted Successfully",
+        "successMessage": "Thank you for contacting us. Your quote request details have been received and our team will review your specifications to provide suitable options.",
+        "errorTitle": "Submission Failed",
+        "errorMessage": "The request could not be sent. Please check your connection or contact us directly via phone or WhatsApp.",
+        "configNotice": "Notice: To enable live email delivery, please configure the Web3Forms access key.",
+        "resetButton": "Submit Another Request",
+        "whatsappAlternative": "Send Request Details via WhatsApp"
+      }
+    }
+  },
+  "footer": {
+    "companyName": "Musanid Aser for Supply & Commercial Brokerage",
+    "brandDesc": "Supply & Commercial Brokerage",
+    "mission": "Dedicated corporate procurement and commercial brokerage partner for enterprises across Saudi Arabia, ensuring rigorous quality and cost optimization.",
+    "crBadge": "Saudi Commercial Registration – Riyadh",
+    "navHeading": "Navigation",
+    "servicesHeading": "Services",
+    "contactHeading": "Direct Channels",
+    "primaryPhoneLabel": "Primary Contact (Call / WhatsApp):",
+    "secondaryPhoneLabel": "Secondary Contact (Call / WhatsApp):",
+    "whatsappLabel": "Direct WhatsApp:",
+    "phoneLabel": "Phone Inquiry:",
+    "emailLabel": "Official Email:",
+    "locationLabel": "Headquarters:",
+    "privacyPolicy": "Privacy Policy",
+    "rights": "All rights reserved."
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "PRIVACY & POLICY",
+      "title": "Privacy Policy & Data Protection",
+      "description": "We are committed to safeguarding your privacy and managing your data with strict confidentiality.",
+      "ctaContact": "Explore Policy Terms"
+    },
+    "meta": {
+      "badge": "Official Policy Document",
+      "entity": "Musanid Aser for Supply and Commercial Brokerage",
+      "updated": "Updated October 2026",
+      "status": "Active & Approved"
+    },
+    "lead": {
+      "title": "Our Commitment to Privacy & Confidentiality",
+      "text": "At Musanid Aser for Supply & Commercial Brokerage, we are dedicated to protecting the privacy of our website visitors and clients, and handling all information provided through the website with strict confidentiality and diligence."
+    },
+    "sections": {
+      "collection": {
+        "num": "01",
+        "tag": "Data Collection",
+        "title": "Information Collected Through Inquiries & Forms",
+        "text": "When using our quote request form or contacting us, certain information may be collected including entity name, contact representative name, mobile number, email address, request details, specifications, quantities, estimated budget, and delivery details.",
+        "fields": [
+          "Organization Name",
+          "Contact Representative Name",
+          "Mobile Phone Number",
+          "Official Email Address",
+          "Request Details",
+          "Technical Specifications",
+          "Required Quantities",
+          "Estimated Budget",
+          "Delivery Details"
+        ]
+      },
+      "purpose": {
+        "num": "02",
+        "tag": "Purpose of Use",
+        "title": "Purpose of Utilizing Collected Data",
+        "text": "This data is utilized solely for reviewing requests, preparing appropriate quotations, communicating with clients, and following up on supply and commercial brokerage services.",
+        "points": [
+          "Reviewing requests and evaluating requirements with technical and commercial accuracy.",
+          "Preparing competitive quotations and comparing qualified sourcing options.",
+          "Direct communication with the client for clarifications and updates.",
+          "Monitoring and coordinating service delivery phases related to supply and commercial brokerage."
+        ]
+      },
+      "legalBasis": {
+        "num": "03",
+        "tag": "Legal Basis",
+        "title": "Legal Basis for Data Processing",
+        "text": "Data processing is conducted based on the data subject's consent when submitted through the website, and for purposes related to reviewing requests, communication, and delivering requested services, in accordance with applicable laws and regulations in the Kingdom of Saudi Arabia."
+      },
+      "retention": {
+        "num": "04",
+        "tag": "Data Retention",
+        "title": "Data Retention Period",
+        "text": "We retain personal data for the duration necessary to fulfill the purpose for which it was collected or as required by relevant regulations, after which it is disposed of securely to prevent unauthorized access or unlawful recovery."
+      },
+      "rights": {
+        "num": "05",
+        "tag": "Data Subject Rights",
+        "title": "Rights of the Data Subject",
+        "text": "In accordance with applicable regulations, the data subject has the right to request access to their personal data, obtain it in a clear format, request its correction or update, request its destruction when statutory conditions apply, and withdraw consent to its processing where applicable.",
+        "items": [
+          "Request access to personal data and obtain it in a clear, readable format.",
+          "Request correction, updating, and verification of personal data.",
+          "Request destruction of personal data when statutory conditions apply.",
+          "Withdraw consent to data processing where applicable in accordance with regulations."
+        ]
+      },
+      "sharing": {
+        "num": "06",
+        "tag": "Confidentiality",
+        "title": "Non-Sale of Data & Commercial Confidentiality",
+        "text": "We do not sell or share client data with any third party for marketing purposes. Essential information may only be shared with verified suppliers or relevant parties when strictly necessary to assess requests or execute services, and only to the extent required."
+      },
+      "security": {
+        "num": "07",
+        "tag": "Security & Protection",
+        "title": "Data Security & Protective Safeguards",
+        "text": "We are committed to taking appropriate measures to protect information against unauthorized access, disclosure, or unlawful use."
+      },
+      "external": {
+        "num": "08",
+        "tag": "External Links",
+        "title": "External Links & Third-Party Platforms",
+        "text": "Our website may include links to external channels such as WhatsApp or email services, which operate under their respective privacy policies."
+      },
+      "consent": {
+        "num": "09",
+        "tag": "Official Consent",
+        "title": "Consent to Privacy Terms",
+        "text": "By using this website and submitting your data through our contact and inquiry forms, you agree to the use of your data for the purposes described in this policy."
+      }
+    },
+    "cta": {
+      "eyebrow": "Privacy & Data Inquiries",
+      "heading": "Have Any Questions Regarding Our Privacy Policy or Your Data?",
+      "subheading": "The Musanid Aser team is ready to answer all your inquiries with complete clarity and confidentiality. Reach out via our direct channels or visit our contact page:",
+      "button": "Go to Contact Page",
+      "whatsappButton": "Chat on WhatsApp",
+      "orDivider": "Or Through Direct Channels"
+    }
+  }
+}

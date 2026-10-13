@@ -1,0 +1,81 @@
+<section class="editorial-services-section">
+  <div class="editorial-container services-inner-container">
+
+    <!-- Section Header (Editorial, Centered & Restrained) -->
+    <header class="services-header">
+
+      <!-- Small Section Label -->
+      <div class="services-label-row">
+        <span class="services-gold-marker"></span>
+        <span class="services-label-text">
+          {{ langService.t.services.label }}
+        </span>
+        <span class="services-gold-marker"></span>
+      </div>
+
+      <!-- Main Heading in Amiri Display Font -->
+      <h2 class="services-heading">
+        {{ langService.t.services.title }}
+      </h2>
+
+      <!-- Short Supporting Paragraph (UI Font) -->
+      <p class="services-lead-text">
+        {{ langService.t.services.description }}
+      </p>
+
+    </header>
+
+    <!-- Three Editorial Image-Based Service Blocks -->
+    <div class="services-editorial-grid">
+      @for (meta of featuredServiceMeta; track meta.index) {
+      @let item = langService.t.services.items[meta.index];
+      <article class="service-image-block">
+        <a routerLink="/services" class="service-block-link" [attr.aria-label]="item.title">
+
+          <!-- Imagery Media Container -->
+          <div class="service-media-frame">
+            <img [src]="meta.image" [alt]="item.title" class="service-block-img" loading="lazy" />
+            <!-- Subtle lower Deep Teal gradient overlay for typography readability -->
+            <div class="service-scrim-overlay" aria-hidden="true"></div>
+          </div>
+
+          <!-- Integrated Content Overlay -->
+          <div class="service-block-content">
+
+            <!-- Subtle Number Marker with Expanding Gold Rule -->
+            <div class="service-num-row">
+              <span class="service-num-tag">{{ item.num }}</span>
+              <span class="service-num-gold-rule"></span>
+            </div>
+
+            <!-- Service Title -->
+            <h3 class="service-block-title">
+              {{ item.title }}
+            </h3>
+
+            <!-- Short Description -->
+            <p class="service-block-desc">
+              {{ item.desc }}
+            </p>
+          </div>
+
+        </a>
+      </article>
+      }
+    </div>
+
+    <!-- Final Section Editorial CTA -->
+    <div class="services-bottom-cta-wrap">
+      <a routerLink="/services" class="services-master-cta">
+        <span class="cta-label">
+          {{ langService.t.services.viewAll }}
+        </span>
+        <span class="cta-arrow" aria-hidden="true">
+          <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'"
+            [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+        </span>
+      </a>
+    </div>
+
+  </div>
+</section>

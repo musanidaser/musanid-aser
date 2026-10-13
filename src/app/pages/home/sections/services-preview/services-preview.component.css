@@ -1,0 +1,394 @@
+/* ========================================================
+   MUSANED ASER — EDITORIAL SERVICES PREVIEW COMPONENT
+   Standard CSS Only (Zero SCSS)
+   Refined Warm Ivory Ground (#F7F3EA) + Three Visual Panels
+   Unified Typography: IBM Plex Sans Arabic
+   ======================================================== */
+
+.editorial-services-section {
+  background-color: #F7F3EA; /* Refined Warm Ivory Neutral */
+  color: var(--charcoal-primary);
+  padding: 110px 0 100px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(11, 77, 77, 0.08);
+}
+
+/* Master Contained Width — inherits .editorial-container */
+.services-inner-container {
+  position: relative;
+}
+
+/* --------------------------------------------------------
+   1. SECTION HEADER (LIGHT & EDITORIAL)
+   -------------------------------------------------------- */
+.services-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 56px;
+}
+
+.services-label-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.services-gold-marker {
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+  display: inline-block;
+}
+
+.services-label-text {
+  font-family: var(--font-ar);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+
+[dir="ltr"] .services-label-text {
+  letter-spacing: 0.16em;
+}
+
+/* Main Heading in IBM Plex Sans Arabic (Weight: 700) */
+.services-heading {
+  font-family: var(--font-ar);
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--teal-primary); /* Deep Teal */
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+}
+
+[dir="ltr"] .services-heading {
+  font-size: 2.1rem;
+  line-height: 1.35;
+}
+
+.gold-accent-text {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+/* Supporting Paragraph (Calm Charcoal, Weight: 400) */
+.services-lead-text {
+  font-family: var(--font-ar);
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #4A5558;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+[dir="ltr"] .services-lead-text {
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* --------------------------------------------------------
+   2. THREE EDITORIAL VISUAL PANELS
+   -------------------------------------------------------- */
+.services-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-image-block {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  min-height: 480px;
+  background-color: #062828;
+  border: 1px solid rgba(11, 77, 77, 0.12);
+  transition: transform 0.35s var(--ease-editorial), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-image-block:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 16px 36px rgba(11, 77, 77, 0.12);
+}
+
+.service-block-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media Frame with Controlled Scaling */
+.service-media-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-block-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.65s var(--ease-editorial);
+  display: block;
+}
+
+.service-image-block:hover .service-block-img {
+  transform: scale(1.03);
+}
+
+/* Subtle Lower Deep Teal Gradient for Typography Readability */
+.service-scrim-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 77, 77, 0) 0%,
+    rgba(6, 40, 40, 0.18) 38%,
+    rgba(6, 40, 40, 0.78) 72%,
+    rgba(6, 40, 40, 0.95) 100%
+  );
+  transition: opacity 0.35s ease;
+}
+
+.service-image-block:hover .service-scrim-overlay {
+  opacity: 0.95;
+}
+
+/* Content Container Overlaid at Lower Portion */
+.service-block-content {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 34px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Number Marker + Expanding Gold Rule */
+.service-num-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.service-num-tag {
+  font-family: var(--font-en);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.service-num-gold-rule {
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--gold-primary);
+  transition: width 0.35s var(--ease-editorial);
+}
+
+.service-image-block:hover .service-num-gold-rule {
+  width: 44px;
+}
+
+/* Service Title in IBM Plex Sans Arabic (Weight: 700) */
+.service-block-title {
+  font-family: var(--font-ar);
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+[dir="ltr"] .service-block-title {
+  font-size: 1.2rem;
+}
+
+/* Short Description in IBM Plex Sans Arabic (Weight: 400) */
+.service-block-desc {
+  font-family: var(--font-ar);
+  font-size: 0.91rem;
+  font-weight: 400;
+  line-height: 1.72;
+  color: rgba(247, 243, 234, 0.9);
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+[dir="ltr"] .service-block-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------
+   3. REFINED EDITORIAL SECTION CTA
+   -------------------------------------------------------- */
+.services-bottom-cta-wrap {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.services-master-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 30px;
+  background-color: transparent;
+  border: 1.5px solid var(--teal-primary);
+  border-radius: 3px;
+  color: var(--teal-primary);
+  text-decoration: none;
+  font-family: var(--font-ar);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.28s var(--ease-editorial);
+}
+
+.services-master-cta .cta-label {
+  line-height: 1;
+}
+
+.services-master-cta .cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-dark);
+  font-size: 0.86rem;
+  transition: transform 0.25s var(--ease-editorial), color 0.25s ease;
+}
+
+/* Master CTA Hover */
+.services-master-cta:hover {
+  background-color: var(--teal-primary);
+  color: #FFFFFF;
+  border-color: var(--teal-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(11, 77, 77, 0.18);
+}
+
+.services-master-cta:hover .cta-arrow {
+  color: var(--gold-light);
+  transform: translateX(-5px);
+}
+
+[dir="ltr"] .services-master-cta:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+/* --------------------------------------------------------
+   4. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .editorial-services-section {
+    padding: 85px 0 75px;
+  }
+
+  .services-heading {
+    font-size: 2.1rem;
+  }
+
+  [dir="ltr"] .services-heading {
+    font-size: 1.85rem;
+  }
+
+  .services-editorial-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 28px;
+  }
+
+  .service-image-block {
+    aspect-ratio: 4 / 4.8;
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 640px) {
+  .editorial-services-section {
+    padding: 60px 0 52px;
+  }
+
+  .services-header {
+    margin-bottom: 34px;
+  }
+
+  .services-heading {
+    font-size: clamp(1.48rem, 5vw, 1.75rem);
+    line-height: 1.38;
+  }
+
+  [dir="ltr"] .services-heading {
+    font-size: clamp(1.35rem, 4.5vw, 1.55rem);
+  }
+
+  .services-lead-text {
+    font-size: 0.90rem;
+    line-height: 1.72;
+  }
+
+  .service-image-block {
+    aspect-ratio: 4 / 4.8;
+    min-height: 380px;
+  }
+
+  .service-block-content {
+    padding: 22px 18px 18px;
+  }
+
+  .service-block-title {
+    font-size: 1.20rem;
+  }
+
+  .service-block-desc {
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+  }
+
+  .services-bottom-cta-wrap {
+    margin-top: 38px;
+  }
+
+  .services-master-cta {
+    width: 100%;
+    max-width: 340px;
+    min-height: 48px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .service-image-block {
+    min-height: 340px;
+  }
+
+  .service-block-title {
+    font-size: 1.10rem;
+  }
+}

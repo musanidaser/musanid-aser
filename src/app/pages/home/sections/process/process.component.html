@@ -1,0 +1,97 @@
+<section class="editorial-process-section">
+  
+  <!-- Subtle Ambient Glow Orbs -->
+  <div class="process-ambient-glow" aria-hidden="true"></div>
+
+  <div class="editorial-container process-master-container">
+
+    <!-- Section Header (Editorial & Measured Authority) -->
+    <header class="process-section-header">
+      
+      <!-- Small Gold Label with Symmetrical Lines -->
+      <div class="process-label-row">
+        <span class="process-gold-leadline" aria-hidden="true"></span>
+        <span class="process-label-text">
+          {{ langService.t.process.label }}
+        </span>
+        <span class="process-gold-leadline" aria-hidden="true"></span>
+      </div>
+
+      <!-- Main Editorial Headline -->
+      <h2 class="process-main-heading">
+        {{ langService.t.process.title }}
+      </h2>
+
+      <!-- Supporting Paragraph -->
+      <p class="process-lead-text">
+        {{ langService.t.process.description }}
+      </p>
+
+    </header>
+
+    <!-- The Vertical Process Journey Architecture -->
+    <div class="process-journey-timeline">
+
+      @for (item of langService.t.process.steps; track item.step; let idx = $index) {
+        <article class="journey-stage-row" [class.stage-even]="idx % 2 === 1">
+          
+          <!-- Central Spine Node (Cleanly Centered on Card) -->
+          <div class="journey-spine-node" aria-hidden="true">
+            <div class="journey-node-marker">
+              <span class="journey-marker-dot"></span>
+            </div>
+          </div>
+
+          <!-- Frosted Architectural Stage Card -->
+          <div class="journey-stage-card">
+
+            <!-- Card Header: Stage Pill Badge & Prominent Number + Icon -->
+            <div class="stage-card-header">
+              <div class="stage-badge-pill">
+                <span class="badge-dot"></span>
+                <span>{{ item.stage }}</span>
+              </div>
+              <div class="stage-header-meta">
+                <span class="stage-prominent-num">{{ item.step }}</span>
+                <div class="stage-icon-box" aria-hidden="true">
+                  <i [class]="stepIcons[idx]"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage Headline -->
+            <h3 class="stage-card-title">
+              {{ item.title }}
+            </h3>
+
+            <!-- Gold Accent Hairline Rule -->
+            <div class="stage-card-accent" aria-hidden="true">
+              <span class="card-accent-gold"></span>
+            </div>
+
+            <!-- Supporting Description -->
+            <p class="stage-card-desc">
+              {{ item.desc }}
+            </p>
+
+          </div>
+
+        </article>
+      }
+
+      <!-- Terminal Ending Conclusion -->
+      <div class="journey-terminal-conclusion">
+        <div class="terminal-spine-anchor" aria-hidden="true">
+          <span class="terminal-pulse-ring"></span>
+          <span class="terminal-node-dot"></span>
+          <span class="terminal-crossbar"></span>
+        </div>
+        <p class="terminal-statement">
+          {{ langService.t.process.terminalConclusion }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>

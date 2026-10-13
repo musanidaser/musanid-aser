@@ -1,0 +1,249 @@
+/* ========================================================
+   UNIFIED EXECUTIVE GRAND FINALE CTA
+   Centered Editorial Composition with Background Image & Dark Overlay
+   ======================================================== */
+.internal-master-cta {
+  position: relative;
+  min-height: 460px;
+  padding: 110px 0;
+  color: #FFFFFF;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000000;
+}
+
+/* Background Image Layer */
+.cta-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('/cta.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.72;
+  z-index: 0;
+}
+
+/* Dark Luxury Scrim Overlay */
+.cta-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.70) 0%,
+    rgba(0, 0, 0, 0.80) 50%,
+    rgba(0, 0, 0, 0.90) 100%
+  );
+  z-index: 1;
+}
+
+/* Fine Gold Hairlines Top & Bottom */
+.cta-hairlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cta-line-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.5) 50%, transparent 100%);
+}
+
+.cta-line-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.35) 50%, transparent 100%);
+}
+
+.cta-centered-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.cta-centered-content {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Eyebrow Tag with Balanced Gold Lines */
+.cta-eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.cta-tag-gold-line {
+  display: inline-block;
+  width: 32px;
+  height: 1.5px;
+  background-color: #D4AF37;
+}
+
+.cta-tag-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #D4AF37;
+  text-transform: uppercase;
+}
+
+[dir="rtl"] .cta-tag-text {
+  font-family: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 0.92rem;
+}
+
+/* Display Headline */
+.cta-display-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Supporting Paragraph */
+.cta-supporting-paragraph {
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 36px 0;
+  max-width: 640px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Button */
+.cta-action-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.editorial-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background-color: #D4AF37;
+  color: #063A3A;
+  padding: 18px 46px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  border: 1px solid #D4AF37;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.editorial-btn-gold:hover {
+  background-color: #E8C86A;
+  color: #042A2A;
+  border-color: #E8C86A;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(212, 175, 55, 0.35);
+}
+
+.arrow-dynamic {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.editorial-btn-gold:hover .arrow-dynamic {
+  transform: translateX(-5px);
+}
+
+[dir="ltr"] .editorial-btn-gold:hover .arrow-dynamic {
+  transform: translateX(5px);
+}
+
+/* Institutional Trust Signals */
+.cta-trust-signals-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cta-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+}
+
+.cta-trust-badge i {
+  color: #D4AF37;
+  font-size: 0.75rem;
+}
+
+.cta-trust-dot {
+  color: rgba(212, 175, 55, 0.5);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .internal-master-cta {
+    padding: 70px 0;
+    min-height: auto;
+  }
+
+  .cta-display-title {
+    font-size: 2.1rem;
+  }
+
+  .cta-supporting-paragraph {
+    font-size: 1.05rem;
+  }
+
+  .editorial-btn-gold {
+    width: 100%;
+    padding: 16px 28px;
+  }
+
+  .cta-trust-signals-row {
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 12px;
+    padding: 14px 20px;
+    width: 100%;
+  }
+
+  .cta-trust-dot {
+    display: none;
+  }
+}

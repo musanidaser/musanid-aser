@@ -1,0 +1,70 @@
+<!-- ========================================================
+     UNIFIED EXECUTIVE GRAND FINALE CTA
+     Centered Editorial Layout with Background Image & Dark Overlay
+     ======================================================== -->
+<section class="internal-master-cta" aria-labelledby="cta-dominant-heading">
+  
+  <!-- Background Image Layer -->
+  <div class="cta-bg-image" [style.backgroundImage]="'url(' + bgImage + ')'" aria-hidden="true"></div>
+
+  <!-- Dark Near-Black Luxury Overlay -->
+  <div class="cta-dark-overlay" aria-hidden="true"></div>
+
+  <!-- Fine Gold Accent Hairlines Top & Bottom -->
+  <div class="cta-hairlines" aria-hidden="true">
+    <div class="cta-line-top"></div>
+    <div class="cta-line-bottom"></div>
+  </div>
+
+  <div class="editorial-container cta-centered-container">
+    <div class="cta-centered-content">
+      
+      <!-- Eyebrow Tag with Balanced Gold Lines -->
+      <div class="cta-eyebrow-tag">
+        <span class="cta-tag-gold-line" aria-hidden="true"></span>
+        <span class="cta-tag-text">{{ label || (langService.currentLang === 'ar' ? 'المتطلبات التجارية للتوريد' : 'COMMERCIAL PROCUREMENT REQUIREMENTS') }}</span>
+        <span class="cta-tag-gold-line" aria-hidden="true"></span>
+      </div>
+
+      <!-- Dominant Display Headline -->
+      <h2 id="cta-dominant-heading" class="cta-display-title">
+        {{ title || (langService.currentLang === 'ar' ? 'لديك احتياج توريد؟' : 'Have a Supply Requirement?') }}
+      </h2>
+
+      <!-- Supporting Paragraph -->
+      <p class="cta-supporting-paragraph">
+        {{ description || (langService.currentLang === 'ar' ? 'شاركنا متطلباتك ودعنا نبدأ من احتياجك.' : 'Share your requirements and let us start from your precise need.') }}
+      </p>
+
+      <!-- Action Button Row -->
+      <div class="cta-action-row">
+        <a [routerLink]="buttonLink" class="editorial-btn-gold cta-action-btn">
+          <span>{{ buttonText || (langService.currentLang === 'ar' ? 'طلب عرض سعر' : 'Request a Quote') }}</span>
+          <i class="fa-solid arrow-dynamic"
+             [class.fa-arrow-left]="langService.currentLang === 'ar'"
+             [class.fa-arrow-right]="langService.currentLang !== 'ar'"
+             aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Institutional Trust Signals -->
+      <div class="cta-trust-signals-row" aria-hidden="true">
+        <span class="cta-trust-badge">
+          <i class="fa-solid fa-check"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'حلول توريد مخصصة' : 'Custom Supply Solutions' }}</span>
+        </span>
+        <span class="cta-trust-dot">•</span>
+        <span class="cta-trust-badge">
+          <i class="fa-solid fa-check"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'مقارنات دقيقة وموثوقة' : 'Structured Quotation Comparison' }}</span>
+        </span>
+        <span class="cta-trust-dot">•</span>
+        <span class="cta-trust-badge">
+          <i class="fa-solid fa-check"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'متابعة مستمرة حتى التسليم' : 'End-to-End Fulfillment' }}</span>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>

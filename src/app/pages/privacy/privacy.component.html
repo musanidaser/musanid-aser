@@ -1,0 +1,356 @@
+<div class="privacy-page-wrapper">
+
+  <!-- ========================================================
+       1. INTERNAL HERO — PRIVACY POLICY
+       Cinematic Architecture Background + Scrim + Editorial Typography
+       ======================================================== -->
+  <app-internal-hero
+    bgImage="/privacy-hero.jpg"
+    [eyebrow]="langService.t.privacy.hero.eyebrow"
+    [title]="langService.t.privacy.hero.title"
+    [description]="langService.t.privacy.hero.description"
+    [ctaText]="langService.t.privacy.hero.ctaContact"
+    ctaLink="#privacy-statement"
+    [imageAlt]="langService.t.privacy.hero.title">
+  </app-internal-hero>
+
+  <!-- ========================================================
+       2. EDITORIAL LEAD & INSTITUTIONAL COMMITMENT STATEMENT
+       Direct Quotation from Musanid Aser Core Principles
+       ======================================================== -->
+  <section class="privacy-statement-section" id="privacy-statement" aria-labelledby="privacy-lead-heading">
+    <div class="statement-ambient-light" aria-hidden="true"></div>
+
+    <div class="editorial-container">
+      <div class="statement-hero-card">
+        <div class="statement-gold-bar" aria-hidden="true"></div>
+
+        <div class="statement-badge">
+          <i class="fa-solid fa-shield-halved badge-ico" aria-hidden="true"></i>
+          <span>{{ langService.t.privacy.meta.badge }}</span>
+        </div>
+
+        <h2 id="privacy-lead-heading" class="statement-headline">
+          {{ langService.t.privacy.lead.title }}
+        </h2>
+
+        <p class="statement-copy">
+          {{ langService.t.privacy.lead.text }}
+        </p>
+
+        <div class="statement-sub-indicators">
+          <span class="indicator-pill">
+            <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+            {{ langService.currentLang === 'ar' ? 'سرية تجارية تامة' : 'Full Commercial Confidentiality' }}
+          </span>
+          <span class="indicator-pill">
+            <i class="fa-solid fa-ban" aria-hidden="true"></i>
+            {{ langService.currentLang === 'ar' ? 'عدم بيع البيانات إطلاقاً' : 'Zero Data Selling' }}
+          </span>
+          <span class="indicator-pill">
+            <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+            {{ langService.currentLang === 'ar' ? 'استخدام مخصص لخدمات التوريد' : 'Purpose-Specific Usage' }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. CLAUSES GRID & DETAILED TERMS
+       All Clauses Provided by the User in High-End Layout
+       ======================================================== -->
+  <section class="privacy-clauses-section" aria-label="بنود سياسة الخصوصية">
+    <div class="editorial-container">
+
+      <div class="clauses-grid">
+
+        <!-- Clause 01: Data Collection -->
+        <article class="clause-card" id="clause-collection">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.collection.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.collection.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.collection.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text">
+            {{ langService.t.privacy.sections.collection.text }}
+          </p>
+
+          <div class="clause-fields-box">
+            <span class="fields-label">
+              <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+              {{ langService.currentLang === 'ar' ? 'عناصر البيانات التي قد يتم جمعها عبر النماذج:' : 'Data elements collected through inquiries & forms:' }}
+            </span>
+            <div class="fields-tags-list">
+              @for (field of langService.t.privacy.sections.collection.fields; track field) {
+              <span class="field-tag">
+                <i class="fa-regular fa-circle-dot" aria-hidden="true"></i>
+                {{ field }}
+              </span>
+              }
+            </div>
+          </div>
+        </article>
+
+        <!-- Clause 02: Purpose of Use -->
+        <article class="clause-card" id="clause-purpose">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.purpose.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.purpose.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.purpose.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text">
+            {{ langService.t.privacy.sections.purpose.text }}
+          </p>
+
+          <div class="purpose-bullets-wrap">
+            <ul class="purpose-checklist">
+              @for (point of langService.t.privacy.sections.purpose.points; track point) {
+              <li>
+                <i class="fa-solid fa-square-check bullet-icon" aria-hidden="true"></i>
+                <span>{{ point }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </article>
+
+        <!-- Clause 03: Legal Basis -->
+        <article class="clause-card" id="clause-legal-basis">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.legalBasis.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.legalBasis.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.legalBasis.title }}</h3>
+            </div>
+          </div>
+
+          <div class="strict-badge-notice">
+            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+            <span>{{ langService.currentLang === 'ar' ? 'الأنظمة واللوائح المعمول بها في المملكة' : 'Applicable Laws & Regulations in KSA' }}</span>
+          </div>
+
+          <p class="clause-text leading-emphasis">
+            {{ langService.t.privacy.sections.legalBasis.text }}
+          </p>
+        </article>
+
+        <!-- Clause 04: Data Retention Period -->
+        <article class="clause-card" id="clause-retention">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.retention.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.retention.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.retention.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text">
+            {{ langService.t.privacy.sections.retention.text }}
+          </p>
+
+          <div class="security-pillars-row">
+            <div class="sec-pillar">
+              <i class="fa-solid fa-hourglass-half sec-ico" aria-hidden="true"></i>
+              <span>{{ langService.currentLang === 'ar' ? 'مدة مرتبطة بالغرض' : 'Purpose-Bound Retention' }}</span>
+            </div>
+            <div class="sec-pillar">
+              <i class="fa-solid fa-book-bookmark sec-ico" aria-hidden="true"></i>
+              <span>{{ langService.currentLang === 'ar' ? 'متطلبات نظامية' : 'Statutory Terms' }}</span>
+            </div>
+            <div class="sec-pillar">
+              <i class="fa-solid fa-trash-can-arrow-up sec-ico" aria-hidden="true"></i>
+              <span>{{ langService.currentLang === 'ar' ? 'إتلاف وتخلص آمن' : 'Secure Safe Disposal' }}</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Clause 05: Data Subject Rights -->
+        <article class="clause-card clause-highlight" id="clause-rights">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.rights.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.rights.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.rights.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text leading-emphasis">
+            {{ langService.t.privacy.sections.rights.text }}
+          </p>
+
+          <div class="purpose-bullets-wrap">
+            <ul class="purpose-checklist">
+              @for (item of langService.t.privacy.sections.rights.items; track item) {
+              <li>
+                <i class="fa-solid fa-square-check bullet-icon" aria-hidden="true"></i>
+                <span>{{ item }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </article>
+
+        <!-- Clause 06: Sharing & Non-Sale -->
+        <article class="clause-card" id="clause-sharing">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.sharing.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.sharing.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.sharing.title }}</h3>
+            </div>
+          </div>
+
+          <div class="strict-badge-notice">
+            <i class="fa-solid fa-shield-cat" aria-hidden="true"></i>
+            <span>{{ langService.currentLang === 'ar' ? 'ضمان السرية وعدم الاستغلال التسويقي' : 'Confidentiality & Non-Marketing Guarantee' }}</span>
+          </div>
+
+          <p class="clause-text leading-emphasis">
+            {{ langService.t.privacy.sections.sharing.text }}
+          </p>
+        </article>
+
+        <!-- Clause 07: Security Measures -->
+        <article class="clause-card" id="clause-security">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.security.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.security.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.security.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text">
+            {{ langService.t.privacy.sections.security.text }}
+          </p>
+
+          <div class="security-pillars-row">
+            <div class="sec-pillar">
+              <i class="fa-solid fa-key sec-ico" aria-hidden="true"></i>
+              <span>{{ langService.currentLang === 'ar' ? 'منع الوصول غير المصرح' : 'Access Control' }}</span>
+            </div>
+            <div class="sec-pillar">
+              <i class="fa-solid fa-database sec-ico" aria-hidden="true"></i>
+              <span>{{ langService.currentLang === 'ar' ? 'حفظ مشفّر ومنظم' : 'Data Safeguards' }}</span>
+            </div>
+            <div class="sec-pillar">
+              <i class="fa-solid fa-briefcase sec-ico" aria-hidden="true"></i>
+              <span>{{ langService.currentLang === 'ar' ? 'استخدام مهني محدد' : 'Strict Business Scope' }}</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Clause 08: External Links & Services -->
+        <article class="clause-card" id="clause-external">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.external.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.external.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.external.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text">
+            {{ langService.t.privacy.sections.external.text }}
+          </p>
+
+          <div class="external-links-chips">
+            <span class="ext-chip">
+              <i class="fa-brands fa-whatsapp ext-ico-wa" aria-hidden="true"></i>
+              WhatsApp Business
+            </span>
+            <span class="ext-chip">
+              <i class="fa-solid fa-envelope ext-ico-mail" aria-hidden="true"></i>
+              E-mail Service
+            </span>
+          </div>
+        </article>
+
+        <!-- Clause 09: Consent & Approval -->
+        <article class="clause-card" id="clause-consent">
+          <div class="clause-card-header">
+            <div class="clause-num-badge">{{ langService.t.privacy.sections.consent.num }}</div>
+            <div class="clause-meta">
+              <span class="clause-tag">{{ langService.t.privacy.sections.consent.tag }}</span>
+              <h3 class="clause-title">{{ langService.t.privacy.sections.consent.title }}</h3>
+            </div>
+          </div>
+
+          <p class="clause-text">
+            {{ langService.t.privacy.sections.consent.text }}
+          </p>
+
+          <div class="consent-stamp">
+            <i class="fa-solid fa-file-contract stamp-ico" aria-hidden="true"></i>
+            <span>{{ langService.currentLang === 'ar' ? 'استخدام الموقع وتعبئة النماذج يُعد إقراراً بالموافقة على ما ورد أعلاه.' : 'Using the website and submitting forms constitutes acknowledgement and consent.' }}</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. HIGH-IMPACT CTA SECTION FOR PRIVACY INQUIRIES & CONTACT
+       Routes to Contact/Quote Page + Direct Phone, Email, WhatsApp
+       ======================================================== -->
+  <section class="privacy-contact-cta-section" id="privacy-contact" aria-labelledby="privacy-contact-headline">
+    <!-- Background Image Layer -->
+    <div class="cta-bg-image" aria-hidden="true"></div>
+
+    <!-- Dark Luxury Scrim Overlay -->
+    <div class="cta-dark-overlay" aria-hidden="true"></div>
+
+    <!-- Fine Gold Accent Hairlines -->
+    <div class="cta-hairlines" aria-hidden="true">
+      <div class="cta-line-top"></div>
+      <div class="cta-line-bottom"></div>
+    </div>
+
+    <div class="editorial-container cta-container-relative">
+      <div class="cta-central-frame">
+
+        <div class="cta-gold-accent-line" aria-hidden="true"></div>
+
+        <span class="cta-eyebrow-tag">
+          <i class="fa-solid fa-headset" aria-hidden="true"></i>
+          {{ langService.t.privacy.cta.eyebrow }}
+        </span>
+
+        <h2 id="privacy-contact-headline" class="cta-main-heading">
+          {{ langService.t.privacy.cta.heading }}
+        </h2>
+
+        <p class="cta-subheading-copy">
+          {{ langService.t.privacy.cta.subheading }}
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="cta-actions-wrap">
+          <a routerLink="/request-quote" class="cta-prime-btn">
+            <span>{{ langService.t.privacy.cta.button }}</span>
+            <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang === 'en'"></i>
+          </a>
+
+          <a href="https://wa.me/966533796523?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="cta-wa-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>{{ langService.t.privacy.cta.whatsappButton }}</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
