@@ -1,0 +1,262 @@
+/* ========================================================
+   MUSANID ASER — ELEGANT GOLD LOGO REVEAL INTRO
+   Pure CSS Only (No SCSS / Zero external animation libraries)
+   Colors: Dark Teal (#063A3A), Deep Teal (#0B4D4D), Gold (#D4AF37)
+   ======================================================== */
+
+:host {
+  display: block;
+}
+
+/* Fullscreen Overlay covering entire viewport and navbar */
+.intro-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background-color: #063A3A;
+  background: radial-gradient(circle at 50% 45%, #0B4D4D 0%, #063A3A 65%, #042424 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  user-select: none;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+/* Smooth exit transition to reveal the underlying site */
+.intro-backdrop.intro-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Content Container */
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  max-width: 90vw;
+}
+
+/* ----------------------------------------------------
+   1. Outer Golden Ring (SVG Drawing)
+   ---------------------------------------------------- */
+.ring-wrapper {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gold-ring-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  pointer-events: none;
+}
+
+.gold-ring-circle {
+  stroke-dasharray: 578;
+  stroke-dashoffset: 578;
+  animation: drawRing 600ms cubic-bezier(0.2, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes drawRing {
+  0% {
+    stroke-dashoffset: 578;
+    opacity: 0.2;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------------
+   2. Brand Emblem (Center Logo)
+   ---------------------------------------------------- */
+.logo-box {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.92);
+  animation: revealLogo 400ms cubic-bezier(0.16, 1, 0.3, 1) 220ms forwards;
+}
+
+.intro-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+@keyframes revealLogo {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ----------------------------------------------------
+   3. Soft Gold Sheen Sweep
+   ---------------------------------------------------- */
+.logo-sheen {
+  position: absolute;
+  top: -20%;
+  left: -120%;
+  width: 100%;
+  height: 140%;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 235, 170, 0.25) 45%,
+    rgba(212, 175, 55, 0.4) 50%,
+    rgba(255, 235, 170, 0.25) 55%,
+    transparent 80%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  opacity: 0;
+  animation: sweepSheen 500ms ease-out 620ms forwards;
+}
+
+@keyframes sweepSheen {
+  0% {
+    left: -120%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+/* ----------------------------------------------------
+   4. Identity Typography
+   ---------------------------------------------------- */
+.brand-text-block {
+  margin-top: 26px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: revealText 450ms cubic-bezier(0.16, 1, 0.3, 1) 650ms forwards;
+}
+
+.brand-title {
+  margin: 0;
+  font-family: var(--font-ar, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FAF7F2;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.brand-divider {
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 10px auto;
+}
+
+.brand-subtitle {
+  margin: 0;
+  font-family: var(--font-ar, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: 0.84rem;
+  font-weight: 400;
+  color: #D4AF37;
+  letter-spacing: 0.08em;
+  opacity: 0.92;
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------------------
+   5. Mobile Responsiveness
+   ---------------------------------------------------- */
+@media (max-width: 640px) {
+  .ring-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .logo-box {
+    width: 110px;
+    height: 110px;
+  }
+
+  .brand-text-block {
+    margin-top: 20px;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .brand-subtitle {
+    font-size: 0.78rem;
+  }
+}
+
+/* ----------------------------------------------------
+   6. Accessibility: Reduced Motion
+   ---------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .intro-backdrop {
+    transition: opacity 150ms ease, visibility 150ms ease;
+  }
+
+  .gold-ring-circle,
+  .logo-box,
+  .brand-text-block {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  .logo-sheen {
+    display: none !important;
+  }
+}

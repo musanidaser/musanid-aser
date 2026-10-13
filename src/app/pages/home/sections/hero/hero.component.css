@@ -1,27 +1,29 @@
 /* ========================================================
    CINEMATIC FULL-WIDTH HERO STYLES (REFINED & EDITORIAL)
-   Authentic Arabic Editorial Character (Amiri + Brand Gold)
+   Authentic Arabic Editorial Character (Unified IBM Plex Sans Arabic + Brand Gold)
    Standard CSS Only (Zero SCSS)
    ======================================================== */
 
 .cinematic-hero-fullwidth {
   position: relative;
-  min-height: 520px;
+  /* Slightly reduced height for perfect visual balance */
+  min-height: clamp(580px, calc(80vh - 80px), 760px);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background-color: #0B0E11;
   color: #FFFFFF;
-  padding: 55px 0 45px;
+  padding: clamp(50px, 6vh, 75px) 0 clamp(40px, 5vh, 65px);
+  box-sizing: border-box;
 }
 
-/* Background Photo Layer (Cropped bottom water via position anchor) */
+/* Background Photo Layer (Carefully anchored for focal Riyadh skyline & logistics) */
 .hero-bg-layer {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center 25%;
+  background-position: center 30%;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -32,14 +34,14 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.38) 0%,
-    rgba(0, 0, 0, 0.44) 50%,
-    rgba(0, 0, 0, 0.58) 100%
+    rgba(0, 0, 0, 0.40) 0%,
+    rgba(0, 0, 0, 0.46) 50%,
+    rgba(0, 0, 0, 0.62) 100%
   );
   z-index: 2;
 }
 
-/* Centered Content Container (Controlled Width & Elevated Position) */
+/* Centered Content Container (Elevated upwards for enhanced prominence and breathing room) */
 .hero-fullwidth-content {
   position: relative;
   z-index: 3;
@@ -47,9 +49,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 860px;
+  max-width: 880px;
+  width: 100%;
   margin: 0 auto;
-  transform: translateY(-16px);
+  /* Elevated upwards */
+  transform: translateY(-32px);
 }
 
 /* Top Centered Eyebrow (Editorial Metadata) */
@@ -58,15 +62,15 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font-size: 0.82rem;
+  font-size: clamp(0.78rem, 1vw, 0.85rem);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: clamp(14px, 2vh, 18px);
 }
 
 .eyebrow-line-gold {
-  width: 28px;
+  width: clamp(22px, 2.5vw, 30px);
   height: 1.5px;
   background-color: var(--gold-primary);
 }
@@ -79,13 +83,13 @@
 /* Monumental Centered Headline (Unified IBM Plex Sans Arabic) */
 .hero-cinematic-title {
   font-family: var(--font-ar);
-  font-size: 2.85rem;
+  font-size: clamp(2.35rem, 3.8vw, 3.15rem);
   font-weight: 800;
   color: #FFFFFF;
-  line-height: 1.5;
+  line-height: 1.45;
   letter-spacing: -0.01em;
-  max-width: 860px;
-  margin: 0 auto 18px;
+  max-width: 880px;
+  margin: 0 auto clamp(14px, 2vh, 18px);
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
 }
 
@@ -101,11 +105,11 @@
 /* Refined Compact Subtitle (Supporting Brand Typography) */
 .hero-cinematic-lead {
   font-family: var(--font-ar);
-  font-size: 1.05rem;
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
   line-height: 1.85;
-  color: rgba(255, 255, 255, 0.88);
-  max-width: 640px;
-  margin: 0 auto 26px;
+  color: rgba(255, 255, 255, 0.90);
+  max-width: 680px;
+  margin: 0 auto clamp(22px, 3vh, 30px);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -114,7 +118,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: clamp(12px, 1.6vw, 18px);
+  width: 100%;
 }
 
 /* Primary CTA: طلب تسعيرة توريد (Dominant Gold #D4AF37) */
@@ -125,9 +130,9 @@
   gap: 10px;
   background-color: var(--gold-primary); /* #D4AF37 */
   color: #1F1F1F;
-  padding: 13px 30px;
+  padding: clamp(12px, 1.5vh, 15px) clamp(26px, 2.5vw, 34px);
   font-family: var(--font-ar);
-  font-size: 0.95rem;
+  font-size: clamp(0.92rem, 1vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   border-radius: 4px;
@@ -153,9 +158,9 @@
   gap: 10px;
   background-color: rgba(255, 255, 255, 0.08);
   color: #FFFFFF;
-  padding: 13px 28px;
+  padding: clamp(12px, 1.5vh, 15px) clamp(24px, 2.3vw, 32px);
   font-family: var(--font-ar);
-  font-size: 0.95rem;
+  font-size: clamp(0.92rem, 1vw, 1rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   border-radius: 4px;
@@ -190,32 +195,94 @@
 }
 
 /* --------------------------------------------------------
-   Responsive Breakpoints
+   Responsive Breakpoints: Large Desktop / Ultra-Wide
    -------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (min-width: 1440px) {
   .cinematic-hero-fullwidth {
-    min-height: 580px;
+    min-height: clamp(640px, calc(82vh - 80px), 820px);
+    padding: 75px 0 65px;
+  }
+
+  .hero-fullwidth-content {
+    max-width: 960px;
+    transform: translateY(-38px);
   }
 
   .hero-cinematic-title {
-    font-size: 2.45rem;
-    line-height: 1.42;
-  }
-
-  .hero-fullwidth-content {
-    max-width: 720px;
+    font-size: 3.25rem;
   }
 }
 
-@media (max-width: 640px) {
+/* --------------------------------------------------------
+   Responsive Breakpoints: Tablet & Medium Displays (769px - 1024px)
+   -------------------------------------------------------- */
+@media (max-width: 1024px) {
   .cinematic-hero-fullwidth {
-    min-height: auto;
-    padding: 60px 0 52px;
+    min-height: clamp(520px, calc(74vh - 80px), 640px);
+    padding: clamp(45px, 5.5vh, 65px) 0 clamp(35px, 4.5vh, 55px);
+  }
+
+  .hero-bg-layer {
+    background-position: center 30%;
   }
 
   .hero-fullwidth-content {
-    transform: none;
+    max-width: 740px;
+    transform: translateY(-24px);
+  }
+
+  .hero-cinematic-title {
+    font-size: clamp(2.1rem, 3.8vw, 2.55rem);
+    line-height: 1.42;
+  }
+}
+
+/* --------------------------------------------------------
+   Responsive Breakpoints: Small Tablet & Phablet (641px - 768px)
+   -------------------------------------------------------- */
+@media (max-width: 768px) {
+  .cinematic-hero-fullwidth {
+    min-height: clamp(480px, calc(72vh - 76px), 580px);
+    padding: clamp(40px, 5vh, 58px) 0 clamp(32px, 4vh, 48px);
+  }
+
+  .hero-bg-layer {
+    background-position: 55% center;
+  }
+
+  .hero-fullwidth-content {
+    transform: translateY(-18px);
+  }
+
+  .hero-cinematic-title {
+    font-size: clamp(1.95rem, 4.4vw, 2.25rem);
+    line-height: 1.4;
+  }
+
+  .hero-cinematic-lead {
+    font-size: 0.98rem;
+    max-width: 580px;
+    margin-bottom: 24px;
+  }
+}
+
+/* --------------------------------------------------------
+   Responsive Breakpoints: Mobile (<= 640px)
+   -------------------------------------------------------- */
+@media (max-width: 640px) {
+  .cinematic-hero-fullwidth {
+    min-height: clamp(440px, calc(70vh - 70px), 540px);
+    padding: clamp(38px, 5vh, 50px) 0 clamp(30px, 4vh, 42px);
+  }
+
+  .hero-bg-layer {
+    background-position: 58% center;
+  }
+
+  .hero-fullwidth-content {
+    transform: translateY(-12px);
     max-width: 100%;
+    padding: 0 4px;
   }
 
   .hero-top-eyebrow {
@@ -229,43 +296,63 @@
   }
 
   .hero-cinematic-title {
-    font-size: clamp(1.62rem, 5.8vw, 1.95rem);
+    font-size: clamp(1.68rem, 6vw, 2.05rem);
     line-height: 1.38;
     margin-bottom: 14px;
     letter-spacing: normal;
   }
 
   .hero-cinematic-lead {
-    font-size: clamp(0.90rem, 2.8vw, 0.98rem);
-    line-height: 1.72;
-    margin-bottom: 24px;
-    padding: 0 4px;
+    font-size: clamp(0.92rem, 3.2vw, 1rem);
+    line-height: 1.74;
+    margin-bottom: 22px;
+    padding: 0 6px;
   }
 
   .hero-actions-row {
     flex-direction: column;
     width: 100%;
     gap: 12px;
+    align-items: center;
   }
 
   .hero-btn-primary,
   .hero-btn-secondary {
     width: 100%;
-    max-width: 340px;
+    max-width: 320px;
     min-height: 48px;
-    padding: 12px 24px;
+    padding: 13px 20px;
     font-size: 0.94rem;
+    box-sizing: border-box;
   }
 }
 
+/* --------------------------------------------------------
+   Responsive Breakpoints: Very Compact Mobile (<= 380px)
+   -------------------------------------------------------- */
 @media (max-width: 380px) {
+  .cinematic-hero-fullwidth {
+    min-height: auto;
+    padding: 34px 0 28px;
+  }
+
+  .hero-fullwidth-content {
+    transform: translateY(-6px);
+  }
+
   .hero-cinematic-title {
     font-size: 1.52rem;
   }
 
+  .hero-cinematic-lead {
+    font-size: 0.88rem;
+    margin-bottom: 18px;
+  }
+
   .hero-btn-primary,
   .hero-btn-secondary {
-    padding: 11px 18px;
+    padding: 12px 16px;
     font-size: 0.90rem;
+    max-width: 100%;
   }
 }

@@ -1,0 +1,58 @@
+@if (isVisible) {
+  <aside
+    class="intro-backdrop"
+    [class.intro-leaving]="isLeaving"
+    aria-hidden="true"
+    aria-label="Musanid Aser Intro Animation">
+    <div class="intro-content">
+      <!-- Outer Decorative Golden Ring (Drawn with SVG stroke animation) -->
+      <div class="ring-wrapper">
+        <svg
+          class="gold-ring-svg"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <defs>
+            <linearGradient id="introGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E8C86A" />
+              <stop offset="50%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#B38E22" />
+            </linearGradient>
+          </defs>
+          <circle
+            class="gold-ring-circle"
+            cx="100"
+            cy="100"
+            r="92"
+            stroke="url(#introGoldGradient)"
+            stroke-width="1.75"
+            stroke-linecap="round" />
+        </svg>
+
+        <!-- Brand Emblem Container -->
+        <div class="logo-box">
+          <img
+            src="/logo.png"
+            alt="مساند آسر"
+            class="intro-logo-img"
+            loading="eager"
+            fetchpriority="high" />
+          <!-- Single Soft Gold Sheen Sweep -->
+          <div class="logo-sheen" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Company Identity Typography -->
+      <div class="brand-text-block">
+        <h1 class="brand-title">
+          {{ langService.t.meta.companyFullName }}
+        </h1>
+        <div class="brand-divider" aria-hidden="true"></div>
+        <p class="brand-subtitle">
+          {{ langService.currentLang === 'ar' ? 'حلول التوريد والوساطة التجارية' : 'Supply & Commercial Brokerage' }}
+        </p>
+      </div>
+    </div>
+  </aside>
+}
