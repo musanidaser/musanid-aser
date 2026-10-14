@@ -15,7 +15,24 @@ import { LanguageService } from '../../core/services/language.service';
  * 1. Obtain an Access Key from https://web3forms.com
  * 2. Set the key in WEB3FORMS_ACCESS_KEY below.
  */
-export const WEB3FORMS_ACCESS_KEY: string = '';
+export const WEB3FORMS_ACCESS_KEY: string = 'a2318250-72df-416b-9c53-bb243add1485';
+
+export interface SubmittedQuoteData {
+  referenceId: string;
+  organizationName: string;
+  contactPerson: string;
+  mobileNumber: string;
+  email: string;
+  requestType: string;
+  requestedItem: string;
+  quantity: number | string;
+  specifications: string;
+  approximateBudget?: string;
+  requiredDate: string;
+  deliveryCity: string;
+  additionalDetails?: string;
+  date: string;
+}
 
 @Component({
   selector: 'app-quote',
@@ -28,19 +45,6 @@ export class QuoteComponent {
   langService = inject(LanguageService);
   private fb = inject(FormBuilder);
 
-  // Exact 12 fields in specified order:
-  // 1. organizationName (Required)
-  // 2. contactPerson (Required)
-  // 3. mobileNumber (Required)
-  // 4. email (Required)
-  // 5. requestType (Required)
-  // 6. requestedItem (Required)
-  // 7. quantity (Required, positive number)
-  // 8. specifications (Required)
-  // 9. approximateBudget (Optional)
-  // 10. requiredDate (Required)
-  // 11. deliveryCity (Required)
-  // 12. additionalDetails (Optional)
   quoteForm: FormGroup = this.fb.group({
     organizationName: ['', [Validators.required, Validators.minLength(2)]],
     contactPerson: ['', [Validators.required, Validators.minLength(2)]],
@@ -62,6 +66,7 @@ export class QuoteComponent {
   isSubmitting = false;
   submitStatus: 'idle' | 'success' | 'error' | 'unconfigured' = 'idle';
   errorMessage: string = '';
+  lastSubmittedData: SubmittedQuoteData | null = null;
 
   get f() {
     return this.quoteForm.controls;
@@ -73,13 +78,13 @@ export class QuoteComponent {
   }
 
   async onSubmit(): Promise<void> {
-    // Prevent duplicate submission while already processing
     if (this.isSubmitting) {
       return;
     }
 
     if (this.quoteForm.invalid) {
       this.quoteForm.markAllAsTouched();
+      this.scrollToFirstInvalidControl();
       return;
     }
 
@@ -89,14 +94,19 @@ export class QuoteComponent {
 
     const formData = this.quoteForm.value;
 
-    // Check if live Web3Forms access key is configured
     if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.trim() === '') {
-      // Safe frontend handling when email key is pending
       this.isSubmitting = false;
       this.submitStatus = 'unconfigured';
-      // Preserve form values (do not clear)
       return;
     }
+
+    // Generate unique executive reference number
+    const referenceId = `MA-${Math.floor(100000 + Math.random() * 900000)}`;
+    const now = new Date();
+    const submissionDate = now.toLocaleString(
+      this.langService.currentLang === 'ar' ? 'ar-SA' : 'en-US',
+      { dateStyle: 'medium', timeStyle: 'short' }
+    );
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -107,37 +117,67 @@ export class QuoteComponent {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `طلب عرض سعر جديد: ${formData.organizationName} - ${formData.requestedItem}`,
-          organization_name: formData.organizationName,
-          contact_person: formData.contactPerson,
-          mobile_number: formData.mobileNumber,
-          email: formData.email,
-          request_type: formData.requestType,
-          requested_item: formData.requestedItem,
-          quantity: formData.quantity,
-          specifications: formData.specifications,
-          approximate_budget: formData.approximateBudget || 'غير محدد (اختياري)',
-          required_date: formData.requiredDate,
-          delivery_city: formData.deliveryCity,
-          additional_details: formData.additionalDetails || 'لا يوجد'
+          subject: `طلب تسعير جديد: ${formData.organizationName} - ${formData.requestedItem} [${referenceId}]`,
+          from_name: `منصة مساند آسر (Musanid Aser)`,
+          replyto: formData.email,
+          botcheck: '',
+          // Structured email table keys for instant readability
+          'الرقم المرجعي للطلب': referenceId,
+          'اسم المنشأة': formData.organizationName,
+          'اسم المسؤول': formData.contactPerson,
+          'رقم الجوال': formData.mobileNumber,
+          'البريد الإلكتروني': formData.email,
+          'نوع الطلب': formData.requestType,
+          'المنتج أو الخدمة المطلوبة': formData.requestedItem,
+          'الكمية': formData.quantity,
+          'المواصفات الفنية': formData.specifications,
+          'الميزانية التقريبية': formData.approximateBudget?.trim() || 'غير محددة (اختياري)',
+          'موعد الاحتياج والتسليم': formData.requiredDate,
+          'مدينة التسليم': formData.deliveryCity,
+          'تفاصيل وملاحظات إضافية': formData.additionalDetails?.trim() || 'لا توجد ملاحظات إضافية',
+          'تاريخ الإرسال': submissionDate
         })
       });
 
       const result = await response.json();
 
       if (response.ok && result.success) {
-        // Confirmation only on genuine success
         this.submitStatus = 'success';
+        this.lastSubmittedData = {
+          referenceId,
+          organizationName: formData.organizationName,
+          contactPerson: formData.contactPerson,
+          mobileNumber: formData.mobileNumber,
+          email: formData.email,
+          requestType: formData.requestType,
+          requestedItem: formData.requestedItem,
+          quantity: formData.quantity,
+          specifications: formData.specifications,
+          approximateBudget: formData.approximateBudget,
+          requiredDate: formData.requiredDate,
+          deliveryCity: formData.deliveryCity,
+          additionalDetails: formData.additionalDetails,
+          date: submissionDate
+        };
         this.quoteForm.reset();
+        this.scrollToFeedback();
       } else {
-        // Clear error status without losing entered data
         this.submitStatus = 'error';
-        this.errorMessage = result.message || 'Error sending request';
+        this.errorMessage =
+          result.message ||
+          (this.langService.currentLang === 'ar'
+            ? 'تعذر إتمام الإرسال في الوقت الحالي، يرجى المحاولة لاحقاً أو عبر واتساب'
+            : 'Error sending quote request. Please retry or contact us via WhatsApp.');
+        this.scrollToFeedback();
       }
     } catch (err: any) {
-      // On failure, retain all form entries
       this.submitStatus = 'error';
-      this.errorMessage = err?.message || 'Network error';
+      this.errorMessage =
+        err?.message ||
+        (this.langService.currentLang === 'ar'
+          ? 'تعذر الاتصال بالخادم، يرجى التحقق من اتصالك بالإنترنت'
+          : 'Network error occurred while sending your request.');
+      this.scrollToFeedback();
     } finally {
       this.isSubmitting = false;
     }
@@ -147,39 +187,40 @@ export class QuoteComponent {
     this.quoteForm.reset();
     this.submitStatus = 'idle';
     this.errorMessage = '';
+    this.lastSubmittedData = null;
+    this.scrollToForm();
   }
 
-  getWhatsAppPrefilledUrl(): string {
-    const v = this.quoteForm.value;
-    const isAr = this.langService.currentLang === 'ar';
-    const text = isAr
-      ? `السلام عليكم، أود تقديم طلب عرض سعر من مؤسسة مساند آسر:\n\n` +
-        `• *اسم المنشأة:* ${v.organizationName || '-'}\n` +
-        `• *اسم المسؤول:* ${v.contactPerson || '-'}\n` +
-        `• *رقم الجوال:* ${v.mobileNumber || '-'}\n` +
-        `• *البريد الإلكتروني:* ${v.email || '-'}\n` +
-        `• *نوع الطلب:* ${v.requestType || '-'}\n` +
-        `• *المنتج أو الخدمة:* ${v.requestedItem || '-'}\n` +
-        `• *الكمية:* ${v.quantity || '-'}\n` +
-        `• *المواصفات:* ${v.specifications || '-'}\n` +
-        `• *الميزانية التقريبية:* ${v.approximateBudget || 'غير محدد'}\n` +
-        `• *موعد الاحتياج:* ${v.requiredDate || '-'}\n` +
-        `• *مدينة التسليم:* ${v.deliveryCity || '-'}\n` +
-        `• *تفاصيل إضافية:* ${v.additionalDetails || 'لا يوجد'}`
-      : `Hello, I would like to request a quote from Musanid Aser:\n\n` +
-        `• *Organization:* ${v.organizationName || '-'}\n` +
-        `• *Contact Person:* ${v.contactPerson || '-'}\n` +
-        `• *Mobile:* ${v.mobileNumber || '-'}\n` +
-        `• *Email:* ${v.email || '-'}\n` +
-        `• *Request Type:* ${v.requestType || '-'}\n` +
-        `• *Requested Item:* ${v.requestedItem || '-'}\n` +
-        `• *Quantity:* ${v.quantity || '-'}\n` +
-        `• *Specifications:* ${v.specifications || '-'}\n` +
-        `• *Approx Budget:* ${v.approximateBudget || 'Not specified'}\n` +
-        `• *Required Date:* ${v.requiredDate || '-'}\n` +
-        `• *Delivery City:* ${v.deliveryCity || '-'}\n` +
-        `• *Additional Details:* ${v.additionalDetails || 'None'}`;
+  private scrollToFeedback(): void {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const anchor = document.getElementById('form-feedback-anchor') || document.getElementById('quote-form-card');
+        if (anchor) {
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 80);
+    }
+  }
 
-    return `https://wa.me/966533796523?text=${encodeURIComponent(text)}`;
+  private scrollToForm(): void {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const anchor = document.getElementById('quote-form-card');
+        if (anchor) {
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 80);
+    }
+  }
+
+  private scrollToFirstInvalidControl(): void {
+    if (typeof document !== 'undefined') {
+      setTimeout(() => {
+        const firstErrorEl = document.querySelector('.has-field-error');
+        if (firstErrorEl) {
+          firstErrorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 80);
+    }
   }
 }

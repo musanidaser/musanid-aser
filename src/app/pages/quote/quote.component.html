@@ -42,7 +42,7 @@
              COLUMN 1: THE QUOTE REQUEST FORM (DOMINANT ELEMENT)
              ==================================================== -->
         <div class="form-dominant-column">
-          <div class="quote-form-card">
+          <div id="quote-form-card" class="quote-form-card">
             
             <!-- Luxury Gold & Teal Top Accent Bar -->
             <div class="form-top-accent-bar" aria-hidden="true"></div>
@@ -66,18 +66,67 @@
               <div class="form-divider-gold" aria-hidden="true"></div>
             </div>
 
-            <!-- SUCCESS STATE BANNER (SHOWN ONLY UPON CONFIRMED SUCCESS) -->
+            <!-- SUCCESS STATE: EXECUTIVE CONFIRMATION & RECEIPT CARD -->
             @if (submitStatus === 'success') {
-              <div class="feedback-banner state-success" role="alert">
-                <div class="feedback-icon-box">
-                  <i class="fa-solid fa-circle-check"></i>
+              <div id="form-feedback-anchor" class="executive-success-card" role="alert">
+                <div class="success-top-badge">
+                  <div class="success-icon-pulse">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <span class="success-status-tag">{{ langService.currentLang === 'ar' ? 'تم الاستلام بنجاح' : 'Successfully Received' }}</span>
                 </div>
-                <div class="feedback-body">
-                  <h3 class="feedback-title">{{ langService.t.quotePage.form.feedback.successTitle }}</h3>
-                  <p class="feedback-text">{{ langService.t.quotePage.form.feedback.successMessage }}</p>
-                  <button type="button" (click)="resetForm()" class="editorial-btn-gold feedback-reset-btn">
-                    <span>{{ langService.t.quotePage.form.feedback.resetButton }}</span>
+
+                <h3 class="success-card-title">{{ langService.t.quotePage.form.feedback.successTitle }}</h3>
+                <p class="success-card-desc">{{ langService.t.quotePage.form.feedback.successMessage }}</p>
+
+                @if (lastSubmittedData) {
+                  <div class="order-receipt-summary">
+                    <div class="receipt-header-row">
+                      <span class="receipt-label">
+                        <i class="fa-solid fa-receipt"></i>
+                        <span>{{ langService.currentLang === 'ar' ? 'الرقم المرجعي للطلب' : 'Reference Number' }}</span>
+                      </span>
+                      <span class="receipt-ref-code" dir="ltr">#{{ lastSubmittedData.referenceId }}</span>
+                    </div>
+
+                    <div class="receipt-details-grid">
+                      <div class="receipt-item">
+                        <span class="receipt-item-label">{{ langService.t.quotePage.form.organizationName }}:</span>
+                        <strong class="receipt-item-value">{{ lastSubmittedData.organizationName }}</strong>
+                      </div>
+                      <div class="receipt-item">
+                        <span class="receipt-item-label">{{ langService.t.quotePage.form.contactPerson }}:</span>
+                        <strong class="receipt-item-value">{{ lastSubmittedData.contactPerson }}</strong>
+                      </div>
+                      <div class="receipt-item">
+                        <span class="receipt-item-label">{{ langService.t.quotePage.form.requestedItem }}:</span>
+                        <strong class="receipt-item-value">{{ lastSubmittedData.requestedItem }}</strong>
+                      </div>
+                      <div class="receipt-item">
+                        <span class="receipt-item-label">{{ langService.t.quotePage.form.quantity }}:</span>
+                        <strong class="receipt-item-value">{{ lastSubmittedData.quantity }}</strong>
+                      </div>
+                      <div class="receipt-item">
+                        <span class="receipt-item-label">{{ langService.t.quotePage.form.deliveryCity }}:</span>
+                        <strong class="receipt-item-value">{{ lastSubmittedData.deliveryCity }}</strong>
+                      </div>
+                      <div class="receipt-item">
+                        <span class="receipt-item-label">{{ langService.currentLang === 'ar' ? 'تاريخ التسجيل' : 'Submission Date' }}:</span>
+                        <span class="receipt-item-value">{{ lastSubmittedData.date }}</span>
+                      </div>
+                    </div>
+                  </div>
+                }
+
+                <div class="success-guarantee-note">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>{{ langService.currentLang === 'ar' ? 'يقوم فريق التوريد والوساطة بمراجعة المواصفات والبدء في استدراج ومقارنة العروض للتواصل معكم بأفضل خيار.' : 'Our procurement and brokerage team is reviewing the specifications to prepare competitive quotations.' }}</span>
+                </div>
+
+                <div class="success-actions-deck">
+                  <button type="button" (click)="resetForm()" class="editorial-btn-gold success-new-request-btn">
                     <i class="fa-solid fa-rotate-left"></i>
+                    <span>{{ langService.t.quotePage.form.feedback.resetButton }}</span>
                   </button>
                 </div>
               </div>
@@ -85,7 +134,7 @@
 
             <!-- ERROR STATE BANNER (FORM DATA PRESERVED) -->
             @if (submitStatus === 'error') {
-              <div class="feedback-banner state-error" role="alert">
+              <div id="form-feedback-anchor" class="feedback-banner state-error" role="alert">
                 <div class="feedback-icon-box">
                   <i class="fa-solid fa-triangle-exclamation"></i>
                 </div>
@@ -96,14 +145,15 @@
                     <p class="feedback-detail-code">{{ errorMessage }}</p>
                   }
                   <div class="feedback-actions-row">
-                    <button type="button" (click)="onSubmit()" class="editorial-btn-gold feedback-retry-btn">
-                      <span>{{ langService.currentLang === 'ar' ? 'إعادة المحاولة' : 'Try Again' }}</span>
-                      <i class="fa-solid fa-rotate-right"></i>
+                    <button type="button" (click)="onSubmit()" [disabled]="isSubmitting" class="editorial-btn-gold feedback-retry-btn">
+                      @if (isSubmitting) {
+                        <i class="fa-solid fa-circle-notch fa-spin"></i>
+                        <span>{{ langService.t.quotePage.form.submittingButton }}</span>
+                      } @else {
+                        <span>{{ langService.currentLang === 'ar' ? 'إعادة المحاولة' : 'Try Again' }}</span>
+                        <i class="fa-solid fa-rotate-right"></i>
+                      }
                     </button>
-                    <a [href]="getWhatsAppPrefilledUrl()" target="_blank" rel="noopener noreferrer" class="whatsapp-fallback-btn">
-                      <i class="fa-brands fa-whatsapp"></i>
-                      <span>{{ langService.t.quotePage.form.feedback.whatsappAlternative }}</span>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -111,7 +161,7 @@
 
             <!-- SETUP CONFIGURATION NOTICE (WHEN LIVE KEY PENDING) -->
             @if (submitStatus === 'unconfigured') {
-              <div class="feedback-banner state-notice" role="alert">
+              <div id="form-feedback-anchor" class="feedback-banner state-notice" role="alert">
                 <div class="feedback-icon-box">
                   <i class="fa-solid fa-circle-info"></i>
                 </div>
@@ -119,10 +169,6 @@
                   <h3 class="feedback-title">{{ langService.currentLang === 'ar' ? 'تم تجهيز بيانات طلبكم' : 'Your Request Data Is Ready' }}</h3>
                   <p class="feedback-text">{{ langService.t.quotePage.form.feedback.configNotice }}</p>
                   <div class="feedback-actions-row">
-                    <a [href]="getWhatsAppPrefilledUrl()" target="_blank" rel="noopener noreferrer" class="whatsapp-fallback-btn active-whatsapp-direct">
-                      <i class="fa-brands fa-whatsapp"></i>
-                      <span>{{ langService.t.quotePage.form.feedback.whatsappAlternative }}</span>
-                    </a>
                     <button type="button" (click)="resetForm()" class="feedback-text-link">
                       {{ langService.t.quotePage.form.feedback.resetButton }}
                     </button>
@@ -134,6 +180,8 @@
             <!-- REACTIVE QUOTE REQUEST FORM -->
             @if (submitStatus !== 'success') {
               <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()" class="quote-form-body" novalidate>
+                <!-- Anti-spam Honeypot (Web3Forms Botcheck) -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
                 
                 <!-- ====================================================
                      GROUP 1: بيانات المنشأة والتواصل
@@ -425,6 +473,7 @@
                   <button
                     type="submit"
                     class="editorial-btn-gold quote-submit-button"
+                    [class.is-loading]="isSubmitting"
                     [disabled]="isSubmitting">
                     @if (isSubmitting) {
                       <i class="fa-solid fa-circle-notch fa-spin"></i>
