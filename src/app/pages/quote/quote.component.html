@@ -159,24 +159,6 @@
               </div>
             }
 
-            <!-- SETUP CONFIGURATION NOTICE (WHEN LIVE KEY PENDING) -->
-            @if (submitStatus === 'unconfigured') {
-              <div id="form-feedback-anchor" class="feedback-banner state-notice" role="alert">
-                <div class="feedback-icon-box">
-                  <i class="fa-solid fa-circle-info"></i>
-                </div>
-                <div class="feedback-body">
-                  <h3 class="feedback-title">{{ langService.currentLang === 'ar' ? 'تم تجهيز بيانات طلبكم' : 'Your Request Data Is Ready' }}</h3>
-                  <p class="feedback-text">{{ langService.t.quotePage.form.feedback.configNotice }}</p>
-                  <div class="feedback-actions-row">
-                    <button type="button" (click)="resetForm()" class="feedback-text-link">
-                      {{ langService.t.quotePage.form.feedback.resetButton }}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            }
-
             <!-- REACTIVE QUOTE REQUEST FORM -->
             @if (submitStatus !== 'success') {
               <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()" class="quote-form-body" novalidate>

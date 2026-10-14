@@ -64,7 +64,7 @@ export class QuoteComponent {
   });
 
   isSubmitting = false;
-  submitStatus: 'idle' | 'success' | 'error' | 'unconfigured' = 'idle';
+  submitStatus: 'idle' | 'success' | 'error' = 'idle';
   errorMessage: string = '';
   lastSubmittedData: SubmittedQuoteData | null = null;
 
@@ -93,12 +93,6 @@ export class QuoteComponent {
     this.errorMessage = '';
 
     const formData = this.quoteForm.value;
-
-    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.trim() === '') {
-      this.isSubmitting = false;
-      this.submitStatus = 'unconfigured';
-      return;
-    }
 
     // Generate unique executive reference number
     const referenceId = `MA-${Math.floor(100000 + Math.random() * 900000)}`;
