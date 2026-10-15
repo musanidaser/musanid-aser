@@ -242,8 +242,8 @@
    -------------------------------------------------------- */
 @media (max-width: 768px) {
   .cinematic-hero-fullwidth {
-    min-height: clamp(480px, calc(72vh - 76px), 580px);
-    padding: clamp(40px, 5vh, 58px) 0 clamp(32px, 4vh, 48px);
+    min-height: auto;
+    padding: clamp(54px, 8vh, 70px) 0 clamp(44px, 6vh, 60px);
   }
 
   .hero-bg-layer {
@@ -251,18 +251,21 @@
   }
 
   .hero-fullwidth-content {
-    transform: translateY(-18px);
+    transform: none;
+    padding: 0 16px;
   }
 
   .hero-cinematic-title {
-    font-size: clamp(1.95rem, 4.4vw, 2.25rem);
-    line-height: 1.4;
+    font-size: clamp(1.85rem, 4vw, 2.15rem);
+    line-height: 1.45;
+    margin-bottom: 16px;
   }
 
   .hero-cinematic-lead {
     font-size: 0.98rem;
+    line-height: 1.85;
     max-width: 580px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 }
 
@@ -271,59 +274,93 @@
    -------------------------------------------------------- */
 @media (max-width: 640px) {
   .cinematic-hero-fullwidth {
-    min-height: clamp(440px, calc(70vh - 70px), 540px);
-    padding: clamp(38px, 5vh, 50px) 0 clamp(30px, 4vh, 42px);
+    min-height: auto;
+    padding: clamp(56px, 9vh, 72px) 0 clamp(48px, 8vh, 64px);
   }
 
   .hero-bg-layer {
-    background-position: 58% center;
+    background-position: center 25%;
+  }
+
+  .hero-overlay-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.58) 0%,
+      rgba(0, 0, 0, 0.65) 50%,
+      rgba(0, 0, 0, 0.78) 100%
+    );
   }
 
   .hero-fullwidth-content {
-    transform: translateY(-12px);
+    transform: none;
     max-width: 100%;
-    padding: 0 4px;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+
+  .hero-desktop-br {
+    display: none;
   }
 
   .hero-top-eyebrow {
-    font-size: 0.74rem;
-    margin-bottom: 12px;
-    gap: 8px;
+    font-size: 0.76rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .eyebrow-line-gold {
-    width: 20px;
+    width: 16px;
+    height: 1px;
+  }
+
+  .eyebrow-text {
+    font-size: 0.76rem;
   }
 
   .hero-cinematic-title {
-    font-size: clamp(1.68rem, 6vw, 2.05rem);
-    line-height: 1.38;
-    margin-bottom: 14px;
+    font-size: clamp(1.42rem, 5vw, 1.72rem);
+    line-height: 1.48;
+    margin-bottom: 20px;
     letter-spacing: normal;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  }
+
+  .gold-gradient-text {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.96em;
   }
 
   .hero-cinematic-lead {
-    font-size: clamp(0.92rem, 3.2vw, 1rem);
-    line-height: 1.74;
-    margin-bottom: 22px;
-    padding: 0 6px;
+    font-size: 0.92rem;
+    line-height: 1.88;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 32px;
+    max-width: 480px;
+    padding: 0 4px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
   }
 
   .hero-actions-row {
     flex-direction: column;
     width: 100%;
-    gap: 12px;
-    align-items: center;
+    gap: 14px;
+    align-items: stretch;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .hero-btn-primary,
   .hero-btn-secondary {
     width: 100%;
-    max-width: 320px;
-    min-height: 48px;
-    padding: 13px 20px;
-    font-size: 0.94rem;
+    max-width: 100%;
+    min-height: 50px;
+    padding: 14px 20px;
+    font-size: 0.95rem;
     box-sizing: border-box;
+    justify-content: center;
   }
 }
 
@@ -333,26 +370,38 @@
 @media (max-width: 380px) {
   .cinematic-hero-fullwidth {
     min-height: auto;
-    padding: 34px 0 28px;
+    padding: 40px 0 36px;
   }
 
   .hero-fullwidth-content {
-    transform: translateY(-6px);
+    padding: 0 12px;
+  }
+
+  .hero-top-eyebrow {
+    margin-bottom: 12px;
   }
 
   .hero-cinematic-title {
-    font-size: 1.52rem;
+    font-size: 1.35rem;
+    line-height: 1.4;
+    margin-bottom: 14px;
   }
 
   .hero-cinematic-lead {
-    font-size: 0.88rem;
-    margin-bottom: 18px;
+    font-size: 0.86rem;
+    line-height: 1.75;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions-row {
+    gap: 10px;
+    max-width: 100%;
   }
 
   .hero-btn-primary,
   .hero-btn-secondary {
-    padding: 12px 16px;
-    font-size: 0.90rem;
-    max-width: 100%;
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    min-height: 46px;
   }
 }

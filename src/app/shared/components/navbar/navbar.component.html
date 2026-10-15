@@ -59,38 +59,75 @@
 
   <!-- Mobile Light Editorial Drawer Panel -->
   @if (isMenuOpen) {
-  <div class="mobile-light-drawer">
-    <nav class="mobile-nav-list">
+  <div class="mobile-drawer-backdrop" (click)="closeMenu()"></div>
+  <div class="mobile-light-drawer" [attr.dir]="langService.currentLang === 'ar' ? 'rtl' : 'ltr'">
+    
+    <div class="mobile-drawer-header">
+      <div class="drawer-brand-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">{{ langService.t.meta.companyName }}</span>
+      </div>
+      <button type="button" class="drawer-close-btn" (click)="closeMenu()" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-list" aria-label="Mobile Navigation">
       <a [routerLink]="langService.link('/')" (click)="closeMenu()" routerLinkActive="mobile-active"
         [routerLinkActiveOptions]="{ exact: true }">
-        {{ langService.t.nav.home }}
+        <span class="nav-item-num">01</span>
+        <span class="nav-item-title">{{ langService.t.nav.home }}</span>
+        <i class="fa-solid nav-item-chevron" [class.fa-angle-left]="langService.currentLang === 'ar'"
+          [class.fa-angle-right]="langService.currentLang !== 'ar'"></i>
       </a>
+
       <a [routerLink]="langService.link('/about')" (click)="closeMenu()" routerLinkActive="mobile-active">
-        {{ langService.t.nav.about }}
+        <span class="nav-item-num">02</span>
+        <span class="nav-item-title">{{ langService.t.nav.about }}</span>
+        <i class="fa-solid nav-item-chevron" [class.fa-angle-left]="langService.currentLang === 'ar'"
+          [class.fa-angle-right]="langService.currentLang !== 'ar'"></i>
       </a>
+
       <a [routerLink]="langService.link('/services')" (click)="closeMenu()" routerLinkActive="mobile-active">
-        {{ langService.t.nav.services }}
+        <span class="nav-item-num">03</span>
+        <span class="nav-item-title">{{ langService.t.nav.services }}</span>
+        <i class="fa-solid nav-item-chevron" [class.fa-angle-left]="langService.currentLang === 'ar'"
+          [class.fa-angle-right]="langService.currentLang !== 'ar'"></i>
       </a>
+
       <a [routerLink]="langService.link('/sectors')" (click)="closeMenu()" routerLinkActive="mobile-active">
-        {{ langService.t.nav.sectors }}
+        <span class="nav-item-num">04</span>
+        <span class="nav-item-title">{{ langService.t.nav.sectors }}</span>
+        <i class="fa-solid nav-item-chevron" [class.fa-angle-left]="langService.currentLang === 'ar'"
+          [class.fa-angle-right]="langService.currentLang !== 'ar'"></i>
       </a>
+
       <a [routerLink]="langService.link('/request-quote')" (click)="closeMenu()" routerLinkActive="mobile-active">
-        {{ langService.t.nav.quote }}
+        <span class="nav-item-num">05</span>
+        <span class="nav-item-title">{{ langService.t.nav.quote }}</span>
+        <i class="fa-solid nav-item-chevron" [class.fa-angle-left]="langService.currentLang === 'ar'"
+          [class.fa-angle-right]="langService.currentLang !== 'ar'"></i>
       </a>
     </nav>
 
     <div class="mobile-drawer-bottom">
-      <button type="button" (click)="langService.toggleLanguage(); closeMenu()" class="mobile-lang-toggle">
-        <span [class.active-code]="langService.currentLang === 'ar'">العربية</span>
-        <span class="lang-slash">/</span>
-        <span [class.active-code]="langService.currentLang === 'en'">English</span>
-      </button>
-
       <a [routerLink]="langService.link('/request-quote')" (click)="closeMenu()" class="mobile-quote-cta">
         <span>{{ langService.t.nav.quote }}</span>
         <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'"
           [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
       </a>
+
+      <div class="mobile-drawer-footer-actions">
+        <button type="button" (click)="langService.toggleLanguage(); closeMenu()" class="mobile-lang-pill">
+          <i class="fa-solid fa-globe"></i>
+          <span>{{ langService.currentLang === 'ar' ? 'English' : 'العربية' }}</span>
+        </button>
+
+        <a [href]="'https://wa.me/966533796523'" target="_blank" rel="noopener noreferrer" class="mobile-whatsapp-pill" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>واتساب</span>
+        </a>
+      </div>
     </div>
   </div>
   }
