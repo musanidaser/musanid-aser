@@ -15,17 +15,17 @@ export class SectorsPreviewComponent {
 
   primarySectorMeta = {
     index: 0,
-    image: 'sectors/companies-organizations.jpg'
+    image: 'sectors/companies.webp'
   };
 
   secondarySectorsMeta = [
     {
       index: 1,
-      image: 'sectors/restaurants-cafes.jpg'
+      image: 'sectors/restaurants.webp'
     },
     {
       index: 4,
-      image: 'sectors/projects-businesses.jpg'
+      image: 'sectors/projects.webp'
     }
   ];
 }

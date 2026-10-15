@@ -6,7 +6,7 @@ export const services = [
     titleEn: 'Business Supply',
     descriptionAr: 'تأمين احتياجات ومستلزمات الأعمال للشركات والمنشآت وفق متطلبات الجودة والميزانية المحددة.',
     descriptionEn: 'Comprehensive supply solutions catering to corporate demands with precision quality and budget alignment.',
-    image: '/services/business-supply.jpg'
+    image: '/services/business-supply.webp'
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const services = [
     titleEn: 'Commercial Brokerage',
     descriptionAr: 'مساندة المنشآت في التواصل التجاري مع الموردين المناسبين وإدارة التنسيق لتحقيق أفضل الشروط التعاقدية.',
     descriptionEn: 'Facilitating commercial coordination between businesses and suitable suppliers to achieve optimal contract terms.',
-    image: '/services/commercial-brokerage.jpg'
+    image: '/services/commercial-brokerage.webp'
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const services = [
     titleEn: 'Supplier Sourcing',
     descriptionAr: 'البحث عن الموردين المناسبين لاحتياجات كل مشروع والتحقق من جاهزيتهم ومطابقتهم للمواصفات المطلوبة.',
     descriptionEn: 'Identifying suitable suppliers matching project specifications and verifying readiness and compliance.',
-    image: '/services/supplier-sourcing.jpg'
+    image: '/services/supplier-sourcing.webp'
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const services = [
     titleEn: 'Quotation Collection & Comparison',
     descriptionAr: 'استدراج عروض الأسعار وتحليلها فنياً ومالياً لاختيار العرض الأمثل والأكثر جدوى للمنشأة.',
     descriptionEn: 'Soliciting, reviewing, and comparing financial and technical quotes to secure optimal commercial value.',
-    image: '/services/quotation-comparison.jpg'
+    image: '/services/quotation-comparison.webp'
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const services = [
     titleEn: 'Supply Coordination & Follow-up',
     descriptionAr: 'متابعة مراحل التنفيذ والجداول الزمنية للتوريد ومساندة استلام المواد وفق المواصفات المحددة.',
     descriptionEn: 'End-to-end milestone coordination and tracking to ensure timely, compliant order fulfillment.',
-    image: '/services/supply-coordination.jpg'
+    image: '/services/supply-coordination.webp'
   },
   {
     id: 6,
@@ -51,6 +51,6 @@ export const services = [
     titleEn: 'Custom Supply Solutions',
     descriptionAr: 'تصميم حلول توريد مرنة ومخصصة تلائم المتطلبات الفريدة والقطاعات الخاصة بدقة واحترافية.',
     descriptionEn: 'Tailored procurement strategies engineered around unique operational demands and industry requirements.',
-    image: '/services/custom-supply-solutions.jpg'
+    image: '/services/custom-supply-solutions.webp'
   }
 ];

@@ -14,8 +14,8 @@ export class ServicesPreviewComponent {
   langService = inject(LanguageService);
 
   featuredServiceMeta = [
-    { index: 0, image: 'services/business-supply.jpg' },
-    { index: 1, image: 'services/commercial-brokerage.jpg' },
-    { index: 5, image: 'services/custom-supply-solutions.jpg' }
+    { index: 0, image: 'services/business-supply.webp' },
+    { index: 1, image: 'services/commercial-brokerage.webp' },
+    { index: 5, image: 'services/custom-supply-solutions.webp' }
   ];
 }

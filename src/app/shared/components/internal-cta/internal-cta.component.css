@@ -19,7 +19,7 @@
 .cta-bg-image {
   position: absolute;
   inset: 0;
-  background-image: url('/cta.png');
+  background-image: url('/cta-images/cta.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

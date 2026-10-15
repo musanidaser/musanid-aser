@@ -343,42 +343,42 @@
           "title": "Business Supply",
           "subtitle": "Business Supply",
           "desc": "Fulfilling corporate equipment and operational supply requirements through structured pathways aligned with quality benchmarks and approved budgets.",
-          "image": "/services/business-supply.jpg"
+          "image": "/services/business-supply.webp"
         },
         {
           "num": "02",
           "title": "Commercial Brokerage",
           "subtitle": "Commercial Brokerage",
           "desc": "Connecting enterprises with suitable suppliers while managing commercial negotiations and contractual terms to protect all parties.",
-          "image": "/services/commercial-brokerage.jpg"
+          "image": "/services/commercial-brokerage.webp"
         },
         {
           "num": "03",
           "title": "Supplier Sourcing",
           "subtitle": "Supplier Sourcing",
           "desc": "Identifying qualified suppliers and specialized manufacturing facilities aligned with specific technical project requirements.",
-          "image": "/services/supplier-sourcing.jpg"
+          "image": "/services/supplier-sourcing.webp"
         },
         {
           "num": "04",
           "title": "Quotation Collection & Comparison",
           "subtitle": "Quotation Collection & Comparison",
           "desc": "Gathering and evaluating commercial quotes objectively with rigorous comparative matrices to support informed purchasing decisions.",
-          "image": "/services/quotation-comparison.jpg"
+          "image": "/services/quotation-comparison.webp"
         },
         {
           "num": "05",
           "title": "Supply Coordination & Follow-up",
           "subtitle": "Supply Coordination & Follow-up",
           "desc": "Overseeing operational progress, verifying timelines, and coordinating fulfillment through to final delivery and specification review.",
-          "image": "/services/supply-coordination.jpg"
+          "image": "/services/supply-coordination.webp"
         },
         {
           "num": "06",
           "title": "Custom Supply Solutions",
           "subtitle": "Custom Supply Solutions",
           "desc": "Engineering tailored procurement solutions designed specifically for complex requirements or specialized project scales.",
-          "image": "/services/custom-supply-solutions.jpg"
+          "image": "/services/custom-supply-solutions.webp"
         }
       ]
     },
@@ -468,7 +468,7 @@
           "tag": "Enterprise & Corporate",
           "title": "Companies & Organizations",
           "desc": "Supplying operational needs, equipment, and commercial products in accordance with enterprise requirements and business operations.",
-          "image": "/sectors/companies.jpg",
+          "image": "/sectors/companies.webp",
           "scopeLabel": "Supply & Support Scope:",
           "scope": ["Daily operational supplies & facility outfitting", "Competitive quotation coordination", "Supervised fulfillment pathways"]
         },
@@ -477,7 +477,7 @@
           "tag": "Hospitality & F&B",
           "title": "Restaurants & Cafés",
           "desc": "Assisting in providing equipment, fixtures, and operational supplies tailored to the operational demands of restaurants and cafés.",
-          "image": "/sectors/restaurants.jpg",
+          "image": "/sectors/restaurants.webp",
           "scopeLabel": "Supply & Support Scope:",
           "scope": ["Specialized commercial machinery & gear", "Hospitality & packaging supplies", "Vetted supplier sourcing"]
         },
@@ -486,7 +486,7 @@
           "tag": "Property Development & Facilities",
           "title": "Real Estate & Commercial",
           "desc": "Supporting commercial facilities, properties, and projects with required supplies and fixtures according to the scope of each demand.",
-          "image": "/sectors/real-estate.jpg",
+          "image": "/sectors/real-estate.webp",
           "scopeLabel": "Supply & Support Scope:",
           "scope": ["Commercial complexes & facilities fixtures", "Finishing materials & outfitting goods", "Quote comparison & supply tracking"]
         },
@@ -495,7 +495,7 @@
           "tag": "Workplaces & Corporate HQs",
           "title": "Offices & Facilities",
           "desc": "Providing office furniture, workplace equipment, and varied supplies that support meeting workplace outfitting requirements.",
-          "image": "/sectors/offices.jpg",
+          "image": "/sectors/offices.webp",
           "scopeLabel": "Supply & Support Scope:",
           "scope": ["Office furniture & workspace solutions", "Workplace operational equipment", "Integrated office environment outfitting"]
         },
@@ -504,7 +504,7 @@
           "tag": "Specialized Projects & Ventures",
           "title": "Projects & Businesses",
           "desc": "Sourcing vetted suppliers and suitable solutions for project-related requirements, considering specifications, volumes, and custom timelines.",
-          "image": "/sectors/projects.jpg",
+          "image": "/sectors/projects.webp",
           "scopeLabel": "Supply & Support Scope:",
           "scope": ["Dedicated project procurement orders", "Timeline & volume alignment", "Compliance verification & delivery follow-up"]
         }

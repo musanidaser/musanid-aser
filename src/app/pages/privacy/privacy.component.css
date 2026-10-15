@@ -411,7 +411,7 @@
 .cta-bg-image {
   position: absolute;
   inset: 0;
-  background-image: url('/privacy-cta-bg.jpg');
+  background-image: url('/cta-images/privacy-cta-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

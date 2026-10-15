@@ -152,7 +152,7 @@ export class SeoService {
     this.metaService.updateTag({ property: 'og:description', content: pageConfig.description });
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
     this.metaService.updateTag({ property: 'og:type', content: 'website' });
-    this.metaService.updateTag({ property: 'og:image', content: `${this.baseUrl}/hero.png` });
+    this.metaService.updateTag({ property: 'og:image', content: `${this.baseUrl}/hero-images/hero.webp` });
     this.metaService.updateTag({ property: 'og:site_name', content: lang === 'ar' ? 'مساند آسر' : 'Musanid Aser' });
     this.metaService.updateTag({ property: 'og:locale', content: lang === 'ar' ? 'ar_SA' : 'en_US' });
 
@@ -160,7 +160,7 @@ export class SeoService {
     this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.metaService.updateTag({ name: 'twitter:title', content: pageConfig.title });
     this.metaService.updateTag({ name: 'twitter:description', content: pageConfig.description });
-    this.metaService.updateTag({ name: 'twitter:image', content: `${this.baseUrl}/hero.png` });
+    this.metaService.updateTag({ name: 'twitter:image', content: `${this.baseUrl}/hero-images/hero.webp` });
 
     // 5. Update Canonical Link
     this.setLinkTag('canonical', canonicalUrl);
@@ -221,7 +221,7 @@ export class SeoService {
         alternateName: 'Musanid Aser',
         url: `${this.baseUrl}/`,
         logo: `${this.baseUrl}/logo.png`,
-        image: `${this.baseUrl}/hero.png`,
+        image: `${this.baseUrl}/hero-images/hero.webp`,
         description: orgDesc,
         telephone: '+966533796523',
         email: 'info@musanidaser.com',

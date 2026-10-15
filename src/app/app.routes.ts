@@ -1,26 +1,32 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { SectorsComponent } from './pages/sectors/sectors.component';
+import { QuoteComponent } from './pages/quote/quote.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 export const routes: Routes = [
   // Arabic Routes (Default)
   {
     path: '',
-    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+    component: HomeComponent
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+    component: AboutComponent
   },
   {
     path: 'services',
-    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent)
+    component: ServicesComponent
   },
   {
     path: 'sectors',
-    loadComponent: () => import('./pages/sectors/sectors.component').then(m => m.SectorsComponent)
+    component: SectorsComponent
   },
   {
     path: 'request-quote',
-    loadComponent: () => import('./pages/quote/quote.component').then(m => m.QuoteComponent)
+    component: QuoteComponent
   },
   {
     path: 'contact',
@@ -32,7 +38,7 @@ export const routes: Routes = [
   },
   {
     path: 'privacy',
-    loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent)
+    component: PrivacyComponent
   },
   {
     path: 'privacy-policy',
@@ -42,23 +48,23 @@ export const routes: Routes = [
   // English Routes
   {
     path: 'en',
-    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+    component: HomeComponent
   },
   {
     path: 'en/about',
-    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+    component: AboutComponent
   },
   {
     path: 'en/services',
-    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent)
+    component: ServicesComponent
   },
   {
     path: 'en/sectors',
-    loadComponent: () => import('./pages/sectors/sectors.component').then(m => m.SectorsComponent)
+    component: SectorsComponent
   },
   {
     path: 'en/request-quote',
-    loadComponent: () => import('./pages/quote/quote.component').then(m => m.QuoteComponent)
+    component: QuoteComponent
   },
   {
     path: 'en/contact',
@@ -70,7 +76,7 @@ export const routes: Routes = [
   },
   {
     path: 'en/privacy',
-    loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent)
+    component: PrivacyComponent
   },
   {
     path: 'en/privacy-policy',

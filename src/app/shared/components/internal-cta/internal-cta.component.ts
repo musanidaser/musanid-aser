@@ -17,5 +17,5 @@ export class InternalCtaComponent {
   @Input() description?: string;
   @Input() buttonText?: string;
   @Input() buttonLink: string = '/request-quote';
-  @Input() bgImage: string = '/cta.png';
+  @Input() bgImage: string = '/cta-images/cta.png';
 }
