@@ -647,7 +647,9 @@
     "emailLabel": "Official Email:",
     "locationLabel": "Headquarters:",
     "privacyPolicy": "Privacy Policy",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "devBy": "Crafted by",
+    "devName": "Youssef Hossam"
   },
   "privacy": {
     "hero": {

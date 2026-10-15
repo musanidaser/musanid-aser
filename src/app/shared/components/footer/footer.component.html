@@ -147,6 +147,25 @@
       <p class="copyright-text">
         &copy; {{ currentYear }} {{ langService.t.meta.companyFullName }}. {{ langService.t.footer.rights }}
       </p>
+
+      <!-- Developer Attribution -->
+      <div class="footer-developer">
+        <span class="dev-label">{{ langService.t.footer.devBy }}</span>
+        <a
+          href="https://wa.me/201006426860"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="dev-pill"
+          [attr.aria-label]="langService.t.footer.devBy + ' ' + langService.t.footer.devName"
+          [title]="langService.currentLang === 'ar' ? 'تواصل مع يوسف حسام عبر واتساب: 01006426860' : 'Contact Youssef Hossam on WhatsApp: 01006426860'"
+        >
+          <span class="dev-icon-bubble">
+            <i class="fa-brands fa-whatsapp dev-wa-icon"></i>
+          </span>
+          <span class="dev-name">{{ langService.t.footer.devName }}</span>
+        </a>
+      </div>
+
       <div class="footer-legal-links">
         <a [routerLink]="langService.link('/privacy')" class="footer-legal-link">
           <i class="fa-solid fa-shield-halved footer-legal-icon"></i>

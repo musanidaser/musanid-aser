@@ -646,7 +646,9 @@
     "emailLabel": "البريد الإلكتروني:",
     "locationLabel": "المقر الرئيسي:",
     "privacyPolicy": "سياسة الخصوصية",
-    "rights": "جميع الحقوق محفوظة."
+    "rights": "جميع الحقوق محفوظة.",
+    "devBy": "صنع بواسطة",
+    "devName": "يوسف حسام"
   },
   "privacy": {
     "hero": {
