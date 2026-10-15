@@ -1,7 +1,7 @@
-@if (isVisible) {
-  <aside
-    class="intro-backdrop"
-    [class.intro-leaving]="isLeaving"
+<aside
+  class="intro-backdrop"
+  [class.intro-leaving]="isLeaving"
+  [class.intro-hidden]="!isVisible"
     (click)="finishIntro()"
     role="dialog"
     aria-label="Musanid Aser Intro"
@@ -149,6 +149,5 @@
         </p>
       </div>
 
-    </div>
-  </aside>
-}
+  </div>
+</aside>

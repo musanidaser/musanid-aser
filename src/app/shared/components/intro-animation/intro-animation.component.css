@@ -36,6 +36,10 @@
   pointer-events: none;
 }
 
+.intro-backdrop.intro-hidden {
+  display: none !important;
+}
+
 /* Ambient Glow Layer */
 .ambient-glow {
   position: absolute;
@@ -140,23 +144,23 @@
 }
 
 .draw-crescent-outer {
-  animation-delay: 50ms;
+  animation-delay: 0ms;
 }
 
 .draw-crescent-inner {
-  animation-delay: 150ms;
+  animation-delay: 80ms;
 }
 
 .draw-letter-a1 {
-  animation-delay: 280ms;
+  animation-delay: 180ms;
 }
 
 .draw-letter-a2 {
-  animation-delay: 380ms;
+  animation-delay: 260ms;
 }
 
 .draw-letter-m1 {
-  animation-delay: 460ms;
+  animation-delay: 340ms;
 }
 
 .draw-letter-m2 {

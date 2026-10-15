@@ -22,7 +22,7 @@ export class IntroAnimationComponent implements OnInit, OnDestroy {
   private document = inject(DOCUMENT);
   private cdr = inject(ChangeDetectorRef);
 
-  isVisible = false;
+  isVisible = true;
   isLeaving = false;
 
   private exitTimer: ReturnType<typeof setTimeout> | null = null;
