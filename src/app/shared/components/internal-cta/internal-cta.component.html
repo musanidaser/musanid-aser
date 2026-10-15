@@ -38,7 +38,7 @@
 
       <!-- Action Button Row -->
       <div class="cta-action-row">
-        <a [routerLink]="buttonLink" class="editorial-btn-gold cta-action-btn">
+        <a [routerLink]="langService.link(buttonLink)" class="editorial-btn-gold cta-action-btn">
           <span>{{ buttonText || (langService.currentLang === 'ar' ? 'طلب عرض سعر' : 'Request a Quote') }}</span>
           <i class="fa-solid arrow-dynamic"
              [class.fa-arrow-left]="langService.currentLang === 'ar'"

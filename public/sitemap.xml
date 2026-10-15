@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home Page (Arabic & English) -->
+  <url>
+    <loc>https://musanidaser.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://musanidaser.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://musanidaser.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/services" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://musanidaser.com/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/services" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sectors Page -->
+  <url>
+    <loc>https://musanidaser.com/sectors</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/sectors" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/sectors" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/sectors" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://musanidaser.com/en/sectors</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/sectors" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/sectors" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/sectors" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Us Page -->
+  <url>
+    <loc>https://musanidaser.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/about" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://musanidaser.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/about" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Request a Quote / Contact Page -->
+  <url>
+    <loc>https://musanidaser.com/request-quote</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/request-quote" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/request-quote" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/request-quote" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://musanidaser.com/en/request-quote</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/request-quote" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/request-quote" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/request-quote" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://musanidaser.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/privacy" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://musanidaser.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://musanidaser.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://musanidaser.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://musanidaser.com/privacy" />
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

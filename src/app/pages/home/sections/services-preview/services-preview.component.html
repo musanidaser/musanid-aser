@@ -30,7 +30,7 @@
       @for (meta of featuredServiceMeta; track meta.index) {
       @let item = langService.t.services.items[meta.index];
       <article class="service-image-block">
-        <a routerLink="/services" class="service-block-link" [attr.aria-label]="item.title">
+        <a [routerLink]="langService.link('/services')" class="service-block-link" [attr.aria-label]="item.title">
 
           <!-- Imagery Media Container -->
           <div class="service-media-frame">
@@ -66,7 +66,7 @@
 
     <!-- Final Section Editorial CTA -->
     <div class="services-bottom-cta-wrap">
-      <a routerLink="/services" class="services-master-cta">
+      <a [routerLink]="langService.link('/services')" class="services-master-cta">
         <span class="cta-label">
           {{ langService.t.services.viewAll }}
         </span>

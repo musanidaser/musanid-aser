@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow build artifacts and private directories if any
+Disallow: /dist/
+
+# Host and Sitemap
+Sitemap: https://musanidaser.com/sitemap.xml

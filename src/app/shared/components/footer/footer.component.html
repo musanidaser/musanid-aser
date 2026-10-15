@@ -5,7 +5,7 @@
 
       <!-- Brand & Summary Col -->
       <div class="footer-col footer-brand-col">
-        <a routerLink="/" class="footer-brand-link">
+        <a [routerLink]="langService.link('/')" class="footer-brand-link">
           <img src="/logo.png" alt="مؤسسة مساند آسر للإمداد والوساطة التجارية | Musanid Aser" class="footer-logo-img" />
           <div class="footer-brand-title">
             <span class="brand-ar">{{ langService.t.meta.companyName }}</span>
@@ -26,37 +26,37 @@
         <div class="footer-gold-bar"></div>
         <ul class="footer-nav-list">
           <li>
-            <a routerLink="/">
+            <a [routerLink]="langService.link('/')">
               <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
               <span>{{ langService.t.nav.home }}</span>
             </a>
           </li>
           <li>
-            <a routerLink="/about">
+            <a [routerLink]="langService.link('/about')">
               <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
               <span>{{ langService.t.nav.about }}</span>
             </a>
           </li>
           <li>
-            <a routerLink="/services">
+            <a [routerLink]="langService.link('/services')">
               <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
               <span>{{ langService.t.nav.services }}</span>
             </a>
           </li>
           <li>
-            <a routerLink="/sectors">
+            <a [routerLink]="langService.link('/sectors')">
               <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
               <span>{{ langService.t.nav.sectors }}</span>
             </a>
           </li>
           <li>
-            <a routerLink="/request-quote" class="quote-nav-link">
+            <a [routerLink]="langService.link('/request-quote')" class="quote-nav-link">
               <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
               <span>{{ langService.t.nav.quote }}</span>
             </a>
           </li>
           <li>
-            <a routerLink="/privacy">
+            <a [routerLink]="langService.link('/privacy')">
               <i class="fa-solid fa-chevron-left footer-nav-chevron"></i>
               <span>{{ langService.t.footer.privacyPolicy }}</span>
             </a>
@@ -73,7 +73,7 @@
         <ul class="footer-services-list">
           @for (service of langService.t.services.items; track service.id) {
           <li>
-            <a routerLink="/services">
+            <a [routerLink]="langService.link('/services')">
               <i class="fa-solid fa-angle-left footer-service-bullet"></i>
               <span>{{ service.title }}</span>
             </a>
@@ -148,7 +148,7 @@
         &copy; {{ currentYear }} {{ langService.t.meta.companyFullName }}. {{ langService.t.footer.rights }}
       </p>
       <div class="footer-legal-links">
-        <a routerLink="/privacy" class="footer-legal-link">
+        <a [routerLink]="langService.link('/privacy')" class="footer-legal-link">
           <i class="fa-solid fa-shield-halved footer-legal-icon"></i>
           <span>{{ langService.t.footer.privacyPolicy }}</span>
         </a>

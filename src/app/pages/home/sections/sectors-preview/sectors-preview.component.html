@@ -35,7 +35,7 @@
       <!-- Dominant Large Visual Block (01 — الشركات والمؤسسات) -->
       @let primary = langService.t.sectors.items[primarySectorMeta.index];
       <article class="sector-block-dominant">
-        <a routerLink="/sectors" class="sector-block-link" [attr.aria-label]="primary.title">
+        <a [routerLink]="langService.link('/sectors')" class="sector-block-link" [attr.aria-label]="primary.title">
           
           <div class="sector-media-frame">
             <img [src]="primarySectorMeta.image" [alt]="primary.title" class="sector-block-img" loading="lazy" />
@@ -66,7 +66,7 @@
         @for (meta of secondarySectorsMeta; track meta.index) {
           @let item = langService.t.sectors.items[meta.index];
           <article class="sector-block-secondary">
-            <a routerLink="/sectors" class="sector-block-link" [attr.aria-label]="item.title">
+            <a [routerLink]="langService.link('/sectors')" class="sector-block-link" [attr.aria-label]="item.title">
 
               <div class="sector-media-frame">
                 <img [src]="meta.image" [alt]="item.title" class="sector-block-img" loading="lazy" />
@@ -98,7 +98,7 @@
 
     <!-- Final Section Editorial CTA -->
     <div class="sectors-bottom-cta-wrap">
-      <a routerLink="/sectors" class="sectors-master-cta">
+      <a [routerLink]="langService.link('/sectors')" class="sectors-master-cta">
         <span class="cta-label">
           {{ langService.t.sectors.viewAll }}
         </span>

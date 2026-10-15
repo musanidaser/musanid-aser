@@ -31,7 +31,7 @@
 
         <!-- Single Refined Action Button -->
         <div class="cta-action-wrap">
-          <a routerLink="/request-quote" class="cta-btn-gold">
+          <a [routerLink]="langService.link('/request-quote')" class="cta-btn-gold">
             <span>{{ langService.t.cta.buttonText }}</span>
             <i class="fa-solid cta-btn-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'" aria-hidden="true"></i>
           </a>

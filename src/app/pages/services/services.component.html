@@ -205,7 +205,7 @@
                     </p>
 
                     <div class="card-footer-action">
-                      <a routerLink="/request-quote" class="card-quote-action-btn">
+                      <a [routerLink]="langService.link('/request-quote')" class="card-quote-action-btn">
                         <span>{{ langService.t.servicesPage.showcase.actionQuote }}</span>
                         <span class="action-btn-circle" aria-hidden="true">
                           <i class="fa-solid"

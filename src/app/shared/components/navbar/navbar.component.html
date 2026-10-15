@@ -2,7 +2,7 @@
   <div class="editorial-container nav-wrapper">
 
     <!-- Brand Logo -->
-    <a routerLink="/" class="brand-link" (click)="closeMenu()">
+    <a [routerLink]="langService.link('/')" class="brand-link" (click)="closeMenu()">
       <img src="/logo.png" alt="مؤسسة مساند آسر للإمداد والوساطة التجارية | Musanid Aser" class="brand-logo-img" />
       <span class="brand-name">
         {{ langService.t.meta.companyName }}
@@ -11,19 +11,19 @@
 
     <!-- Desktop Navigation Links -->
     <nav class="desktop-navigation" aria-label="Main Navigation">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-anchor">
+      <a [routerLink]="langService.link('/')" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-anchor">
         {{ langService.t.nav.home }}
       </a>
-      <a routerLink="/about" routerLinkActive="active" class="nav-anchor">
+      <a [routerLink]="langService.link('/about')" routerLinkActive="active" class="nav-anchor">
         {{ langService.t.nav.about }}
       </a>
-      <a routerLink="/services" routerLinkActive="active" class="nav-anchor">
+      <a [routerLink]="langService.link('/services')" routerLinkActive="active" class="nav-anchor">
         {{ langService.t.nav.services }}
       </a>
-      <a routerLink="/sectors" routerLinkActive="active" class="nav-anchor">
+      <a [routerLink]="langService.link('/sectors')" routerLinkActive="active" class="nav-anchor">
         {{ langService.t.nav.sectors }}
       </a>
-      <a routerLink="/request-quote" routerLinkActive="active" class="nav-anchor">
+      <a [routerLink]="langService.link('/request-quote')" routerLinkActive="active" class="nav-anchor">
         {{ langService.t.nav.quote }}
       </a>
     </nav>
@@ -40,7 +40,7 @@
       </button>
 
       <!-- The Single CTA: Request a Quote (Gold #D4AF37 on #1F1F1F) -->
-      <a routerLink="/request-quote" class="editorial-quote-cta">
+      <a [routerLink]="langService.link('/request-quote')" class="editorial-quote-cta">
         <span>{{ langService.t.nav.quote }}</span>
         <i class="fa-solid cta-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'"
           [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
@@ -61,20 +61,20 @@
   @if (isMenuOpen) {
   <div class="mobile-light-drawer">
     <nav class="mobile-nav-list">
-      <a routerLink="/" (click)="closeMenu()" routerLinkActive="mobile-active"
+      <a [routerLink]="langService.link('/')" (click)="closeMenu()" routerLinkActive="mobile-active"
         [routerLinkActiveOptions]="{ exact: true }">
         {{ langService.t.nav.home }}
       </a>
-      <a routerLink="/about" (click)="closeMenu()" routerLinkActive="mobile-active">
+      <a [routerLink]="langService.link('/about')" (click)="closeMenu()" routerLinkActive="mobile-active">
         {{ langService.t.nav.about }}
       </a>
-      <a routerLink="/services" (click)="closeMenu()" routerLinkActive="mobile-active">
+      <a [routerLink]="langService.link('/services')" (click)="closeMenu()" routerLinkActive="mobile-active">
         {{ langService.t.nav.services }}
       </a>
-      <a routerLink="/sectors" (click)="closeMenu()" routerLinkActive="mobile-active">
+      <a [routerLink]="langService.link('/sectors')" (click)="closeMenu()" routerLinkActive="mobile-active">
         {{ langService.t.nav.sectors }}
       </a>
-      <a routerLink="/request-quote" (click)="closeMenu()" routerLinkActive="mobile-active">
+      <a [routerLink]="langService.link('/request-quote')" (click)="closeMenu()" routerLinkActive="mobile-active">
         {{ langService.t.nav.quote }}
       </a>
     </nav>
@@ -86,7 +86,7 @@
         <span [class.active-code]="langService.currentLang === 'en'">English</span>
       </button>
 
-      <a routerLink="/request-quote" (click)="closeMenu()" class="mobile-quote-cta">
+      <a [routerLink]="langService.link('/request-quote')" (click)="closeMenu()" class="mobile-quote-cta">
         <span>{{ langService.t.nav.quote }}</span>
         <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'"
           [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>

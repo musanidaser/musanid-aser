@@ -34,7 +34,7 @@
       <!-- Optional Single Gold CTA: Centered on Same Central Axis -->
       @if (ctaText && ctaLink) {
         <div class="hero-action-anchor">
-          <a [routerLink]="ctaLink.startsWith('#') ? null : ctaLink"
+          <a [routerLink]="ctaLink.startsWith('#') ? null : langService.link(ctaLink)"
              (click)="onCtaClick($event)"
              class="editorial-btn-gold hero-gold-button">
             <span>{{ ctaText }}</span>

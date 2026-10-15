@@ -1,84 +1,183 @@
 /* ========================================================
-   MUSANID ASER — ELEGANT GOLD LOGO REVEAL INTRO
-   Pure CSS Only (No SCSS / Zero external animation libraries)
-   Colors: Dark Teal (#063A3A), Deep Teal (#0B4D4D), Gold (#D4AF37)
+   MUSANID ASER — LUXURY LOGO DRAWING & REVEAL INTRO
+   Refined Emerald Teal (#062828) & Brushed Gold (#D4AF37)
    ======================================================== */
 
 :host {
   display: block;
 }
 
-/* Fullscreen Overlay covering entire viewport and navbar */
+/* Fullscreen Overlay */
 .intro-backdrop {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 999999;
-  background-color: #063A3A;
-  background: radial-gradient(circle at 50% 45%, #0B4D4D 0%, #063A3A 65%, #042424 100%);
+  background: radial-gradient(ellipse at 50% 45%, #0a3d3d 0%, #062626 50%, #031414 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: auto;
+  cursor: pointer;
+  overflow: hidden;
   user-select: none;
   opacity: 1;
-  visibility: visible;
-  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
-              visibility 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity;
+  transform: scale(1);
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+              filter 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
-/* Smooth exit transition to reveal the underlying site */
 .intro-backdrop.intro-leaving {
   opacity: 0;
-  visibility: hidden;
+  transform: scale(1.05);
+  filter: blur(8px);
   pointer-events: none;
 }
 
-/* Content Container */
+/* Ambient Glow Layer */
+.ambient-glow {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(11, 77, 77, 0.3) 45%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: pulseAura 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseAura {
+  0% {
+    transform: translate(-50%, -50%) scale(0.92);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.95;
+  }
+}
+
+/* Skip Button */
+.intro-skip-btn {
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(11, 77, 77, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: rgba(250, 247, 242, 0.85);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  z-index: 10;
+}
+
+[dir="ltr"] .intro-skip-btn {
+  right: auto;
+  left: 28px;
+}
+
+.intro-skip-btn:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: #D4AF37;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Central Composition Frame */
 .intro-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 24px;
+  padding: 30px;
   max-width: 90vw;
 }
 
 /* ----------------------------------------------------
-   1. Outer Golden Ring (SVG Drawing)
+   1. The Logo Composition (SVG Drawing + 3D Logo)
    ---------------------------------------------------- */
-.ring-wrapper {
+.logo-composition {
   position: relative;
-  width: 190px;
-  height: 190px;
+  width: 260px;
+  height: 185px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.gold-ring-svg {
+/* Layer A: SVG Drawing Strokes */
+.drawing-svg-layer {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
   pointer-events: none;
+  z-index: 2;
+  animation: fadeOutDrawing 450ms cubic-bezier(0.16, 1, 0.3, 1) 1050ms forwards;
 }
 
-.gold-ring-circle {
-  stroke-dasharray: 578;
-  stroke-dashoffset: 578;
-  animation: drawRing 600ms cubic-bezier(0.2, 0.8, 0.25, 1) forwards;
+.draw-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawStrokeAnimation 850ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-@keyframes drawRing {
+.draw-crescent-outer {
+  animation-delay: 50ms;
+}
+
+.draw-crescent-inner {
+  animation-delay: 150ms;
+}
+
+.draw-letter-a1 {
+  animation-delay: 280ms;
+}
+
+.draw-letter-a2 {
+  animation-delay: 380ms;
+}
+
+.draw-letter-m1 {
+  animation-delay: 460ms;
+}
+
+.draw-letter-m2 {
+  animation-delay: 540ms;
+}
+
+.draw-letter-m3 {
+  animation-delay: 620ms;
+}
+
+.draw-swoosh {
+  animation-delay: 700ms;
+}
+
+@keyframes drawStrokeAnimation {
   0% {
-    stroke-dashoffset: 578;
-    opacity: 0.2;
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
   }
   100% {
     stroke-dashoffset: 0;
@@ -86,35 +185,43 @@
   }
 }
 
-/* ----------------------------------------------------
-   2. Brand Emblem (Center Logo)
-   ---------------------------------------------------- */
-.logo-box {
-  position: relative;
-  width: 130px;
-  height: 130px;
+@keyframes fadeOutDrawing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+/* Layer B: Real 3D Metallic Emblem */
+.real-logo-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  overflow: hidden;
-  opacity: 0;
-  transform: scale(0.92);
-  animation: revealLogo 400ms cubic-bezier(0.16, 1, 0.3, 1) 220ms forwards;
+  z-index: 1;
+  overflow: visible;
 }
 
-.intro-logo-img {
+.real-logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+  opacity: 0;
+  transform: scale(0.94);
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.7))
+          drop-shadow(0 0 24px rgba(212, 175, 55, 0.3));
+  animation: revealRealEmblem 650ms cubic-bezier(0.16, 1, 0.3, 1) 750ms forwards;
 }
 
-@keyframes revealLogo {
+@keyframes revealRealEmblem {
   0% {
     opacity: 0;
-    transform: scale(0.92);
+    transform: scale(0.94);
   }
   100% {
     opacity: 1;
@@ -122,88 +229,57 @@
   }
 }
 
-/* ----------------------------------------------------
-   3. Soft Gold Sheen Sweep
-   ---------------------------------------------------- */
-.logo-sheen {
-  position: absolute;
-  top: -20%;
-  left: -120%;
-  width: 100%;
-  height: 140%;
-  background: linear-gradient(
-    115deg,
-    transparent 20%,
-    rgba(255, 235, 170, 0.25) 45%,
-    rgba(212, 175, 55, 0.4) 50%,
-    rgba(255, 235, 170, 0.25) 55%,
-    transparent 80%
-  );
-  transform: skewX(-20deg);
-  pointer-events: none;
-  opacity: 0;
-  animation: sweepSheen 500ms ease-out 620ms forwards;
-}
-
-@keyframes sweepSheen {
-  0% {
-    left: -120%;
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    left: 140%;
-    opacity: 0;
-  }
-}
 
 /* ----------------------------------------------------
-   4. Identity Typography
+   2. Concise, Elegant Brand Identity Typography
    ---------------------------------------------------- */
 .brand-text-block {
-  margin-top: 26px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
-  transform: translateY(8px);
-  animation: revealText 450ms cubic-bezier(0.16, 1, 0.3, 1) 650ms forwards;
+  transform: translateY(12px);
+  animation: revealTypography 600ms cubic-bezier(0.16, 1, 0.3, 1) 850ms forwards;
 }
 
-.brand-title {
+.brand-name {
   margin: 0;
   font-family: var(--font-ar, 'IBM Plex Sans Arabic', sans-serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #FAF7F2;
+  font-size: 1.85rem;
+  font-weight: 800;
   letter-spacing: 0.02em;
-  line-height: 1.4;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  line-height: 1.25;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E8C7 45%, #D4AF37 75%, #FAF7F2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.7));
 }
 
-.brand-divider {
-  width: 42px;
-  height: 1px;
+.brand-hairline {
+  width: 55px;
+  height: 1.5px;
   background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-  margin: 10px auto;
+  margin: 12px 0 10px;
+  opacity: 0.85;
 }
 
-.brand-subtitle {
+.brand-activity {
   margin: 0;
   font-family: var(--font-ar, 'IBM Plex Sans Arabic', sans-serif);
-  font-size: 0.84rem;
-  font-weight: 400;
+  font-size: 0.96rem;
+  font-weight: 500;
   color: #D4AF37;
-  letter-spacing: 0.08em;
-  opacity: 0.92;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  opacity: 0.95;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes revealText {
+@keyframes revealTypography {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(12px);
   }
   100% {
     opacity: 1;
@@ -212,43 +288,54 @@
 }
 
 /* ----------------------------------------------------
-   5. Mobile Responsiveness
+   3. Mobile Responsiveness
    ---------------------------------------------------- */
 @media (max-width: 640px) {
-  .ring-wrapper {
-    width: 160px;
-    height: 160px;
-  }
-
-  .logo-box {
-    width: 110px;
-    height: 110px;
+  .logo-composition {
+    width: 210px;
+    height: 150px;
   }
 
   .brand-text-block {
-    margin-top: 20px;
+    margin-top: 18px;
   }
 
-  .brand-title {
-    font-size: 1rem;
-    padding: 0 10px;
+  .brand-name {
+    font-size: 1.45rem;
   }
 
-  .brand-subtitle {
-    font-size: 0.78rem;
+  .brand-hairline {
+    width: 45px;
+    margin: 10px 0 8px;
+  }
+
+  .brand-activity {
+    font-size: 0.85rem;
+  }
+
+  .intro-skip-btn {
+    top: 18px;
+    right: 20px;
+    padding: 6px 14px;
+    font-size: 0.76rem;
+  }
+
+  [dir="ltr"] .intro-skip-btn {
+    right: auto;
+    left: 20px;
   }
 }
 
 /* ----------------------------------------------------
-   6. Accessibility: Reduced Motion
+   4. Accessibility: Reduced Motion
    ---------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   .intro-backdrop {
     transition: opacity 150ms ease, visibility 150ms ease;
   }
 
-  .gold-ring-circle,
-  .logo-box,
+  .draw-path,
+  .real-logo-img,
   .brand-text-block {
     animation: none !important;
     opacity: 1 !important;
@@ -256,7 +343,7 @@
     stroke-dashoffset: 0 !important;
   }
 
-  .logo-sheen {
+  .ambient-glow {
     display: none !important;
   }
 }

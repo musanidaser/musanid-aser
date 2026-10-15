@@ -160,7 +160,7 @@
 
                     <!-- Footer Action Button -->
                     <div class="card-footer-action">
-                      <a routerLink="/request-quote" class="card-quote-action-btn">
+                      <a [routerLink]="langService.link('/request-quote')" class="card-quote-action-btn">
                         <span>{{ langService.currentLang === 'ar' ? 'طلب تسعيرة لهذا القطاع' : 'Request Sector Quotation' }}</span>
                         <span class="action-btn-circle" aria-hidden="true">
                           <i class="fa-solid"

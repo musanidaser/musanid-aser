@@ -80,7 +80,7 @@
 
     <!-- Editorial Footer Link (Positioned on the Opposite Side) -->
     <div class="manifesto-footer-link-wrap">
-      <a routerLink="/about" class="manifesto-editorial-link">
+      <a [routerLink]="langService.link('/about')" class="manifesto-editorial-link">
         <div class="link-content-row">
           <span class="link-label">
             {{ langService.t.introduction.linkText }}

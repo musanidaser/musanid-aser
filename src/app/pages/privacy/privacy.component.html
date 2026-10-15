@@ -335,7 +335,7 @@
 
         <!-- Action Buttons -->
         <div class="cta-actions-wrap">
-          <a routerLink="/request-quote" class="cta-prime-btn">
+          <a [routerLink]="langService.link('/request-quote')" class="cta-prime-btn">
             <span>{{ langService.t.privacy.cta.button }}</span>
             <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang === 'en'"></i>
           </a>

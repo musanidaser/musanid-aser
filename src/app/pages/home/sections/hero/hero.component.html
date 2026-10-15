@@ -29,13 +29,13 @@
 
     <!-- Two Hero Action Buttons (Side by Side on Desktop) -->
     <div class="hero-actions-row">
-      <a routerLink="/request-quote" class="hero-btn-primary">
+      <a [routerLink]="langService.link('/request-quote')" class="hero-btn-primary">
         <span>{{ langService.t.hero.ctaQuote }}</span>
         <i class="fa-solid btn-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'"
           [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
       </a>
 
-      <a routerLink="/services" class="hero-btn-secondary">
+      <a [routerLink]="langService.link('/services')" class="hero-btn-secondary">
         <span>{{ langService.t.hero.ctaServices }}</span>
         <i class="fa-solid btn-arrow" [class.fa-arrow-left]="langService.currentLang === 'ar'"
           [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>

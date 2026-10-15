@@ -2,57 +2,153 @@
   <aside
     class="intro-backdrop"
     [class.intro-leaving]="isLeaving"
-    aria-hidden="true"
-    aria-label="Musanid Aser Intro Animation">
+    (click)="finishIntro()"
+    role="dialog"
+    aria-label="Musanid Aser Intro"
+    tabindex="-1">
+    
+    <!-- Ambient Golden Glow behind logo -->
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- Quick Skip Control -->
+    <button
+      type="button"
+      class="intro-skip-btn"
+      (click)="finishIntro(); $event.stopPropagation()"
+      [attr.aria-label]="langService.currentLang === 'ar' ? 'تخطي المقدمة' : 'Skip intro'">
+      <span>{{ langService.currentLang === 'ar' ? 'تخطي' : 'Skip' }}</span>
+      <i class="fa-solid" [class.fa-arrow-left]="langService.currentLang === 'ar'" [class.fa-arrow-right]="langService.currentLang !== 'ar'"></i>
+    </button>
+
     <div class="intro-content">
-      <!-- Outer Decorative Golden Ring (Drawn with SVG stroke animation) -->
-      <div class="ring-wrapper">
+      <!-- Logo Composition with Vector Drawing Layer + Real 3D Emblem Reveal -->
+      <div class="logo-composition">
+        
+        <!-- Animated Drawing Contours (SVG Gold Stroke Animation) -->
         <svg
-          class="gold-ring-svg"
-          viewBox="0 0 200 200"
+          class="drawing-svg-layer"
+          viewBox="0 0 500 350"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true">
           <defs>
-            <linearGradient id="introGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#E8C86A" />
-              <stop offset="50%" stop-color="#D4AF37" />
-              <stop offset="100%" stop-color="#B38E22" />
+            <linearGradient id="goldStrokeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF0BE" />
+              <stop offset="40%" stop-color="#E8C86A" />
+              <stop offset="70%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#9A7718" />
             </linearGradient>
+            <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3.5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
           </defs>
-          <circle
-            class="gold-ring-circle"
-            cx="100"
-            cy="100"
-            r="92"
-            stroke="url(#introGoldGradient)"
+
+          <!-- Outer Crescent Orbital Arc -->
+          <path
+            class="draw-path draw-crescent-outer"
+            pathLength="100"
+            d="M 115 195 C 105 75, 235 15, 290 12 C 160 35, 110 120, 125 210 C 145 275, 230 315, 330 295 C 395 280, 445 235, 440 230 C 415 280, 335 325, 235 320 C 145 315, 105 260, 115 195 Z"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            filter="url(#goldGlow)" />
+
+          <!-- Inner Crescent Dynamic Arc -->
+          <path
+            class="draw-path draw-crescent-inner"
+            pathLength="100"
+            d="M 135 180 C 130 95, 220 40, 265 28 C 175 52, 132 125, 145 200 C 160 255, 230 292, 315 280 C 375 270, 415 232, 415 232 C 375 275, 305 300, 225 295 C 155 288, 125 240, 135 180 Z"
+            stroke="url(#goldStrokeGrad)"
             stroke-width="1.75"
             stroke-linecap="round" />
+
+          <!-- Monogram Letter A Stem Left -->
+          <path
+            class="draw-path draw-letter-a1"
+            pathLength="100"
+            d="M 165 240 L 235 95"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="3"
+            stroke-linecap="round"
+            filter="url(#goldGlow)" />
+
+          <!-- Monogram Letter A Stem Right -->
+          <path
+            class="draw-path draw-letter-a2"
+            pathLength="100"
+            d="M 235 95 L 285 240"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="3"
+            stroke-linecap="round" />
+
+          <!-- Monogram Letter M Diagonal Left -->
+          <path
+            class="draw-path draw-letter-m1"
+            pathLength="100"
+            d="M 245 80 L 315 200"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="3"
+            stroke-linecap="round"
+            filter="url(#goldGlow)" />
+
+          <!-- Monogram Letter M Diagonal Right -->
+          <path
+            class="draw-path draw-letter-m2"
+            pathLength="100"
+            d="M 315 200 L 385 100"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="3"
+            stroke-linecap="round" />
+
+          <!-- Monogram Letter M Stem Right -->
+          <path
+            class="draw-path draw-letter-m3"
+            pathLength="100"
+            d="M 385 100 L 385 240"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="3"
+            stroke-linecap="round" />
+
+          <!-- Dynamic Horizontal Swoosh -->
+          <path
+            class="draw-path draw-swoosh"
+            pathLength="100"
+            d="M 190 185 Q 260 140 345 205"
+            stroke="url(#goldStrokeGrad)"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            filter="url(#goldGlow)" />
         </svg>
 
-        <!-- Brand Emblem Container -->
-        <div class="logo-box">
+        <!-- Real Metallic 3D Logo (Reveals seamlessly into the drawing lines) -->
+        <div class="real-logo-frame">
           <img
             src="/logo.png"
             alt="مساند آسر"
-            class="intro-logo-img"
+            class="real-logo-img"
             loading="eager"
             fetchpriority="high" />
-          <!-- Single Soft Gold Sheen Sweep -->
-          <div class="logo-sheen" aria-hidden="true"></div>
         </div>
+
       </div>
 
-      <!-- Company Identity Typography -->
+      <!-- Concise, Ultra-Refined Typography -->
       <div class="brand-text-block">
-        <h1 class="brand-title">
-          {{ langService.t.meta.companyFullName }}
-        </h1>
-        <div class="brand-divider" aria-hidden="true"></div>
-        <p class="brand-subtitle">
-          {{ langService.currentLang === 'ar' ? 'حلول التوريد والوساطة التجارية' : 'Supply & Commercial Brokerage' }}
+        <h2 class="brand-name">
+          {{ langService.currentLang === 'ar' ? 'مساند آسر' : 'Musanid Aser' }}
+        </h2>
+        
+        <div class="brand-hairline" aria-hidden="true"></div>
+
+        <p class="brand-activity">
+          {{ langService.currentLang === 'ar' ? 'توريد الأعمال والوساطة التجارية' : 'Business Supply & Commercial Brokerage' }}
         </p>
       </div>
+
     </div>
   </aside>
 }

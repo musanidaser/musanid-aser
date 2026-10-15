@@ -28,58 +28,43 @@ export class IntroAnimationComponent implements OnInit, OnDestroy {
   private exitTimer: ReturnType<typeof setTimeout> | null = null;
   private removeTimer: ReturnType<typeof setTimeout> | null = null;
 
-  private readonly SESSION_STORAGE_KEY = 'musanid_intro_seen';
-
   ngOnInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
-    try {
-      // Check if user already saw the intro during this browser session
-      const alreadySeen = sessionStorage.getItem(this.SESSION_STORAGE_KEY);
-      const urlParams = new URLSearchParams(window.location.search);
-      const forceIntro = urlParams.get('intro') === 'true';
+    // Activate the intro on initial page load / refresh
+    this.isVisible = true;
+    this.lockScroll();
 
-      if (alreadySeen && !forceIntro) {
-        this.isVisible = false;
-        return;
-      }
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Mark session as seen
-      sessionStorage.setItem(this.SESSION_STORAGE_KEY, 'true');
-
-      // Check if user prefers reduced motion
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      this.isVisible = true;
-      this.lockScroll();
-
-      if (prefersReducedMotion) {
-        // Fast, smooth bypass for reduced motion
-        this.exitTimer = setTimeout(() => {
-          this.isLeaving = true;
-          this.cdr.markForCheck();
-
-          this.removeTimer = setTimeout(() => {
-            this.finishIntro();
-          }, 150);
-        }, 300);
-      } else {
-        // Standard timing: ~1.5s visual reveal + 0.4s fade transition = ~1.9s total
-        this.exitTimer = setTimeout(() => {
-          this.isLeaving = true;
-          this.cdr.markForCheck();
-
-          this.removeTimer = setTimeout(() => {
-            this.finishIntro();
-          }, 400);
-        }, 1500);
-      }
-    } catch {
-      // Fallback in case storage access is restricted
-      this.finishIntro();
+    if (prefersReducedMotion) {
+      this.exitTimer = setTimeout(() => {
+        this.finishIntro();
+      }, 350);
+    } else {
+      // Elegant cinematic duration: 2.2s presentation + smooth exit
+      this.exitTimer = setTimeout(() => {
+        this.finishIntro();
+      }, 2200);
     }
+  }
+
+  finishIntro(): void {
+    if (this.exitTimer) clearTimeout(this.exitTimer);
+    if (this.removeTimer) clearTimeout(this.removeTimer);
+
+    if (this.isLeaving) return;
+    this.isLeaving = true;
+    this.cdr.markForCheck();
+
+    this.removeTimer = setTimeout(() => {
+      this.isVisible = false;
+      this.isLeaving = false;
+      this.unlockScroll();
+      this.cdr.markForCheck();
+    }, 450);
   }
 
   private lockScroll(): void {
@@ -94,20 +79,9 @@ export class IntroAnimationComponent implements OnInit, OnDestroy {
     }
   }
 
-  private finishIntro(): void {
-    this.isVisible = false;
-    this.isLeaving = false;
-    this.unlockScroll();
-    this.cdr.markForCheck();
-  }
-
   ngOnDestroy(): void {
-    if (this.exitTimer) {
-      clearTimeout(this.exitTimer);
-    }
-    if (this.removeTimer) {
-      clearTimeout(this.removeTimer);
-    }
+    if (this.exitTimer) clearTimeout(this.exitTimer);
+    if (this.removeTimer) clearTimeout(this.removeTimer);
     this.unlockScroll();
   }
 }

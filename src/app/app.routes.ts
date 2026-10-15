@@ -1,30 +1,26 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  // Arabic Routes (Default)
   {
     path: '',
-    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
-    title: 'مؤسسة مساند آسر للإمداد والوساطة التجارية | Musanid Aser'
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent),
-    title: 'من نحن | About Us - Musanid Aser'
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
   },
   {
     path: 'services',
-    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent),
-    title: 'خدماتنا | Services - Musanid Aser'
+    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent)
   },
   {
     path: 'sectors',
-    loadComponent: () => import('./pages/sectors/sectors.component').then(m => m.SectorsComponent),
-    title: 'القطاعات | Sectors - Musanid Aser'
+    loadComponent: () => import('./pages/sectors/sectors.component').then(m => m.SectorsComponent)
   },
   {
     path: 'request-quote',
-    loadComponent: () => import('./pages/quote/quote.component').then(m => m.QuoteComponent),
-    title: 'طلب تسعيرة وتواصل معنا | Musanid Aser'
+    loadComponent: () => import('./pages/quote/quote.component').then(m => m.QuoteComponent)
   },
   {
     path: 'contact',
@@ -36,13 +32,52 @@ export const routes: Routes = [
   },
   {
     path: 'privacy',
-    loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent),
-    title: 'سياسة الخصوصية وحماية البيانات | Privacy Policy - Musanid Aser'
+    loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent)
   },
   {
     path: 'privacy-policy',
     redirectTo: 'privacy'
   },
+
+  // English Routes
+  {
+    path: 'en',
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'en/about',
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+  },
+  {
+    path: 'en/services',
+    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent)
+  },
+  {
+    path: 'en/sectors',
+    loadComponent: () => import('./pages/sectors/sectors.component').then(m => m.SectorsComponent)
+  },
+  {
+    path: 'en/request-quote',
+    loadComponent: () => import('./pages/quote/quote.component').then(m => m.QuoteComponent)
+  },
+  {
+    path: 'en/contact',
+    redirectTo: 'en/request-quote'
+  },
+  {
+    path: 'en/contact-us',
+    redirectTo: 'en/request-quote'
+  },
+  {
+    path: 'en/privacy',
+    loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent)
+  },
+  {
+    path: 'en/privacy-policy',
+    redirectTo: 'en/privacy'
+  },
+
+  // Fallback Catch-all
   {
     path: '**',
     redirectTo: ''
