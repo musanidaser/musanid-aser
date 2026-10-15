@@ -23,16 +23,16 @@
   user-select: none;
   opacity: 1;
   transform: scale(1);
-  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
-              transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
-              filter 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+              filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform, filter;
 }
 
 .intro-backdrop.intro-leaving {
   opacity: 0;
-  transform: scale(1.05);
-  filter: blur(8px);
+  transform: scale(1.08);
+  filter: blur(12px);
   pointer-events: none;
 }
 

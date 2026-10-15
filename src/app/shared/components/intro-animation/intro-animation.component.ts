@@ -64,7 +64,7 @@ export class IntroAnimationComponent implements OnInit, OnDestroy {
       this.isLeaving = false;
       this.unlockScroll();
       this.cdr.markForCheck();
-    }, 450);
+    }, 700);
   }
 
   private lockScroll(): void {

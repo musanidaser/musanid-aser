@@ -72,7 +72,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-width: 960px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
 }
@@ -83,12 +83,12 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: clamp(16px, 2.2vh, 22px);
+  margin-bottom: clamp(18px, 2.4vh, 24px);
 }
 
 .eyebrow-hairline-side {
   display: inline-block;
-  width: clamp(24px, 3.5vw, 40px);
+  width: clamp(28px, 4vw, 48px);
   height: 1.5px;
   background-color: #D4AF37;
   opacity: 0.9;
@@ -96,7 +96,7 @@
 
 .eyebrow-label-text {
   font-family: 'Montserrat', var(--font-ar), sans-serif;
-  font-size: clamp(0.78rem, 1vw, 0.88rem);
+  font-size: clamp(0.82rem, 1.1vw, 0.92rem);
   font-weight: 700;
   letter-spacing: 0.16em;
   color: #D4AF37;
@@ -106,27 +106,27 @@
 /* Main Heading: Scaled & Balanced Arabic Title */
 .hero-monumental-heading {
   font-family: var(--font-ar);
-  font-size: clamp(2.4rem, 4.8vw, 3.6rem);
+  font-size: clamp(2.6rem, 5.2vw, 4rem);
   font-weight: 800;
   color: #FFFFFF;
-  line-height: 1.35;
-  margin: 0 0 clamp(18px, 2.6vh, 26px) 0;
+  line-height: 1.32;
+  margin: 0 0 clamp(20px, 2.8vh, 28px) 0;
   letter-spacing: -0.01em;
   text-align: center;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
 }
 
 /* Supporting Description: Relaxed line height and max width */
 .hero-supporting-summary {
   font-family: var(--font-ar);
-  font-size: clamp(1.02rem, 1.3vw, 1.16rem);
-  line-height: 1.9;
-  color: rgba(247, 243, 234, 0.94);
-  max-width: 820px;
+  font-size: clamp(1.08rem, 1.4vw, 1.25rem);
+  line-height: 1.95;
+  color: rgba(247, 243, 234, 0.95);
+  max-width: 880px;
   width: 100%;
-  margin: 0 auto clamp(26px, 3.6vh, 36px) auto;
+  margin: 0 auto clamp(30px, 4vh, 40px) auto;
   text-align: center;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 /* Centered Gold CTA Button */
@@ -143,21 +143,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   background-color: #D4AF37;
   color: #121212;
   width: auto;
-  min-width: 170px;
-  padding: 0 24px;
-  height: 42px;
+  min-width: 190px;
+  padding: 0 30px;
+  height: 48px;
   font-family: var(--font-ar);
-  font-size: 0.90rem;
+  font-size: 0.96rem;
   font-weight: 700;
   white-space: nowrap;
   border-radius: 4px;
   border: 1px solid #C49F27;
   transition: all 0.25s var(--ease-editorial);
-  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.28);
+  box-shadow: 0 3px 14px rgba(212, 175, 55, 0.3);
   text-decoration: none;
   cursor: pointer;
 }
@@ -171,7 +171,7 @@
   border-color: #B38E22;
   color: #0A0A0A;
   transform: translateY(-2px);
-  box-shadow: 0 5px 16px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 5px 18px rgba(212, 175, 55, 0.45);
 }
 
 .arrow-dynamic {
@@ -192,26 +192,26 @@
    ======================================================== */
 @media (max-width: 768px) {
   .unified-internal-hero {
-    min-height: clamp(480px, 58vh, 560px);
-    padding: clamp(80px, 11vh, 105px) 0 clamp(70px, 9vh, 90px);
+    min-height: clamp(500px, 62vh, 600px);
+    padding: clamp(90px, 12vh, 120px) 0 clamp(80px, 10vh, 105px);
   }
 
   .hero-central-axis-content {
-    max-width: 700px;
-    padding: 0 20px;
+    max-width: 760px;
+    padding: 0 24px;
   }
 
   .hero-monumental-heading {
-    font-size: clamp(2.1rem, 5vw, 2.7rem);
-    line-height: 1.4;
-    margin-bottom: 22px;
+    font-size: clamp(2.3rem, 5.5vw, 3rem);
+    line-height: 1.35;
+    margin-bottom: 24px;
   }
 
   .hero-supporting-summary {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    max-width: 640px;
-    margin-bottom: 34px;
+    font-size: 1.12rem;
+    line-height: 1.95;
+    max-width: 700px;
+    margin-bottom: 36px;
   }
 }
 
@@ -220,8 +220,8 @@
    ======================================================== */
 @media (max-width: 640px) {
   .unified-internal-hero {
-    min-height: clamp(460px, 60vh, 540px);
-    padding: clamp(75px, 11vh, 90px) 0 clamp(64px, 9vh, 80px);
+    min-height: clamp(480px, 64vh, 580px);
+    padding: clamp(85px, 12vh, 105px) 0 clamp(72px, 10vh, 90px);
   }
 
   .hero-image-viewport {
@@ -230,49 +230,49 @@
 
   .hero-central-axis-content {
     max-width: 100%;
-    padding: 0 16px;
+    padding: 0 20px;
     box-sizing: border-box;
   }
 
   .hero-eyebrow-block {
-    margin-bottom: 18px;
-    gap: 10px;
+    margin-bottom: 20px;
+    gap: 12px;
     flex-wrap: wrap;
   }
 
   .eyebrow-hairline-side {
-    width: 24px;
+    width: 28px;
     height: 1.5px;
   }
 
   .eyebrow-label-text {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     letter-spacing: 0.14em;
   }
 
   .hero-monumental-heading {
-    font-size: clamp(1.85rem, 6.4vw, 2.35rem);
-    line-height: 1.38;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
+    font-size: clamp(2.1rem, 7.2vw, 2.65rem);
+    line-height: 1.35;
+    margin-bottom: 22px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
   }
 
   .hero-supporting-summary {
-    font-size: 1rem;
-    line-height: 1.88;
-    max-width: 540px;
-    margin: 0 auto 32px auto;
-    color: rgba(247, 243, 234, 0.94);
+    font-size: 1.05rem;
+    line-height: 1.92;
+    max-width: 580px;
+    margin: 0 auto 34px auto;
+    color: rgba(247, 243, 234, 0.96);
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
   }
 
   .hero-gold-button {
     width: auto;
-    min-width: 180px;
-    max-width: 300px;
-    padding: 0 26px;
-    height: 46px;
-    font-size: 0.94rem;
+    min-width: 190px;
+    max-width: 320px;
+    padding: 0 28px;
+    height: 48px;
+    font-size: 0.96rem;
     justify-content: center;
   }
 }
