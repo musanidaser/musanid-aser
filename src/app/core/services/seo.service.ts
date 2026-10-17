@@ -152,7 +152,12 @@ export class SeoService {
     this.metaService.updateTag({ property: 'og:description', content: pageConfig.description });
     this.metaService.updateTag({ property: 'og:url', content: canonicalUrl });
     this.metaService.updateTag({ property: 'og:type', content: 'website' });
-    this.metaService.updateTag({ property: 'og:image', content: `${this.baseUrl}/hero-images/hero.webp` });
+    this.metaService.updateTag({ property: 'og:image', content: `${this.baseUrl}/logo.png` });
+    this.metaService.updateTag({ property: 'og:image:secure_url', content: `${this.baseUrl}/logo.png` });
+    this.metaService.updateTag({ property: 'og:image:type', content: 'image/png' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '1024' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '683' });
+    this.metaService.updateTag({ property: 'og:image:alt', content: lang === 'ar' ? 'شعار مؤسسة مساند آسر للإمداد والوساطة التجارية' : 'Musanid Aser Logo' });
     this.metaService.updateTag({ property: 'og:site_name', content: lang === 'ar' ? 'مساند آسر' : 'Musanid Aser' });
     this.metaService.updateTag({ property: 'og:locale', content: lang === 'ar' ? 'ar_SA' : 'en_US' });
 
@@ -160,7 +165,8 @@ export class SeoService {
     this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.metaService.updateTag({ name: 'twitter:title', content: pageConfig.title });
     this.metaService.updateTag({ name: 'twitter:description', content: pageConfig.description });
-    this.metaService.updateTag({ name: 'twitter:image', content: `${this.baseUrl}/hero-images/hero.webp` });
+    this.metaService.updateTag({ name: 'twitter:image', content: `${this.baseUrl}/logo.png` });
+    this.metaService.updateTag({ name: 'twitter:image:alt', content: lang === 'ar' ? 'شعار مؤسسة مساند آسر للإمداد والوساطة التجارية' : 'Musanid Aser Logo' });
 
     // 5. Update Canonical Link
     this.setLinkTag('canonical', canonicalUrl);
@@ -221,7 +227,7 @@ export class SeoService {
         alternateName: 'Musanid Aser',
         url: `${this.baseUrl}/`,
         logo: `${this.baseUrl}/logo.png`,
-        image: `${this.baseUrl}/hero-images/hero.webp`,
+        image: `${this.baseUrl}/logo.png`,
         description: orgDesc,
         telephone: '+966533796523',
         email: 'info@musanidaser.com',

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ملف تعريف مؤسسة مساند آسر للإمداد والوساطة التجارية | Company Profile</title>
+  <title>ملف تعريف مؤسسة مساند آسر للإمداد والوساطة التجارية</title>
 
   <!-- Google Fonts: Cairo (Arabic) & Outfit (Latin/Numbers) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,8 +95,8 @@
        COMMON RUNNING HEADER & FOOTER (PAGES 2 TO 5)
        ---------------------------------------------------- */
     .running-header {
-      height: 14mm;
-      padding: 3mm 16mm 2mm;
+      height: 13mm;
+      padding: 2.5mm 16mm 1.5mm;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -107,41 +107,41 @@
       box-sizing: border-box;
     }
 
+    /* User Request: Text is 'مؤسسة مساند آسر' and Logo is closer */
     .running-header-right {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 8.5pt;
-      font-weight: 700;
-      color: var(--teal-deep);
-      letter-spacing: 0.02em;
+      gap: 6px;
+      font-size: 9pt;
+      font-weight: 800;
+      color: var(--teal-dark);
+      letter-spacing: 0.01em;
     }
 
     .running-header-logo {
-      height: 7mm;
+      height: 7.5mm;
       width: auto;
       object-fit: contain;
     }
 
     .running-header-left {
-      font-family: var(--font-en);
-      font-size: 7.5pt;
-      font-weight: 600;
+      font-size: 8pt;
+      font-weight: 700;
       color: var(--gold-dark);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      direction: ltr;
+      letter-spacing: 0.04em;
     }
 
+    /* User Request: Footer has page number on one side, and 'مساند آسر' on the other side.
+       Removed website and company location. Spacing above footer added for breathing room. */
     .running-footer {
-      height: 14mm;
-      padding: 0 16mm 2.5mm;
+      height: 12mm;
+      padding: 0 16mm 1.5mm;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-top: 1.5px solid rgba(212, 175, 55, 0.4);
       background: transparent;
-      font-size: 7.8pt;
+      font-size: 8pt;
       color: var(--charcoal-muted);
       z-index: 10;
       flex-shrink: 0;
@@ -149,50 +149,30 @@
       position: relative;
     }
 
-    .running-footer-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-    }
-
     .running-footer-brand {
-      font-weight: 700;
+      font-weight: 800;
       color: var(--teal-dark);
-    }
-
-    .running-footer-dot {
-      color: var(--gold-primary);
-      font-weight: 700;
+      font-size: 8.5pt;
+      letter-spacing: 0.02em;
     }
 
     .running-page-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
       background: var(--white);
-      border: 1px solid rgba(212, 175, 55, 0.35);
+      border: 1px solid rgba(212, 175, 55, 0.4);
       border-radius: 2px;
-      padding: 0.8mm 2.8mm;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
-    }
-
-    .running-page-label {
-      font-family: var(--font-en);
-      font-size: 6.8pt;
-      font-weight: 700;
-      color: var(--gold-dark);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      direction: ltr;
+      padding: 0.8mm 3mm;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
 
     .running-page-number {
       font-family: var(--font-en);
-      font-size: 8pt;
+      font-size: 8.5pt;
       font-weight: 800;
       color: var(--teal-dark);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       direction: ltr !important;
       unicode-bidi: isolate;
       display: inline-block;
@@ -206,8 +186,7 @@
       font-size: 8pt;
       font-weight: 700;
       color: var(--gold-dark);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      letter-spacing: 0.06em;
       margin-bottom: 1.5mm;
     }
 
@@ -219,7 +198,7 @@
     }
 
     .page-main-title {
-      font-size: 18pt;
+      font-size: 17.5pt;
       font-weight: 800;
       color: var(--teal-dark);
       line-height: 1.3;
@@ -227,7 +206,7 @@
     }
 
     .page-main-desc {
-      font-size: 9pt;
+      font-size: 8.8pt;
       font-weight: 400;
       color: var(--charcoal-muted);
       line-height: 1.6;
@@ -262,10 +241,10 @@
       left: 0;
       right: 0;
       height: 135mm;
-      background-image: url('../public/hero.png');
+      background-image: url('../public/hero-images/hero.webp');
       background-size: cover;
       background-position: center bottom;
-      opacity: 0.25;
+      opacity: 0.22;
       mix-blend-mode: luminosity;
       mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 100%);
       -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 100%);
@@ -306,9 +285,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 8pt;
+      font-size: 8.5pt;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       color: var(--gold-light);
       position: relative;
       z-index: 5;
@@ -335,101 +314,72 @@
       padding: 0 8mm;
     }
 
+    /* User Request: Enhanced Logo Ring and Slightly Larger Logo */
     .cover-logo-ring {
-      width: 50mm;
-      height: 50mm;
-      border: 1.5px solid var(--gold-primary);
+      width: 62mm;
+      height: 62mm;
+      border: 2px solid var(--gold-primary);
       border-radius: 50%;
-      margin: 0 auto 7mm;
+      margin: 0 auto 5mm;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle, rgba(14, 85, 85, 0.8) 0%, rgba(6, 58, 58, 0.95) 100%);
-      box-shadow: 0 0 35px rgba(212, 175, 55, 0.35), inset 0 0 20px rgba(212, 175, 55, 0.25);
+      background: radial-gradient(circle, rgba(16, 95, 95, 0.85) 0%, rgba(6, 58, 58, 0.98) 100%);
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.4), inset 0 0 25px rgba(212, 175, 55, 0.28);
       position: relative;
     }
 
     .cover-logo-ring::after {
       content: '';
       position: absolute;
-      inset: -4px;
+      inset: -5px;
       border-radius: 50%;
-      border: 0.75px dashed rgba(212, 175, 55, 0.45);
+      border: 1px dashed rgba(212, 175, 55, 0.55);
     }
 
     .cover-logo-img {
-      width: 35mm;
-      height: 35mm;
+      width: 47mm;
+      height: 47mm;
       object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
     }
 
     .cover-brand-title {
-      font-size: 24.5pt;
-      font-weight: 800;
+      font-size: 25pt;
+      font-weight: 900;
       color: #FAF7F2;
       line-height: 1.35;
-      margin-bottom: 3mm;
-      letter-spacing: 0.02em;
-      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
-    }
-
-    .cover-brand-en {
-      font-family: var(--font-en);
-      font-size: 9.8pt;
-      font-weight: 600;
-      letter-spacing: 0.24em;
-      color: var(--gold-light);
-      text-transform: uppercase;
-      margin-bottom: 7mm;
-      direction: ltr;
+      margin-bottom: 4mm;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
     }
 
     .cover-gold-divider {
-      width: 70mm;
-      height: 1.5px;
+      width: 75mm;
+      height: 2px;
       background: linear-gradient(90deg, transparent 0%, var(--gold-primary) 50%, transparent 100%);
-      margin: 0 auto 6.5mm;
+      margin: 0 auto 5mm;
+      position: relative;
     }
 
-    .cover-doc-badge-group {
-      display: inline-flex;
-      align-items: center;
-      gap: 3mm;
-      margin-bottom: 4mm;
-    }
-
-    .cover-badge-doc {
-      display: inline-block;
-      padding: 2.2mm 8mm;
-      border: 1px solid var(--gold-primary);
-      background: rgba(212, 175, 55, 0.14);
-      color: var(--gold-light);
-      font-family: var(--font-en), var(--font-ar);
-      font-size: 8.5pt;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      border-radius: 2px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .cover-badge-year {
-      display: inline-block;
-      padding: 2.2mm 4.5mm;
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      background: rgba(6, 58, 58, 0.75);
-      color: var(--gold-light);
-      font-family: var(--font-en);
-      font-size: 8pt;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      border-radius: 2px;
+    .cover-gold-divider::after {
+      content: '◆';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--gold-primary);
+      font-size: 7pt;
+      background: var(--teal-dark);
+      padding: 0 4px;
     }
 
     .cover-tagline {
-      font-size: 11pt;
-      font-weight: 500;
-      color: rgba(250, 247, 242, 0.92);
-      letter-spacing: 0.04em;
+      font-size: 11.5pt;
+      font-weight: 600;
+      color: rgba(250, 247, 242, 0.94);
+      letter-spacing: 0.03em;
+      line-height: 1.5;
     }
 
     .cover-bottom-bar {
@@ -438,74 +388,68 @@
       justify-content: space-between;
       position: relative;
       z-index: 5;
-      font-size: 7.8pt;
-      color: rgba(250, 247, 242, 0.78);
+      font-size: 8pt;
+      color: rgba(250, 247, 242, 0.85);
       border-top: 1px solid rgba(212, 175, 55, 0.35);
-      padding-top: 4mm;
+      padding-top: 3.5mm;
     }
 
     .cover-cr-meta {
       line-height: 1.6;
       display: flex;
       flex-direction: column;
-      gap: 1mm;
     }
 
     .cover-cr-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      color: var(--gold-light);
       font-weight: 700;
+      color: var(--gold-light);
     }
 
     .cover-cr-icon {
       width: 3.5mm;
       height: 3.5mm;
-      color: var(--gold-primary);
     }
 
     .cover-web-meta {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 1mm;
+      gap: 2px;
     }
 
     .cover-web-link {
       font-family: var(--font-en);
+      font-size: 8.8pt;
       font-weight: 700;
-      font-size: 9pt;
       color: var(--gold-light);
-      letter-spacing: 0.08em;
-      direction: ltr;
       text-decoration: none;
+      letter-spacing: 0.06em;
     }
 
     .cover-official-badge {
-      font-family: var(--font-en);
-      font-size: 6.8pt;
-      font-weight: 700;
-      color: rgba(250, 247, 242, 0.65);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      direction: ltr;
+      font-size: 7.2pt;
+      font-weight: 600;
+      color: rgba(250, 247, 242, 0.7);
     }
 
     /* ========================================================
-       PAGE 2: ABOUT US (EXACT BUDGET - ZERO VOIDS)
+       PAGE 2: ABOUT US (EXACT BUDGET - HEADERS PUSHED DOWN)
        ======================================================== */
     .about-body {
-      padding: 3mm 16mm 0;
-      height: 269mm;
+      padding: 6mm 16mm 0;
+      height: 263mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
+      margin-bottom: 5mm;
     }
 
     .about-intro-block {
-      height: 26mm;
+      height: 25mm;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -515,7 +459,7 @@
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 6mm;
-      height: 98mm;
+      height: 92mm;
       align-items: stretch;
     }
 
@@ -532,17 +476,17 @@
     }
 
     .about-lead-p {
-      font-size: 8.8pt;
+      font-size: 8.5pt;
       font-weight: 500;
       color: var(--teal-dark);
-      line-height: 1.6;
+      line-height: 1.58;
       text-align: justify;
     }
 
     .about-pillars-mini {
       display: flex;
       flex-direction: column;
-      gap: 1.8mm;
+      gap: 1.5mm;
     }
 
     .about-mini-item {
@@ -552,19 +496,19 @@
       background: var(--white);
       border: 1px solid rgba(212, 175, 55, 0.35);
       border-radius: 2px;
-      padding: 1.8mm 3mm;
+      padding: 1.5mm 3mm;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
 
     .mini-item-num {
       font-family: var(--font-en);
-      font-size: 9pt;
+      font-size: 8.8pt;
       font-weight: 800;
       color: var(--gold-dark);
       background: rgba(212, 175, 55, 0.16);
       border-radius: 2px;
-      width: 6.5mm;
-      height: 6.5mm;
+      width: 6.2mm;
+      height: 6.2mm;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -594,7 +538,7 @@
       background: var(--teal-dark);
       border: 1px solid var(--gold-primary);
       border-right: 4.5px solid var(--gold-primary);
-      padding: 3mm 4.5mm;
+      padding: 2.6mm 4.5mm;
       border-radius: 2px;
       position: relative;
       box-shadow: 0 2px 8px rgba(6, 58, 58, 0.15);
@@ -605,10 +549,10 @@
       position: absolute;
       top: -2mm;
       left: 3mm;
-      font-family: var(--font-en);
-      font-size: 26pt;
+      font-family: var(--font-ar);
+      font-size: 24pt;
       font-weight: 800;
-      color: rgba(212, 175, 55, 0.22);
+      color: rgba(212, 175, 55, 0.2);
       line-height: 1;
       pointer-events: none;
     }
@@ -652,7 +596,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 2.5mm 3.5mm;
+      padding: 2.2mm 3.5mm;
       background: linear-gradient(to top, rgba(6, 58, 58, 0.95) 0%, rgba(6, 58, 58, 0.82) 75%, transparent 100%);
       color: var(--white);
       font-size: 7.8pt;
@@ -674,13 +618,13 @@
     .about-photo-strip {
       position: relative;
       width: 100%;
-      height: 36mm;
+      height: 34mm;
       border-radius: 2px;
       overflow: hidden;
       border: 1px solid rgba(212, 175, 55, 0.4);
       display: flex;
       align-items: center;
-      padding: 3.5mm 7mm;
+      padding: 3mm 7mm;
       background-image: url('../public/about-mission.jpg');
       background-size: cover;
       background-position: center;
@@ -705,14 +649,14 @@
     }
 
     .strip-text-title {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: var(--gold-light);
-      margin-bottom: 1.5mm;
+      margin-bottom: 1.2mm;
     }
 
     .strip-text-sub {
-      font-size: 8.3pt;
+      font-size: 8.2pt;
       color: rgba(255, 255, 255, 0.9);
       max-width: 95mm;
     }
@@ -749,17 +693,17 @@
     }
 
     .about-pillars-grid {
-      height: 86mm;
+      height: 80mm;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 5mm;
+      gap: 4.5mm;
     }
 
     .pillar-card {
       background: var(--white);
       border: 1px solid rgba(212, 175, 55, 0.35);
       border-top: 3.5px solid var(--teal-deep);
-      padding: 3.8mm 4.2mm 3.5mm;
+      padding: 3.2mm 3.8mm 2.8mm;
       border-radius: 2px;
       display: flex;
       flex-direction: column;
@@ -774,12 +718,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.2mm;
+      margin-bottom: 1mm;
     }
 
     .pillar-icon-box {
-      width: 9.5mm;
-      height: 9.5mm;
+      width: 8.5mm;
+      height: 8.5mm;
       background: rgba(212, 175, 55, 0.14);
       border: 1px solid var(--gold-primary);
       border-radius: 50%;
@@ -795,46 +739,35 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.5mm;
+      gap: 0.3mm;
     }
 
     .pillar-title {
-      font-size: 11.5pt;
+      font-size: 11pt;
       font-weight: 800;
       color: var(--teal-dark);
       line-height: 1.2;
-    }
-
-    .pillar-en {
-      font-family: var(--font-en);
-      font-size: 6.8pt;
-      font-weight: 700;
-      color: var(--gold-dark);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      direction: ltr;
     }
 
     .pillar-divider {
       width: 100%;
       height: 1px;
       background: linear-gradient(90deg, rgba(212, 175, 55, 0.45) 0%, rgba(212, 175, 55, 0.15) 80%, transparent 100%);
-      margin-bottom: 2mm;
+      margin-bottom: 1.8mm;
     }
 
     .pillar-desc {
-      font-size: 8.2pt;
+      font-size: 7.9pt;
       color: var(--charcoal-muted);
-      line-height: 1.55;
-      margin-bottom: 2.2mm;
+      line-height: 1.5;
+      margin-bottom: 1.8mm;
       text-align: justify;
     }
 
-    /* Uniform, executive 2-block feature layout inside every card */
     .pillar-features-group {
       display: flex;
       flex-direction: column;
-      gap: 1.8mm;
+      gap: 1.5mm;
     }
 
     .pillar-feat-box {
@@ -842,14 +775,14 @@
       border: 1px solid rgba(212, 175, 55, 0.3);
       border-right: 3px solid var(--teal-deep);
       border-radius: 2px;
-      padding: 1.8mm 2.8mm;
+      padding: 1.5mm 2.5mm;
       display: flex;
       flex-direction: column;
-      gap: 0.5mm;
+      gap: 0.3mm;
     }
 
     .pillar-feat-title {
-      font-size: 7.8pt;
+      font-size: 7.5pt;
       font-weight: 700;
       color: var(--teal-dark);
       display: flex;
@@ -866,33 +799,34 @@
     }
 
     .pillar-feat-desc {
-      font-size: 7.2pt;
+      font-size: 7.1pt;
       color: var(--charcoal-muted);
       line-height: 1.35;
       padding-right: 9px;
     }
 
     /* ========================================================
-       PAGE 3: SERVICES (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 3: SERVICES (EXACT BUDGET - HEADERS PUSHED DOWN)
        ======================================================== */
     .services-body {
-      padding: 3mm 16mm 0;
-      height: 269mm;
+      padding: 6mm 16mm 0;
+      height: 263mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
+      margin-bottom: 5mm;
     }
 
     .services-intro-block {
-      height: 26mm;
+      height: 25mm;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
 
     .services-grid {
-      height: 176mm;
+      height: 168mm;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -902,7 +836,7 @@
     .service-card {
       border: 1px solid rgba(212, 175, 55, 0.32);
       background: var(--white);
-      padding: 4.5mm 5.5mm;
+      padding: 4mm 5.2mm;
       border-radius: 2px;
       position: relative;
       display: flex;
@@ -916,7 +850,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.5mm;
+      margin-bottom: 1.2mm;
     }
 
     .service-badge-left {
@@ -939,25 +873,15 @@
 
     .service-num {
       font-family: var(--font-en);
-      font-size: 13pt;
+      font-size: 12.5pt;
       font-weight: 800;
       color: var(--gold-dark);
       letter-spacing: 0.05em;
       direction: ltr;
     }
 
-    .service-tag {
-      font-family: var(--font-en);
-      font-size: 7pt;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--teal-mid);
-      text-transform: uppercase;
-      direction: ltr;
-    }
-
     .service-title {
-      font-size: 11.2pt;
+      font-size: 10.8pt;
       font-weight: 700;
       color: var(--teal-dark);
       margin-bottom: 1mm;
@@ -965,13 +889,12 @@
     }
 
     .service-desc {
-      font-size: 8.2pt;
+      font-size: 8.1pt;
       color: var(--charcoal-muted);
-      line-height: 1.55;
-      margin-bottom: 2mm;
+      line-height: 1.52;
+      margin-bottom: 1.8mm;
     }
 
-    /* Structured Scope chips that eliminate card emptiness */
     .service-scope-row {
       display: flex;
       align-items: center;
@@ -993,119 +916,130 @@
       position: relative;
       background: var(--teal-dark);
       color: var(--white);
-      padding: 4.5mm 7mm;
+      padding: 4mm 7mm;
       border-radius: 2px;
       border-right: 4.5px solid var(--gold-primary);
       display: flex;
       align-items: center;
-      height: 48mm;
       overflow: hidden;
-      background-image: url('../public/services/services-cta.jpg');
+      background-image: url('../public/services/services-cta.webp');
       background-size: cover;
       background-position: center;
       box-sizing: border-box;
+      height: 36mm;
+      flex-shrink: 0;
     }
 
     .services-commitment-box::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(6, 58, 58, 0.93);
+      background: rgba(6, 58, 58, 0.94);
       z-index: 1;
     }
 
     .services-commit-content {
       position: relative;
       z-index: 2;
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 6mm;
+      width: 100%;
     }
 
     .services-commit-text h4 {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: var(--gold-light);
-      margin-bottom: 1.5mm;
+      margin-bottom: 1.2mm;
     }
 
     .services-commit-text p {
-      font-size: 8.5pt;
-      color: rgba(255, 255, 255, 0.92);
-      line-height: 1.62;
+      font-size: 8pt;
+      color: rgba(255, 255, 255, 0.9);
       max-width: 140mm;
+      line-height: 1.55;
     }
 
     .services-commit-badge {
-      width: 14mm;
-      height: 14mm;
+      width: 11mm;
+      height: 11mm;
+      border: 1px solid var(--gold-primary);
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--gold-light);
+      padding: 2.2mm;
       flex-shrink: 0;
     }
 
     /* ========================================================
-       PAGE 4: SECTORS (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 4: SECTORS (EXACT BUDGET - HEADERS PUSHED DOWN)
        ======================================================== */
     .sectors-body {
-      padding: 3mm 16mm 0;
-      height: 269mm;
+      padding: 6mm 16mm 0;
+      height: 263mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
+      margin-bottom: 5mm;
     }
 
     .sectors-intro-block {
-      height: 26mm;
+      height: 25mm;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
 
     .sectors-grid-top {
-      height: 92mm;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 5mm;
+      height: 79mm;
     }
 
     .sectors-grid-bottom {
-      height: 92mm;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 4.5mm;
+      height: 83mm;
     }
 
     .sector-card {
       background: var(--white);
-      border: 1px solid rgba(212, 175, 55, 0.32);
+      border: 1px solid rgba(212, 175, 55, 0.35);
       border-radius: 2px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
       height: 100%;
     }
 
     .sector-img-box {
       width: 100%;
-      height: 48mm;
       position: relative;
       overflow: hidden;
-      background-color: var(--teal-dark);
-      flex-shrink: 0;
+      background: #EAE6DF;
+    }
+
+    .sectors-grid-top .sector-img-box {
+      height: 38mm;
     }
 
     .sectors-grid-bottom .sector-img-box {
-      height: 46mm;
+      height: 42mm;
     }
 
     .sector-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .sector-num-badge {
@@ -1124,7 +1058,7 @@
     }
 
     .sector-card-content {
-      padding: 3.5mm 4mm;
+      padding: 2.8mm 3.8mm;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -1146,27 +1080,16 @@
     }
 
     .sector-title {
-      font-size: 10.5pt;
+      font-size: 10.2pt;
       font-weight: 700;
       color: var(--teal-dark);
-    }
-
-    .sector-en {
-      font-family: var(--font-en);
-      font-size: 6.8pt;
-      font-weight: 600;
-      color: var(--gold-dark);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1.2mm;
-      direction: ltr;
     }
 
     .sector-desc {
       font-size: 7.8pt;
       color: var(--charcoal-muted);
-      line-height: 1.5;
-      margin-bottom: 1.8mm;
+      line-height: 1.48;
+      margin-bottom: 1.4mm;
     }
 
     .sector-scope-tags {
@@ -1189,14 +1112,14 @@
     .sectors-photo-band {
       position: relative;
       width: 100%;
-      height: 38mm;
+      height: 35mm;
       border-radius: 2px;
       overflow: hidden;
       border: 1px solid rgba(212, 175, 55, 0.35);
       display: flex;
       align-items: center;
-      padding: 4mm 7mm;
-      background-image: url('../public/sectors-hero.jpg');
+      padding: 3.5mm 7mm;
+      background-image: url('../public/hero-images/sectors-hero.webp');
       background-size: cover;
       background-position: center;
       box-sizing: border-box;
@@ -1223,72 +1146,53 @@
       font-size: 10.5pt;
       font-weight: 700;
       color: var(--gold-light);
-      margin-bottom: 1.5mm;
+      margin-bottom: 1.2mm;
     }
 
     .sectors-band-desc {
-      font-size: 8.3pt;
+      font-size: 8.2pt;
       color: rgba(255, 255, 255, 0.9);
       max-width: 155mm;
-      line-height: 1.58;
+      line-height: 1.55;
     }
 
     /* ========================================================
-       PAGE 5: METHODOLOGY (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 5: METHODOLOGY (EXACT BUDGET - 1-LINE CONCISE DESCS)
        ======================================================== */
     .process-body {
-      padding: 2.5mm 16mm 0;
-      height: 269mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 3.5mm;
-      box-sizing: border-box;
-    }
-
-    .process-intro-block {
-      height: 25mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      flex-shrink: 0;
-    }
-
-    .process-steps-list {
-      height: 157mm;
+      padding: 6mm 16mm 0;
+      height: 263mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
-      flex-shrink: 0;
+      box-sizing: border-box;
+      margin-bottom: 5mm;
     }
 
-    /* Connected vertical line running ONLY between step 1 and step 4, terminating safely inside step 4 */
-    .process-steps-list::before {
-      content: '';
-      position: absolute;
-      top: 18mm;
-      height: 116mm;
-      right: 12mm;
-      width: 2px;
-      background: linear-gradient(180deg, var(--gold-primary), var(--teal-deep));
-      z-index: 1;
+    .process-intro-block {
+      height: 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .process-steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5mm;
     }
 
     .process-step-item {
+      background: var(--white);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-right: 4.5px solid var(--teal-dark);
+      padding: 3.5mm 5mm;
+      border-radius: 2px;
       display: grid;
       grid-template-columns: 24mm 1fr;
-      gap: 5mm;
-      background: var(--white);
-      border: 1px solid rgba(212, 175, 55, 0.32);
-      border-radius: 2px;
-      padding: 3.5mm 5mm;
+      gap: 4.5mm;
       align-items: center;
-      position: relative;
-      z-index: 2;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-      height: 36.8mm;
-      box-sizing: border-box;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
     .step-number-badge {
@@ -1296,33 +1200,35 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: var(--teal-dark);
-      color: var(--white);
-      height: 100%;
+      text-align: center;
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(212, 175, 55, 0.4);
       border-radius: 2px;
-      border: 1px solid var(--gold-primary);
+      padding: 2.5mm 1.5mm;
+      height: 100%;
     }
 
     .step-num {
       font-family: var(--font-en);
       font-size: 14pt;
       font-weight: 800;
-      color: var(--gold-light);
+      color: var(--teal-dark);
       line-height: 1;
-      direction: ltr;
+      margin-bottom: 0.8mm;
     }
 
     .step-stage-label {
       font-size: 6.8pt;
-      color: rgba(255, 255, 255, 0.88);
-      font-weight: 600;
-      margin-top: 1mm;
+      font-weight: 700;
+      color: var(--gold-dark);
+      letter-spacing: 0.04em;
     }
 
     .step-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
     }
 
     .step-title-row {
@@ -1339,36 +1245,29 @@
     }
 
     .step-icon-svg {
-      width: 5.5mm;
-      height: 5.5mm;
+      width: 4.6mm;
+      height: 4.6mm;
       color: var(--gold-dark);
       flex-shrink: 0;
     }
 
     .step-title {
-      font-size: 11pt;
+      font-size: 10.2pt;
       font-weight: 700;
       color: var(--teal-dark);
     }
 
-    .step-en {
-      font-family: var(--font-en);
-      font-size: 7.2pt;
-      font-weight: 600;
-      color: var(--gold-dark);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      direction: ltr;
-    }
-
+    /* User Request: Concise single-line descriptions with zero clutter */
     .step-desc {
-      font-size: 8.2pt;
+      font-size: 8pt;
       color: var(--charcoal-muted);
-      line-height: 1.55;
-      margin-bottom: 1.5mm;
+      line-height: 1.45;
+      margin-bottom: 1.2mm;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    /* Concrete Deliverable tag that eliminates step voids */
     .step-deliverables {
       display: flex;
       align-items: center;
@@ -1390,19 +1289,18 @@
       position: relative;
       background: var(--teal-dark);
       color: var(--white);
-      padding: 4.5mm 7mm;
+      padding: 3.8mm 7mm;
       border-radius: 2px;
       border: 1px solid var(--gold-primary);
-      height: 57mm;
+      height: 48mm;
       overflow: hidden;
-      background-image: url('../public/cta.png');
+      background-image: url('../public/cta-images/cta.png');
       background-size: cover;
       background-position: center;
       box-sizing: border-box;
       display: flex;
       align-items: center;
       flex-shrink: 0;
-      margin-top: 1mm;
     }
 
     .process-pillars-callout::before {
@@ -1424,7 +1322,7 @@
       font-weight: 700;
       color: var(--gold-light);
       text-align: center;
-      margin-bottom: 3mm;
+      margin-bottom: 2.8mm;
       letter-spacing: 0.04em;
     }
 
@@ -1448,27 +1346,34 @@
     }
 
     .process-p-icon {
-      width: 6.5mm;
-      height: 6.5mm;
+      width: 7.5mm;
+      height: 7.5mm;
+      border: 1px solid var(--gold-primary);
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.16);
       color: var(--gold-light);
-      margin-bottom: 1.2mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.6mm;
+      margin-bottom: 1.5mm;
     }
 
     .process-p-head {
-      font-size: 9.2pt;
+      font-size: 8.8pt;
       font-weight: 700;
-      color: var(--white);
+      color: #FFFFFF;
       margin-bottom: 0.8mm;
     }
 
     .process-p-sub {
-      font-size: 7.8pt;
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.5;
+      font-size: 7.4pt;
+      color: rgba(250, 247, 242, 0.82);
+      line-height: 1.4;
     }
 
     .process-conclude-bar {
-      padding: 2.5mm 5mm;
+      padding: 2.2mm 5mm;
       background: var(--white);
       border: 1px dashed rgba(212, 175, 55, 0.55);
       border-radius: 2px;
@@ -1477,7 +1382,7 @@
       font-weight: 600;
       color: var(--teal-dark);
       box-sizing: border-box;
-      height: 14mm;
+      height: 12mm;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1485,7 +1390,7 @@
     }
 
     /* ========================================================
-       PAGE 6: CONTACT US (BALANCED DARK ELEGANCE - NO WHITE VOID)
+       PAGE 6: CONTACT US (BALANCED DARK ELEGANCE)
        ======================================================== */
     .page-contact {
       background-color: var(--teal-dark);
@@ -1501,7 +1406,7 @@
     .contact-bg-photo {
       position: absolute;
       inset: 0;
-      background-image: url('../public/quote-hero.jpg');
+      background-image: url('../public/hero-images/quote-hero.webp');
       background-size: cover;
       background-position: center;
       opacity: 0.16;
@@ -1530,8 +1435,8 @@
     }
 
     .contact-logo-ring {
-      width: 30mm;
-      height: 30mm;
+      width: 32mm;
+      height: 32mm;
       border: 1.5px solid var(--gold-primary);
       border-radius: 50%;
       margin: 0 auto 3mm;
@@ -1543,8 +1448,8 @@
     }
 
     .contact-logo-img {
-      width: 21mm;
-      height: 21mm;
+      width: 23mm;
+      height: 23mm;
       object-fit: contain;
     }
 
@@ -1569,9 +1474,8 @@
       grid-template-columns: 1.25fr 0.75fr;
       gap: 7mm;
       align-items: stretch;
-      padding: 0 4mm;
       z-index: 5;
-      height: 186mm;
+      height: 168mm;
       box-sizing: border-box;
     }
 
@@ -1583,28 +1487,28 @@
     }
 
     .contact-item-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.32);
-      padding: 3.5mm 5mm;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-right: 4px solid var(--gold-primary);
       border-radius: 2px;
+      padding: 3mm 4.5mm;
       display: flex;
       align-items: center;
-      gap: 14px;
-      height: 33.5mm;
-      box-sizing: border-box;
+      gap: 4mm;
     }
 
     .contact-item-icon-svg {
-      width: 9mm;
-      height: 9mm;
-      border-radius: 2px;
-      background: var(--gold-primary);
-      color: var(--teal-dark);
+      width: 8mm;
+      height: 8mm;
+      background: rgba(212, 175, 55, 0.16);
+      border: 1px solid var(--gold-primary);
+      border-radius: 50%;
+      color: var(--gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
       padding: 1.8mm;
+      flex-shrink: 0;
     }
 
     .contact-item-texts {
@@ -1616,7 +1520,7 @@
       font-size: 7.5pt;
       color: var(--gold-light);
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
     }
 
     .contact-item-value {
@@ -1638,7 +1542,6 @@
       font-family: var(--font-en), var(--font-ar);
     }
 
-    /* ELIMINATING THE BLANK WHITE VOID ON PAGE 6 */
     .contact-qr-card {
       background: rgba(255, 255, 255, 0.08);
       border: 1.5px solid var(--gold-primary);
@@ -1649,50 +1552,44 @@
       align-items: center;
       justify-content: space-between;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-      height: 100%;
-      box-sizing: border-box;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     }
 
     .contact-qr-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-block;
+      background: var(--gold-primary);
+      color: var(--teal-dark);
       font-size: 7.5pt;
-      font-weight: 700;
-      color: var(--gold-light);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 1mm 3mm;
+      font-weight: 800;
+      padding: 1.2mm 4.5mm;
       border-radius: 2px;
-      background: rgba(212, 175, 55, 0.15);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      letter-spacing: 0.04em;
     }
 
     .contact-qr-invite-txt {
-      font-size: 8.2pt;
+      font-size: 8pt;
       color: rgba(255, 255, 255, 0.9);
       line-height: 1.5;
-      max-width: 52mm;
+      padding: 0 1.5mm;
     }
 
-    /* High-contrast crisp white QR container framed with gold */
     .contact-qr-white-frame {
       width: 48mm;
       height: 48mm;
       background: #FFFFFF;
-      border: 2px solid var(--gold-primary);
       border-radius: 3px;
-      padding: 2.5mm;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      padding: 3mm;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+      border: 1.5px solid var(--gold-primary);
     }
 
     .contact-qr-img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
       display: block;
     }
 
@@ -1700,15 +1597,6 @@
       font-size: 8.8pt;
       font-weight: 700;
       color: var(--gold-light);
-    }
-
-    .contact-qr-sub {
-      font-family: var(--font-en);
-      font-size: 7.5pt;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.8);
-      letter-spacing: 0.06em;
-      direction: ltr;
     }
 
     .contact-qr-btn {
@@ -1719,8 +1607,8 @@
       color: var(--teal-dark);
       padding: 2mm 5mm;
       border-radius: 2px;
-      font-size: 8pt;
-      font-weight: 700;
+      font-size: 8.2pt;
+      font-weight: 800;
       text-decoration: none;
       width: 100%;
       box-sizing: border-box;
@@ -1734,16 +1622,17 @@
       align-items: center;
       justify-content: space-between;
       z-index: 5;
-      height: 16mm;
+      height: 14mm;
       flex-shrink: 0;
       box-sizing: border-box;
       position: relative;
     }
 
     .contact-cr-info {
-      font-size: 7.6pt;
-      color: rgba(250, 247, 242, 0.85);
-      line-height: 1.55;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.02em;
     }
 
     .contact-bottom-right {
@@ -1755,16 +1644,16 @@
     .contact-page-badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      justify-content: center;
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.35);
+      border: 1px solid rgba(212, 175, 55, 0.4);
       border-radius: 2px;
       padding: 0.8mm 3mm;
     }
 
     .contact-page-num {
       font-family: var(--font-en);
-      font-size: 8pt;
+      font-size: 8.5pt;
       font-weight: 800;
       color: var(--gold-light);
       letter-spacing: 0.08em;
@@ -1791,8 +1680,8 @@
         <span class="cover-meta-dot"></span>
         <span>المملكة العربية السعودية · الرياض</span>
       </div>
-      <div class="cover-meta-item" style="direction: ltr;">
-        <span style="font-family: var(--font-en); font-weight: 700; letter-spacing: 0.14em;">KINGDOM OF SAUDI ARABIA</span>
+      <div class="cover-meta-item">
+        <span>سجل تجاري معتمد</span>
         <span class="cover-meta-dot"></span>
       </div>
     </div>
@@ -1802,15 +1691,10 @@
         <img src="../public/logo.png" alt="شعار مساند آسر" class="cover-logo-img">
       </div>
 
-      <h1 class="cover-brand-title">مؤسسة مساند آسر للإمداد والوساطة التجارية</h1>
-      <div class="cover-brand-en">Musanid Aser for Supply & Commercial Brokerage</div>
+      <h1 class="cover-brand-title">مؤسسة مساند آسر<br>للإمداد والوساطة التجارية</h1>
 
       <div class="cover-gold-divider"></div>
 
-      <div class="cover-doc-badge-group">
-        <div class="cover-badge-doc">ملف تعريف المنشأة · COMPANY PROFILE</div>
-        <div class="cover-badge-year">2026 EDITION</div>
-      </div>
       <p class="cover-tagline">حلول متكاملة في توريد الأعمال والوساطة التجارية المهنية</p>
     </div>
 
@@ -1820,11 +1704,11 @@
           <svg class="cover-cr-icon svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <span>سجل تجاري معتمد · المقر الرئيسي: الرياض</span>
         </div>
-        <span>المملكة العربية السعودية · وثيقة تعريفية رسمية</span>
+        <span>المملكة العربية السعودية · وثيقة تعريفية رسمية معتمدة</span>
       </div>
       <div class="cover-web-meta">
         <a href="https://musanidaser.com" target="_blank" class="cover-web-link">www.musanidaser.com</a>
-        <span class="cover-official-badge">OFFICIAL CORPORATE PORTAL</span>
+        <span class="cover-official-badge">الموقع الإلكتروني الرسمي</span>
       </div>
     </div>
   </section>
@@ -1836,9 +1720,9 @@
     <header class="running-header">
       <div class="running-header-right">
         <img src="../public/logo.png" alt="مساند آسر" class="running-header-logo">
-        <span>مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
+        <span>مؤسسة مساند آسر</span>
       </div>
-      <div class="running-header-left">About Us · Company Profile</div>
+      <div class="running-header-left">من نحن والتموضع المؤسسي</div>
     </header>
 
     <main class="about-body">
@@ -1849,7 +1733,7 @@
         </div>
         <h2 class="page-main-title">شريككم المهني في توريد الأعمال والوساطة التجارية</h2>
         <p class="page-main-desc">
-          انطلقت مؤسسة مساند آسر في الرياض لتقديم نموذج عمل منظم وواضح، يساند المنشآت والشركات في إدارة وتنسيق احتياجاتها التجارية بأعلى معايير الانضباط والموثوقية.
+          انطلقت مؤسسة مساند آسر للإمداد والوساطة التجارية في الرياض لتقديم نموذج عمل مهني ومنظم يساند الشركات والمشروعات في إدارة وتلبية احتياجاتها من التوريدات التجارية بكفاءة ومرونة.
         </p>
       </div>
 
@@ -1857,7 +1741,7 @@
         <div class="about-narrative">
           <div class="about-lead-block">
             <p class="about-lead-p">
-              نعمل كحلقة وصل مهنية متخصصة تغطي مجالات توريد الأعمال والوساطة التجارية واستقطاب الموردين والبحث عن أفضل الخيارات المتاحة، إلى جانب جمع وتحليل عروض الأسعار بموضوعية ودقة، ومتابعة مسارات التوريد حتى اكتمال الاستلام.
+              نعمل كحلقة وصل مهنية متخصصة تغطي مجالات توريد الأعمال والوساطة التجارية واستقطاب الموردين والبحث عن أفضل الخيارات المتاحة، إلى جانب جمع وتحليل عروض الأسعار بموضوعية ودقة، ومتابعة كافة مراحل التوريد حتى اكتمال التسليم.
             </p>
           </div>
 
@@ -1888,14 +1772,14 @@
           <div class="about-highlight-box">
             <div class="about-quote-mark">“</div>
             <div class="about-highlight-quote">
-              "التوريد الناجح لا يبدأ من توفير المنتج، بل من الفهم الدقيق للاحتياج الفعلي والمواصفات المعتمدة."
+              "التوريد الجيد لا يبدأ من المنتج، بل من فهم الاحتياج."
             </div>
             <div class="about-highlight-author">— المنطلق التشغيلي المعتمد في مساند آسر</div>
           </div>
         </div>
 
         <div class="about-image-wrapper">
-          <img src="../public/about-foundation.jpg" alt="فريق مساند آسر" class="about-img">
+          <img src="../public/about-foundation.jpg" alt="مساند آسر" class="about-img">
           <div class="about-img-caption">
             <svg class="about-caption-icon svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             <span>إدارة مسارات التوريد بمنهجية تشغيلية دقيقة</span>
@@ -1936,7 +1820,6 @@
             <div class="pillar-header">
               <div class="pillar-title-group">
                 <h3 class="pillar-title">رؤيتنا</h3>
-                <span class="pillar-en">Vision</span>
               </div>
               <div class="pillar-icon-box">
                 <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
@@ -1944,7 +1827,7 @@
             </div>
             <div class="pillar-divider"></div>
             <p class="pillar-desc">
-              أن نكون الشريك الموثوق لمنشآت الأعمال بالمملكة في سلاسل الإمداد والوساطة التجارية، عبر ترسيخ معايير النزاهة والوضوح والانضباط التعاقدي.
+              أن نكون الشريك الموثوق لمنشآت الأعمال بالمملكة في إدارة سلاسل الإمداد والوساطة التجارية، عبر ترسيخ معايير النزاهة والانضباط التعاقدي.
             </p>
           </div>
           <div class="pillar-features-group">
@@ -1965,7 +1848,6 @@
             <div class="pillar-header">
               <div class="pillar-title-group">
                 <h3 class="pillar-title">رسالتنا</h3>
-                <span class="pillar-en">Mission</span>
               </div>
               <div class="pillar-icon-box">
                 <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
@@ -1994,7 +1876,6 @@
             <div class="pillar-header">
               <div class="pillar-title-group">
                 <h3 class="pillar-title">مبادئنا</h3>
-                <span class="pillar-en">Values</span>
               </div>
               <div class="pillar-icon-box">
                 <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -2008,7 +1889,7 @@
           <div class="pillar-features-group">
             <div class="pillar-feat-box">
               <div class="pillar-feat-title"><span class="pillar-feat-dot"></span>الوضوح والنزاهة التعاقدية</div>
-              <div class="pillar-feat-desc">شفافية تامة في عروض الأسعار والمواصفات المعتمدة دون غموض</div>
+              <div class="pillar-feat-desc">تفاصيل واضحة وخطوات مفهومة وشفافية تامة في عروض الأسعار</div>
             </div>
             <div class="pillar-feat-box">
               <div class="pillar-feat-title"><span class="pillar-feat-dot"></span>المرونة والمتابعة المستمرة</div>
@@ -2020,30 +1901,23 @@
     </main>
 
     <footer class="running-footer">
-      <div class="running-footer-info">
-        <span class="running-footer-brand">مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
-        <span class="running-footer-dot">·</span>
-        <span>الرياض — المملكة العربية السعودية</span>
-        <span class="running-footer-dot">·</span>
-        <span style="font-family: var(--font-en); direction: ltr; font-weight: 600;">musanidaser.com</span>
-      </div>
+      <div class="running-footer-brand">مساند آسر</div>
       <div class="running-page-badge">
-        <span class="running-page-label">PAGE</span>
         <span class="running-page-number">02 / 06</span>
       </div>
     </footer>
   </section>
 
   <!-- ========================================================
-       PAGE 3: SERVICES (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 3: SERVICES (EXACT BUDGET - HEADERS PUSHED DOWN)
        ======================================================== -->
   <section class="page page-services">
     <header class="running-header">
       <div class="running-header-right">
         <img src="../public/logo.png" alt="مساند آسر" class="running-header-logo">
-        <span>مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
+        <span>مؤسسة مساند آسر</span>
       </div>
-      <div class="running-header-left">Our Services · Six Pillars</div>
+      <div class="running-header-left">منظومة الخدمات المعتمدة</div>
     </header>
 
     <main class="services-body">
@@ -2068,11 +1942,10 @@
               </div>
               <span class="service-num">01</span>
             </div>
-            <span class="service-tag">Business Supply</span>
           </div>
           <h3 class="service-title">توريد المنتجات والاحتياجات</h3>
           <p class="service-desc">
-            تأمين احتياجات ومستلزمات الأعمال للشركات والمنشآت بمختلف أنشطتها وفق معايير الجودة المعتمدة والميزانيات المحددة بدقة.
+            تأمين احتياجات ومستلزمات الأعمال والمنشآت من خلال مسارات توريد منظمة تتوافق مع معايير الجودة والميزانيات المحددة.
           </p>
           <div class="service-scope-row">
             <span class="service-scope-tag">مستلزمات التشغيل الدورية</span>
@@ -2085,11 +1958,10 @@
           <div class="service-card-top">
             <div class="service-badge-left">
               <div class="service-icon-box">
-                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
               </div>
               <span class="service-num">02</span>
             </div>
-            <span class="service-tag">Commercial Brokerage</span>
           </div>
           <h3 class="service-title">الوساطة التجارية</h3>
           <p class="service-desc">
@@ -2110,11 +1982,10 @@
               </div>
               <span class="service-num">03</span>
             </div>
-            <span class="service-tag">Supplier Sourcing</span>
           </div>
           <h3 class="service-title">البحث عن الموردين واستقطابهم</h3>
           <p class="service-desc">
-            البحث الميداني والتجاري عن الموردين المناسبين لاحتياجات كل مشروع والتحقق من جاهزيتهم الفنية ومطابقتهم للمواصفات.
+            البحث عن الموردين المناسبين لاحتياجات كل مشروع والتحقق من جاهزيتهم الفنية ومطابقتهم للمواصفات المطلوبة بدقة.
           </p>
           <div class="service-scope-row">
             <span class="service-scope-tag">المسح الميداني للسوق</span>
@@ -2131,11 +2002,10 @@
               </div>
               <span class="service-num">04</span>
             </div>
-            <span class="service-tag">Quotation Comparison</span>
           </div>
           <h3 class="service-title">جمع ومقارنة عروض الأسعار</h3>
           <p class="service-desc">
-            استدراج عروض الأسعار وتحليلها فنياً ومالياً وإعداد جداول مقارنة موضوعية توضح الفروقات لاختيار العرض الأنسب بدقة.
+            استدراج عروض الأسعار وتحليلها فنياً ومالياً وإعداد مقارنات دقيقة توضح الفروقات لاختيار العرض الأنسب والأكثر أماناً.
           </p>
           <div class="service-scope-row">
             <span class="service-scope-tag">تحليل مالي وفني مفصل</span>
@@ -2152,11 +2022,10 @@
               </div>
               <span class="service-num">05</span>
             </div>
-            <span class="service-tag">Supply Coordination</span>
           </div>
           <h3 class="service-title">تنسيق ومتابعة التوريد</h3>
           <p class="service-desc">
-            متابعة مراحل التنفيذ والجداول الزمنية للشحن، ومساندة مطابقة المواد المستلمة مع الشروط المعتمدة لمنع أي تعثر.
+            متابعة مراحل التنفيذ والجداول الزمنية للتوريد ومساندة استلام المواد والمستلزمات وفق المواصفات المحددة لمنع أي تعثر.
           </p>
           <div class="service-scope-row">
             <span class="service-scope-tag">متابعة الجداول الزمنية</span>
@@ -2173,7 +2042,6 @@
               </div>
               <span class="service-num">06</span>
             </div>
-            <span class="service-tag">Custom Solutions</span>
           </div>
           <h3 class="service-title">حلول التوريد المخصصة</h3>
           <p class="service-desc">
@@ -2203,30 +2071,23 @@
     </main>
 
     <footer class="running-footer">
-      <div class="running-footer-info">
-        <span class="running-footer-brand">مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
-        <span class="running-footer-dot">·</span>
-        <span>الرياض — المملكة العربية السعودية</span>
-        <span class="running-footer-dot">·</span>
-        <span style="font-family: var(--font-en); direction: ltr; font-weight: 600;">musanidaser.com</span>
-      </div>
+      <div class="running-footer-brand">مساند آسر</div>
       <div class="running-page-badge">
-        <span class="running-page-label">PAGE</span>
         <span class="running-page-number">03 / 06</span>
       </div>
     </footer>
   </section>
 
   <!-- ========================================================
-       PAGE 4: SECTORS (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 4: SECTORS (EXACT BUDGET - HEADERS PUSHED DOWN)
        ======================================================== -->
   <section class="page page-sectors">
     <header class="running-header">
       <div class="running-header-right">
         <img src="../public/logo.png" alt="مساند آسر" class="running-header-logo">
-        <span>مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
+        <span>مؤسسة مساند آسر</span>
       </div>
-      <div class="running-header-left">Target Sectors · Coverage</div>
+      <div class="running-header-left">القطاعات والأنشطة المستهدفة</div>
     </header>
 
     <main class="sectors-body">
@@ -2237,7 +2098,7 @@
         </div>
         <h2 class="page-main-title">حلول توريد تلبي خصوصية مختلف الأنشطة</h2>
         <p class="page-main-desc">
-          ندرس الطبيعة التشغيلية لكل قطاع سنوفر متطلباته بدقة ومطابقة عالية مع المواصفات الفنية المعتمدة.
+          ندرس الطبيعة التشغيلية لكل قطاع لنقدم مسارات توريد ووساطة تلائم نوعية المواد والمعدات المطلوبة.
         </p>
       </div>
 
@@ -2245,7 +2106,7 @@
       <div class="sectors-grid-top">
         <div class="sector-card">
           <div class="sector-img-box">
-            <img src="../public/sectors/corporates.jpg" alt="الشركات والمؤسسات" class="sector-img">
+            <img src="../public/sectors/companies.webp" alt="الشركات والمؤسسات" class="sector-img">
             <span class="sector-num-badge">01</span>
           </div>
           <div class="sector-card-content">
@@ -2256,13 +2117,12 @@
                 </div>
                 <h3 class="sector-title">الشركات والمؤسسات</h3>
               </div>
-              <div class="sector-en">Corporates & Enterprises</div>
               <p class="sector-desc">
-                تلبية متطلبات المنشآت وتجهيزات الأعمال والمستلزمات المؤسسية الدورية بجودة واعتمادية وسرعة تنسيق.
+                توفير احتياجات التشغيل والتجهيزات والمنتجات التجارية وفق متطلبات الشركات والمؤسسات وطبيعة أعمالها.
               </p>
             </div>
             <div class="sector-scope-tags">
-              <span class="sector-tag-chip">مستلزمات دورية</span>
+              <span class="sector-tag-chip">مستلزمات التشغيل الدورية</span>
               <span class="sector-tag-chip">حلول توريد مرنة</span>
             </div>
           </div>
@@ -2270,7 +2130,7 @@
 
         <div class="sector-card">
           <div class="sector-img-box">
-            <img src="../public/sectors/restaurants.jpg" alt="المطاعم والمقاهي" class="sector-img">
+            <img src="../public/sectors/restaurants.webp" alt="المطاعم والمقاهي" class="sector-img">
             <span class="sector-num-badge">02</span>
           </div>
           <div class="sector-card-content">
@@ -2281,13 +2141,12 @@
                 </div>
                 <h3 class="sector-title">المطاعم والمقاهي</h3>
               </div>
-              <div class="sector-en">Restaurants & Cafes</div>
               <p class="sector-desc">
-                تأمين مستلزمات قطاع الضيافة والمواد التشغيلية والمعدات المناسبة لطبيعة النشاط ومعايير التشغيل اليومي.
+                المساعدة في توفير المعدات والتجهيزات والمستلزمات التشغيلية التي تتناسب مع احتياجات المطاعم والمقاهي.
               </p>
             </div>
             <div class="sector-scope-tags">
-              <span class="sector-tag-chip">مواد الضيافة والتشغيل</span>
+              <span class="sector-tag-chip">معدات الضيافة والتشغيل</span>
               <span class="sector-tag-chip">جودة معتمدة يومياً</span>
             </div>
           </div>
@@ -2298,7 +2157,7 @@
       <div class="sectors-grid-bottom">
         <div class="sector-card">
           <div class="sector-img-box">
-            <img src="../public/sectors/real-estate.jpg" alt="العقارات والتجارة" class="sector-img">
+            <img src="../public/sectors/real-estate.webp" alt="العقارات والتجارة" class="sector-img">
             <span class="sector-num-badge">03</span>
           </div>
           <div class="sector-card-content">
@@ -2309,21 +2168,20 @@
                 </div>
                 <h3 class="sector-title">العقارات والأنشطة التجارية</h3>
               </div>
-              <div class="sector-en">Real Estate & Commercial</div>
               <p class="sector-desc">
-                تنسيق توريد متطلبات التطوير العقاري والمجمعات التجارية بمواصفات محددة واختيار الموردين الأكفاء.
+                دعم احتياجات المنشآت والمرافق والمشروعات التجارية من المنتجات والتجهيزات المطلوبة وفق نطاق كل طلب.
               </p>
             </div>
             <div class="sector-scope-tags">
               <span class="sector-tag-chip">تجهيزات المرافق</span>
-              <span class="sector-tag-chip">موردون مؤهلون</span>
+              <span class="sector-tag-chip">مقارنة العروض وتنسيق التوريد</span>
             </div>
           </div>
         </div>
 
         <div class="sector-card">
           <div class="sector-img-box">
-            <img src="../public/sectors/offices.jpg" alt="المكاتب والمنشآت" class="sector-img">
+            <img src="../public/sectors/offices.webp" alt="المكاتب والمنشآت" class="sector-img">
             <span class="sector-num-badge">04</span>
           </div>
           <div class="sector-card-content">
@@ -2334,21 +2192,20 @@
                 </div>
                 <h3 class="sector-title">المكاتب والمنشآت</h3>
               </div>
-              <div class="sector-en">Offices & Facilities</div>
               <p class="sector-desc">
-                تجهيز بيئات العمل وحلول التوريد للمباني الإدارية والتشغيل المكتبي المتكامل.
+                توفير الأثاث والتجهيزات المكتبية والمستلزمات المختلفة التي تساعد على تلبية متطلبات تجهيز بيئات العمل.
               </p>
             </div>
             <div class="sector-scope-tags">
-              <span class="sector-tag-chip">بيئات العمل الإدارية</span>
-              <span class="sector-tag-chip">تشغيل متكامل</span>
+              <span class="sector-tag-chip">الأثاث المكتبي المتكامل</span>
+              <span class="sector-tag-chip">حلول المساحات الإدارية</span>
             </div>
           </div>
         </div>
 
         <div class="sector-card">
           <div class="sector-img-box">
-            <img src="../public/sectors/projects.jpg" alt="المشاريع والأعمال" class="sector-img">
+            <img src="../public/sectors/projects.webp" alt="المشاريع والأعمال" class="sector-img">
             <span class="sector-num-badge">05</span>
           </div>
           <div class="sector-card-content">
@@ -2359,20 +2216,19 @@
                 </div>
                 <h3 class="sector-title">المشاريع والأعمال</h3>
               </div>
-              <div class="sector-en">Business Projects</div>
               <p class="sector-desc">
-                إدارة وتنسيق توريدات المشروعات التجارية والخاصة بدقة في الجداول والمواصفات.
+                البحث عن الموردين والحلول المناسبة للاحتياجات المرتبطة بالمشروعات، مع مراعاة المواصفات والكميات المحددة.
               </p>
             </div>
             <div class="sector-scope-tags">
-              <span class="sector-tag-chip">مشاريع تجارية</span>
-              <span class="sector-tag-chip">انضباط الجداول</span>
+              <span class="sector-tag-chip">توريدات المشروعات</span>
+              <span class="sector-tag-chip">انضباط الجداول والكميات</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Strategic Photographic Capability Strip -->
+      <!-- Strategic Capability Strip -->
       <div class="sectors-photo-band">
         <div class="sectors-photo-band-overlay"></div>
         <div class="sectors-photo-band-content">
@@ -2385,30 +2241,23 @@
     </main>
 
     <footer class="running-footer">
-      <div class="running-footer-info">
-        <span class="running-footer-brand">مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
-        <span class="running-footer-dot">·</span>
-        <span>الرياض — المملكة العربية السعودية</span>
-        <span class="running-footer-dot">·</span>
-        <span style="font-family: var(--font-en); direction: ltr; font-weight: 600;">musanidaser.com</span>
-      </div>
+      <div class="running-footer-brand">مساند آسر</div>
       <div class="running-page-badge">
-        <span class="running-page-label">PAGE</span>
         <span class="running-page-number">04 / 06</span>
       </div>
     </footer>
   </section>
 
   <!-- ========================================================
-       PAGE 5: METHODOLOGY (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 5: METHODOLOGY (EXACT BUDGET - 1-LINE CONCISE DESCS)
        ======================================================== -->
   <section class="page page-process">
     <header class="running-header">
       <div class="running-header-right">
         <img src="../public/logo.png" alt="مساند آسر" class="running-header-logo">
-        <span>مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
+        <span>مؤسسة مساند آسر</span>
       </div>
-      <div class="running-header-left">Methodology · Execution</div>
+      <div class="running-header-left">منهجية ومراحل العمل المنظم</div>
     </header>
 
     <main class="process-body">
@@ -2436,12 +2285,11 @@
                 <div class="step-icon-svg">
                   <svg class="svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                 </div>
-                <h3 class="step-title">فهم الاحتياج والمتطلبات</h3>
+                <h3 class="step-title">فهم الاحتياج وتدقيق المواصفات</h3>
               </div>
-              <span class="step-en">Understanding Requirements</span>
             </div>
             <p class="step-desc">
-              استيعاب المواصفات الفنية، الكميات، معايير الجودة، والميزانية التقديرية بدقة عبر مراجعة تفاصيل الطلب مع المنشأة لتحديد نطاق التوريد بوضوح.
+              استيعاب المواصفات الفنية والكميات بدقة لتحديد نطاق التوريد والاعتماد المالي.
             </p>
             <div class="step-deliverables">
               <span class="step-badge-out">المخرجات:</span>
@@ -2462,12 +2310,11 @@
                 <div class="step-icon-svg">
                   <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><circle cx="11" cy="11" r="3"/></svg>
                 </div>
-                <h3 class="step-title">البحث عن الموردين والخيارات المناسبة</h3>
+                <h3 class="step-title">البحث عن الموردين واستقطاب الخيارات</h3>
               </div>
-              <span class="step-en">Supplier Sourcing</span>
             </div>
             <p class="step-desc">
-              مسح السوق واستقطاب الموردين المناسبين لطبيعة الطلب، والتحقق من جاهزيتهم الفنية والتجارية ومطابقتهم للمواصفات المطلوبة.
+              مسح السوق واستقطاب الموردين الأكفاء والتحقق الميداني من جاهزيتهم الفنية.
             </p>
             <div class="step-deliverables">
               <span class="step-badge-out">المخرجات:</span>
@@ -2490,10 +2337,9 @@
                 </div>
                 <h3 class="step-title">مراجعة ومقارنة العروض والمواصفات</h3>
               </div>
-              <span class="step-en">Quotation Comparison</span>
             </div>
             <p class="step-desc">
-              إعداد تقرير مقارن موضوعي يوضح الفروقات الفنية والمالية بين العروض لتمكين المنشأة من اختيار العرض الأنسب والأكثر أماناً.
+              تحليل العروض وإعداد جدول مقارنة موضوعي يكشف الفروقات المالية والفنية بوضوح.
             </p>
             <div class="step-deliverables">
               <span class="step-badge-out">المخرجات:</span>
@@ -2514,12 +2360,11 @@
                 <div class="step-icon-svg">
                   <svg class="svg-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
-                <h3 class="step-title">تنسيق ومتابعة التوريد وفق نطاق الاتفاق</h3>
+                <h3 class="step-title">تنسيق ومتابعة التوريد حتى الاستلام</h3>
               </div>
-              <span class="step-en">Supply Coordination</span>
             </div>
             <p class="step-desc">
-              إشراف وتنسيق مستمر لمراحل الشحن والتسليم لضمان مطابقة المواد المستلمة مع الشروط المعتمدة واكتمال مسار التوريد بنجاح.
+              متابعة مباشرة ومستمرة لمسار الشحن والتسليم لضمان مطابقة المواد المستلمة.
             </p>
             <div class="step-deliverables">
               <span class="step-badge-out">المخرجات:</span>
@@ -2565,22 +2410,15 @@
     </main>
 
     <footer class="running-footer">
-      <div class="running-footer-info">
-        <span class="running-footer-brand">مؤسسة مساند آسر للإمداد والوساطة التجارية</span>
-        <span class="running-footer-dot">·</span>
-        <span>الرياض — المملكة العربية السعودية</span>
-        <span class="running-footer-dot">·</span>
-        <span style="font-family: var(--font-en); direction: ltr; font-weight: 600;">musanidaser.com</span>
-      </div>
+      <div class="running-footer-brand">مساند آسر</div>
       <div class="running-page-badge">
-        <span class="running-page-label">PAGE</span>
         <span class="running-page-number">05 / 06</span>
       </div>
     </footer>
   </section>
 
   <!-- ========================================================
-       PAGE 6: CONTACT US (EXACT 269mm BUDGET - ZERO EMPTY VOIDS)
+       PAGE 6: CONTACT US (EXACT BUDGET - NO WHITE VOID)
        ======================================================== -->
   <section class="page page-contact">
     <div class="contact-bg-photo"></div>
@@ -2668,7 +2506,7 @@
         </div>
       </div>
 
-      <!-- Balanced Glassmorphic QR Card (Zero white void) -->
+      <!-- Balanced Glassmorphic QR Card -->
       <div class="contact-qr-card">
         <div class="contact-qr-badge">بوابة التواصل الرقمية</div>
         <p class="contact-qr-invite-txt">
@@ -2677,12 +2515,11 @@
 
         <!-- High-contrast crisp white QR square with gold border -->
         <div class="contact-qr-white-frame">
-          <img src="../public/qr-code.svg" alt="QR Code musanidaser.com" class="contact-qr-img">
+          <img src="../public/qr-code.svg" alt="رمز الاستجابة السريعة لموقع مساند آسر" class="contact-qr-img">
         </div>
 
         <div>
           <div class="contact-qr-label">امسح الرمز لزيارة الموقع</div>
-          <div class="contact-qr-sub">SCAN TO VISIT WEBSITE</div>
         </div>
 
         <a href="https://musanidaser.com" target="_blank" class="contact-qr-btn">زيارة الموقع الرسمي</a>
@@ -2691,12 +2528,10 @@
 
     <div class="contact-bottom-block">
       <div class="contact-cr-info">
-        <strong style="color: #FFFFFF;">مؤسسة مساند آسر للإمداد والوساطة التجارية</strong> · سجل تجاري معتمد · الرياض<br>
-        جميع الحقوق محفوظة © 2026 مساند آسر · وثيقة تعريفية رسمية معتمدة
+        مساند آسر
       </div>
       <div class="contact-bottom-right">
         <div class="contact-page-badge">
-          <span class="running-page-label" style="color: var(--gold-light);">PAGE</span>
           <span class="contact-page-num">06 / 06</span>
         </div>
       </div>
