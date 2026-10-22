@@ -6,4 +6,4 @@ Allow: /
 Disallow: /dist/
 
 # Host and Sitemap
-Sitemap: https://musanidaser.com/sitemap.xml
+Sitemap: https://www.musanidaser.com/sitemap.xml

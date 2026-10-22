@@ -17,7 +17,7 @@ export class SeoService {
   private metaService = inject(Meta);
   private document = inject(DOCUMENT);
 
-  private readonly baseUrl = 'https://musanidaser.com';
+  private readonly baseUrl = 'https://www.musanidaser.com';
 
   private readonly seoData: Record<string, { ar: PageSeoConfig; en: PageSeoConfig }> = {
     '': {
